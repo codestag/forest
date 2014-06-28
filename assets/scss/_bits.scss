@@ -1,0 +1,20 @@
+%site-width{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:after{
+  	clear: both;
+  }
+  &:after,
+  &:before{
+		content: " ";
+		display: table;
+  }
+}
+
+$accent: #1bbc9b;
+$sectionTitle: #363f48;
+$sectionBackground: #2d3e50;
