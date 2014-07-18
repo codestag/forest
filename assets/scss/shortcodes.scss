@@ -603,11 +603,7 @@ pre{
   /* For IE 6/7 (trigger hasLayout) */
 }
 
-.stag-icon-link {
-  text-decoration: none;
-}
-
-.stag-icon {
+.fa {
   display: inline-block;
   margin-right: 0.2em;
   text-align: center;
@@ -616,7 +612,7 @@ pre{
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.stag-icon:hover {
+.fa:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
 }
