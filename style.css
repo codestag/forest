@@ -1,10 +1,10 @@
 /*!
 Theme Name: Forest
-Theme URI: http://codestag.com/themes/forest
+Theme URI: https://codestag.com/themes/forest
 Description: A portfolio WordPress theme with bold, flat design style and solid code framework.
 Author: Codestag
-Author URI: http://codestag.com
-Version: 1.1.7
+Author URI: https://codestag.com
+Version: 1.1.8
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two columns, flexible-width, custom-background, custom-menu, editor-style, featured-images, theme-options, translation ready, threaded-comments
@@ -268,7 +268,6 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'stag';
@@ -435,8 +434,8 @@ you can use the generic selector below, but it's slower:
 }
 
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -534,9 +533,9 @@ input[type="submit"],
   padding: 5px 15px;
   border-radius: 3px;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 button:hover,
@@ -566,8 +565,8 @@ input[type="email"],
 input[type="password"],
 textarea {
   border: none;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   background: #f5f5f5;
   border-radius: 3px;
@@ -576,9 +575,9 @@ textarea {
   width: 100%;
   max-width: 100%;
   border: 1px solid transparent;
-  -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 input[type="text"]:focus,
@@ -617,8 +616,8 @@ textarea {
 .header-shrink {
   height: 71px !important;
   padding: 15px 0;
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 .header-shrink #primary-menu {
@@ -637,9 +636,9 @@ textarea {
 
 @media (min-width: 992px) {
   .site-header {
-    -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
 }
@@ -649,9 +648,9 @@ textarea {
 }
 
 .navigation a {
-  -webkit-transition: 0.07s ease-in;
   -moz-transition: 0.07s ease-in;
   -o-transition: 0.07s ease-in;
+  -webkit-transition: 0.07s ease-in;
   transition: 0.07s ease-in;
 }
 
@@ -697,9 +696,9 @@ textarea {
 #primary-menu > li a {
   display: block;
   padding: 13px 30px;
-  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   line-height: 1.3;
   border-left: 1px solid #c0c0c0;
@@ -893,9 +892,9 @@ textarea {
   z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -962,37 +961,35 @@ textarea {
   visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   -webkit-backface-visibility: hidden;
 }
 .portfolio-thumb .button-secondary {
-  -webkit-transform: translateY(-20px);
   -moz-transform: translateY(-20px);
   -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
   transform: translateY(-20px);
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
   -moz-transition: -moz-transform 0.25s ease-in-out;
   -o-transition: -o-transform 0.25s ease-in-out;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
 }
 .portfolio-thumb .icon-eye {
   font-size: 15px;
 }
 .portfolio-thumb:hover .portfolio-preview {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible;
   -webkit-backface-visibility: hidden;
 }
 .portfolio-thumb:hover .button-secondary {
-  -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -ms-transform: translateY(0px);
-  -o-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
@@ -1012,8 +1009,8 @@ textarea {
   border-radius: 0;
   margin: 0;
   overflow: hidden;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1037,12 +1034,12 @@ textarea {
 .portfolio-slider .flex-control-nav a {
   background: none;
   border: 2px solid #FFF;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: color, background 0.12s linear;
   -moz-transition: color, background 0.12s linear;
   -o-transition: color, background 0.12s linear;
+  -webkit-transition: color, background 0.12s linear;
   transition: color, background 0.12s linear;
 }
 .portfolio-slider .flex-control-nav a.flex-active, .portfolio-slider .flex-control-nav a:hover {
@@ -1097,18 +1094,18 @@ textarea {
   letter-spacing: -2px;
   color: #fff;
   max-width: 800px;
-  -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 #slider .flex-caption--inner {
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 #slider .flex-content {
@@ -1130,104 +1127,89 @@ textarea {
 
 @keyframes slideTransition {
   0% {
-    -webkit-transform: translate(0, -200px);
     -moz-transform: translate(0, -200px);
     -ms-transform: translate(0, -200px);
-    -o-transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
     transform: translate(0, -200px);
     opacity: .3;
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
 }
-
 @-webkit-keyframes slideTransition {
   0% {
-    -webkit-transform: translate(0, -200px);
     -moz-transform: translate(0, -200px);
     -ms-transform: translate(0, -200px);
-    -o-transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
     transform: translate(0, -200px);
     opacity: .3;
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
 }
-
 @-moz-keyframes slideTransition {
   0% {
-    -webkit-transform: translate(0, -200px);
     -moz-transform: translate(0, -200px);
     -ms-transform: translate(0, -200px);
-    -o-transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
     transform: translate(0, -200px);
     opacity: .3;
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
 }
-
 @-ms-keyframes slideTransition {
   0% {
-    -webkit-transform: translate(0, -200px);
     -moz-transform: translate(0, -200px);
     -ms-transform: translate(0, -200px);
-    -o-transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
     transform: translate(0, -200px);
     opacity: .3;
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
 }
-
 @-o-keyframes slideTransition {
   0% {
-    -webkit-transform: translate(0, -200px);
     -moz-transform: translate(0, -200px);
     -ms-transform: translate(0, -200px);
-    -o-transform: translate(0, -200px);
+    -webkit-transform: translate(0, -200px);
     transform: translate(0, -200px);
     opacity: .3;
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     opacity: 1;
   }
 }
-
 #slider .flex-active-slide .flex-caption {
   -webkit-animation: slideTransition .6s;
   -moz-animation: slideTransition .6s;
@@ -1331,9 +1313,9 @@ textarea {
   font-size: 0px;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: background 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out;
   -o-transition: background 0.2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
 
@@ -1469,9 +1451,9 @@ textarea {
   z-index: 2;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -1543,9 +1525,9 @@ textarea {
   margin-right: 18px;
   margin-right: calc(18px - .25em);
   margin-bottom: 10px;
-  -webkit-transition: background 0.3s ease-out;
   -moz-transition: background 0.3s ease-out;
   -o-transition: background 0.3s ease-out;
+  -webkit-transition: background 0.3s ease-out;
   transition: background 0.3s ease-out;
 }
 .portfolio-filter li.active {
@@ -1581,9 +1563,9 @@ textarea {
   font-size: 12px;
   padding: 2px 14px;
   float: right;
-  -webkit-transition: border-radius 0.4s;
   -moz-transition: border-radius 0.4s;
   -o-transition: border-radius 0.4s;
+  -webkit-transition: border-radius 0.4s;
   transition: border-radius 0.4s;
   font-weight: normal;
 }

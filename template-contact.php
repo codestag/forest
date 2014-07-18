@@ -21,7 +21,7 @@ if(isset($_POST['submitted'])){
     if(trim($_POST['email']) === '')  {
         $errorMessages['emailError'] = $emailError;
         $hasError = true;
-    } else if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", trim($_POST['email']))) {
+    } else if ( ! is_email( trim($_POST['email']) ) ) {
         $errorMessages['emailInvalidError'] = $emailInvalidError;
         $hasError = true;
     } else {
@@ -53,7 +53,7 @@ if(isset($_POST['submitted'])){
 
         $headers = 'From: '.$name.' <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
 
-        mail($emailTo, $subject, $body, $headers);
+        wp_mail($emailTo, $subject, $body, $headers);
         $emailSent = true;
     }
 }
@@ -95,7 +95,7 @@ if(isset($_POST['submitted'])){
             <?php stag_page_after(); ?>
 
             <?php if(isset($emailSent) && $emailSent == true) : ?>
-                
+
                 <div class="stag-alert green">
                     <p><?php _e('Thanks, your email was sent successfully.', 'stag') ?></p>
                 </div>
@@ -103,7 +103,7 @@ if(isset($_POST['submitted'])){
             <?php else: ?>
 
                 <form action="<?php the_permalink(); ?>" id="contactForm" class="contact-form" method="post">
-                    
+
                     <hr class="stag-divider plain">
 
                     <h2><?php _e('Send us a Message', 'stag'); ?></h2>
@@ -113,7 +113,7 @@ if(isset($_POST['submitted'])){
                             <label for="contactName"><?php _e('Your Name', 'stag') ?></label>
                             <input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>">
                             <?php if(isset($errorMessages['nameError'])) { ?>
-                                <span class="error"><?php echo $errorMessages['nameError']; ?></span> 
+                                <span class="error"><?php echo $errorMessages['nameError']; ?></span>
                             <?php } ?>
                         </p>
 
@@ -121,10 +121,10 @@ if(isset($_POST['submitted'])){
                             <label for="email"><?php _e('Your Email', 'stag') ?></label>
                             <input type="text" name="email" id="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>">
                             <?php if(isset($errorMessages['emailError'])) { ?>
-                                <span class="error"><?php echo $errorMessages['emailError']; ?></span> 
+                                <span class="error"><?php echo $errorMessages['emailError']; ?></span>
                             <?php } ?>
                             <?php if(isset($errorMessages['emailInvalidError'])) { ?>
-                                <span class="error"><?php echo $errorMessages['emailInvalidError']; ?></span> 
+                                <span class="error"><?php echo $errorMessages['emailInvalidError']; ?></span>
                             <?php } ?>
                         </p>
                     </div>
@@ -133,7 +133,7 @@ if(isset($_POST['submitted'])){
                         <label for="commentsText"><?php _e('Your Message', 'stag') ?></label>
                         <textarea rows="8" name="comments" id="commentsText" ><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
                         <?php if(isset($errorMessages['commentError'])) { ?>
-                            <span class="error"><?php echo $errorMessages['commentError']; ?></span> 
+                            <span class="error"><?php echo $errorMessages['commentError']; ?></span>
                         <?php } ?>
                     </p>
 

@@ -2,13 +2,13 @@
 /**
  *
  * Stag Framework
- * 
+ *
  * @package WordPress
  * @subpackage StagFramework
  * @version 2.0.0
  * @author Ram Ratan Maurya (Codestag)
- * @link http://mauryaratan.me
- * @link http://codestag.com
+ * @link https://mauryaratan.me
+ * @link https://codestag.com
  *
  */
 

@@ -1,5 +1,9 @@
 == Forest Changelog ==
 
+= 1.1.8: July 19, 2014 =
+* Fix localisation issue
+* Contact Form tweaks
+
 = 1.1.7: January 06, 2014 =
 * style.css - updated version number
 * functions.php - Added support for 'Stag Custom Sidebars' plugin
