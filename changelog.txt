@@ -1,5 +1,8 @@
 == Forest Changelog ==
 
+= 1.1.9: Jan 2, 2015 =
+* Updated documentation/support link(s)
+
 = 1.1.8: July 19, 2014 =
 * Fix localisation issue
 * Contact Form tweaks

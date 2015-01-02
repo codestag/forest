@@ -38,8 +38,8 @@ class StagFramework{
 		define( 'STAG_THEME_AUTHOR', $theme_author );
 		define( 'STAG_THEME_AUTHOR_URI', $theme_author_uri );
 
-		define( 'STAG_SUPPORT_URI', '//support.codestag.com' );
-		define( 'STAG_HOME', '//codestag.com' );
+		define( 'STAG_SUPPORT_URI', 'https://codestag.com/support/' );
+		define( 'STAG_HOME', 'https://codestag.com' );
 		define( 'STAG_DEBUG', true );
 	}
 }

@@ -2,14 +2,14 @@
 
 /**
  * Admin Theme Options Page
- * 
+ *
  * @return void
  */
 function stag_options_page(){
 	$stag_options = get_option( 'stag_framework_options' );
 	ksort( $stag_options['stag_framework'] );
 ?>
-	
+
 	<?php if( isset( $_GET['activated'] ) ) : ?>
 	<div class="updated admin-message" id="message">
 		<p><?php echo sprintf( __( '<strong>%s activated.</strong> Please save settings before leaving this page.', 'stag' ), STAG_THEME_NAME ); ?></p>
@@ -17,7 +17,7 @@ function stag_options_page(){
 	<?php endif; ?>
 
 	<div id="stag-notification" class="stag-notification" data-success="<?php _e( 'Settings saved!', 'stag' ); ?>" data-error="<?php _e( 'Error saving settings!', 'stag' ); ?>"></div>
-	
+
 	<div id="stag-admin-wrap">
 		<form action="<?php echo admin_url( 'admin-ajax.php' ); ?>" method="post" id="stag-form">
 
@@ -34,7 +34,7 @@ function stag_options_page(){
 					echo sprintf( __( 'By <a href="%1$s" target="_blank">%2$s</a> <span class="divider">&#47;</span> <a href="%3$s" target="_blank">Documentation</a> <span class="divider">&#47;</span> <a href="%4$s" target="_blank">Support</a>', 'stag' ),
 					STAG_THEME_AUTHOR_URI,
 					STAG_THEME_AUTHOR,
-					'//codestag.com/docs/' . stag_to_slug( STAG_THEME_NAME ) . '.pdf',
+					'http://docs.codestag.com/collection/203-forest',
 					STAG_SUPPORT_URI
 					);
 					?>
@@ -51,7 +51,7 @@ function stag_options_page(){
 						<?php endforeach; ?>
 					</ul>
 				</aside>
-				
+
 				<div class="stag-main-content">
 					<?php foreach( $stag_options['stag_framework'] as $page ) : ?>
 					<div id="page-<?php echo stag_to_slug( key( $page ) ); ?>" class="page">
@@ -66,7 +66,7 @@ function stag_options_page(){
 						?>
 
 						<div class="<?php echo stag_to_slug( @$item['title'] ); ?> row stag-clearfix">
-							<h3><?php echo $item['title']; ?></h3>							
+							<h3><?php echo $item['title']; ?></h3>
 							<?php if( isset( $item['desc'] ) && $item['desc'] != '' ) : ?>
 							<div class="desc"><?php echo $item['desc']; ?></div>
 							<?php endif; ?>
@@ -79,7 +79,7 @@ function stag_options_page(){
 					<?php endforeach; ?>
 
 					<div class="stag-clear"></div>
-					
+
 					<footer class="stag-footer">
 						<input type="hidden" name="action" value="stag_framework_save" />
 						<input type="hidden" name="stag_noncename" id="stag_noncename" value="<?php echo wp_create_nonce('stag_framework_options'); ?>" />
@@ -88,7 +88,7 @@ function stag_options_page(){
 					</footer>
 
 				</div>
-			
+
 			</div><!-- .stag-content -->
 
 		</form><!-- #stag-form -->
@@ -103,7 +103,7 @@ function stag_options_page(){
  */
 function stag_admin_interface_styles( $hook ) {
 	if( $hook != 'toplevel_page_stagframework' ) return;
-	
+
 	wp_register_style( 'stag-admin-interface', get_template_directory_uri() . '/framework/assets/css/stag-admin-interface.css', array( 'wp-color-picker' ), STAG_FRAMEWORK_VERSION );
 	wp_register_script( 'stag-admin-interface', get_template_directory_uri() . '/framework/assets/js/stag-admin-interface.js', array( 'jquery', 'wp-color-picker' ), STAG_FRAMEWORK_VERSION, true );
 

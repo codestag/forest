@@ -224,7 +224,7 @@ function stag_comments($comment, $args, $depth) {
         <div class="comment-area">
             <div class="row">
               <span class="comment-author"><?php echo get_comment_author_link(); ?></span>
-              <span class="comment-date"><?php echo get_comment_date("U"); ?></span>
+              <span class="comment-date"><?php printf( __( '%s ago', 'stag' ), human_time_diff( get_comment_date( 'U' ), current_time( 'timestamp' ) ) ); ?></span>
               <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
             </div>
             <?php if ($comment->comment_approved == '0') : ?>
@@ -277,7 +277,7 @@ add_filter('widget_text', 'do_shortcode');
 /**
 * Relative Date for comments
 */
-add_filter( 'get_comment_date', 'get_the_relative_time' );
+// add_filter( 'get_comment_date', 'get_the_relative_time' );
 function get_the_relative_time($time = null){
     if(is_null($time)) $time = get_the_time("U");
 
