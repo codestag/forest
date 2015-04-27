@@ -99,7 +99,7 @@ function stag_google_font_url() {
 	);
 	$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
 
-	return $fonts_url;
+	return esc_url( $fonts_url );
 }
 
 if( ! function_exists( 'stag_remove_trailing_char' ) ) {
