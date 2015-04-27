@@ -1,5 +1,9 @@
 == Forest Changelog ==
 
+= 1.2: April 27, 2015 =
+* XSS vulnerability check - https://make.wordpress.org/plugins/2015/04/20/fixing-add_query_arg-and-remove_query_arg-usage/
+* Updated TGM Plugin Activation library
+
 = 1.1.9: Jan 2, 2015 =
 * Updated documentation/support link(s)
 
