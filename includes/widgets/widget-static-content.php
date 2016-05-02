@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_static_content");'));
 
 class stag_widget_static_content extends WP_Widget{
-    function stag_widget_static_content(){
+    function __construct(){
         $widget_ops = array('classname' => 'static-content', 'description' => __('Displays content from a specific page.', 'stag'));
         $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_static_content');
-        $this->WP_Widget('stag_widget_static_content', __('Section: Static Content', 'stag'), $widget_ops, $control_ops);
+        parent::__construct('stag_widget_static_content', __('Section: Static Content', 'stag'), $widget_ops, $control_ops);
     }
 
     function widget($args, $instance){

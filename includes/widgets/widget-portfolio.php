@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_portfolio");'));
 
 class stag_widget_portfolio extends WP_Widget{
-  function stag_widget_portfolio(){
+  function __construct(){
     $widget_ops = array('classname' => 'section-portfolio', 'description' => __('Display portfolio items.', 'stag'));
     $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_portfolio');
-    $this->WP_Widget('stag_widget_portfolio', __('Section: Portfolio', 'stag'), $widget_ops, $control_ops);
+    parent::__construct('stag_widget_portfolio', __('Section: Portfolio', 'stag'), $widget_ops, $control_ops);
   }
 
   function widget($args, $instance){

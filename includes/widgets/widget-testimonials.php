@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_testimonials");'));
 
 class stag_widget_testimonials extends WP_Widget{
-  function stag_widget_testimonials(){
+  function __construct(){
     $widget_ops = array('classname' => 'section-testimonials', 'description' => __('Displays testimonials.', 'stag'));
     $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_testimonials');
-    $this->WP_Widget('stag_widget_testimonials', __('Section: Testimonials', 'stag'), $widget_ops, $control_ops);
+    parent::__construct('stag_widget_testimonials', __('Section: Testimonials', 'stag'), $widget_ops, $control_ops);
   }
 
   function widget($args, $instance){
@@ -28,13 +28,13 @@ class stag_widget_testimonials extends WP_Widget{
     if(have_posts()): while(have_posts()): the_post();
 
     ?>
-    
+
     <blockquote>
         <i class="icon-testimonial"></i>
         <?php the_content(); ?>
         <footer><?php the_title(); ?></footer>
     </blockquote>
-    
+
     <?php
     endwhile;
     endif;
@@ -51,7 +51,7 @@ class stag_widget_testimonials extends WP_Widget{
 
     // STRIP TAGS TO REMOVE HTML
     $instance['title'] = strip_tags($new_instance['title']);
-    
+
 
     return $instance;
   }
@@ -67,7 +67,7 @@ class stag_widget_testimonials extends WP_Widget{
 
     /* HERE GOES THE FORM */
     ?>
-  
+
     <p>
       <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'stag'); ?></label>
       <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />

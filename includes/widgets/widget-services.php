@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_services");'));
 
 class stag_widget_services extends WP_Widget{
-    function stag_widget_services(){
+    function __construct(){
         $widget_ops = array('classname' => 'service', 'description' => __('Display latest posts from blog.', 'stag'));
         $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_services');
-        $this->WP_Widget('stag_widget_services', __('Service Box', 'stag'), $widget_ops, $control_ops);
+        parent::__construct('stag_widget_services', __('Service Box', 'stag'), $widget_ops, $control_ops);
     }
 
     function widget($args, $instance){

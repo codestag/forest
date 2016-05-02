@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_latest_posts");'));
 
 class stag_widget_latest_posts extends WP_Widget{
-    function stag_widget_latest_posts(){
+    function __construct(){
         $widget_ops = array('classname' => 'section-latest-posts', 'description' => __('Displays latest blog posts.', 'stag'));
         $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_latest_posts');
-        $this->WP_Widget('stag_widget_latest_posts', __('Section: Latest Posts', 'stag'), $widget_ops, $control_ops);
+        parent::__construct('stag_widget_latest_posts', __('Section: Latest Posts', 'stag'), $widget_ops, $control_ops);
     }
 
     function widget($args, $instance){
@@ -39,9 +39,9 @@ class stag_widget_latest_posts extends WP_Widget{
 
             while(have_posts()): the_post();
             ?>
-            
+
             <article <?php post_class('grid-6'); ?> id="post-<?php the_ID(); ?>">
-                
+
                 <?php if(has_post_thumbnail()): ?>
                 <figure class="entry-image">
                     <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stag' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>

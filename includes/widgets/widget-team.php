@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_team");'));
 
 class stag_widget_team extends WP_Widget{
-    function stag_widget_team(){
+    function __construct(){
         $widget_ops = array('classname' => 'section-team', 'description' => __('Displays team members.', 'stag'));
         $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_team');
-        $this->WP_Widget('stag_widget_team', __('Section: Team', 'stag'), $widget_ops, $control_ops);
+        parent::__construct('stag_widget_team', __('Section: Team', 'stag'), $widget_ops, $control_ops);
     }
 
     function widget($args, $instance){
@@ -35,7 +35,7 @@ class stag_widget_team extends WP_Widget{
         $linkedin = get_post_meta( get_the_ID(), '_stag_team_linkedin', true );
 
         ?>
-        
+
         <div class="team-member">
             <figure class="member-picture">
                 <?php the_post_thumbnail(); ?>
@@ -48,11 +48,11 @@ class stag_widget_team extends WP_Widget{
                     ?>
                 </div>
             </figure>
-            
+
             <h3 class="member-title"><?php the_title(); ?></h3>
             <?php if( $info != '' ) echo '<p class="member-info">'. $info .'</p>'; ?>
         </div>
-        
+
         <?php
         endwhile;
         endif;
@@ -83,7 +83,7 @@ class stag_widget_team extends WP_Widget{
 
     /* HERE GOES THE FORM */
     ?>
-  
+
     <p>
       <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'stag'); ?></label>
       <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo @$instance['title']; ?>" />

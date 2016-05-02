@@ -2,10 +2,10 @@
 add_action('widgets_init', create_function('', 'return register_widget("stag_widget_services_section");'));
 
 class stag_widget_services_section extends WP_Widget{
-  function stag_widget_services_section(){
+  function __construct(){
     $widget_ops = array('classname' => 'services-section', 'description' => __('Display widgets from Services Sidebar.', 'stag'));
     $control_ops = array('width' => 300, 'height' => 350, 'id_base' => 'stag_widget_services_section');
-    $this->WP_Widget('stag_widget_services_section', __('Section: Services Section', 'stag'), $widget_ops, $control_ops);
+    parent::__construct('stag_widget_services_section', __('Section: Services Section', 'stag'), $widget_ops, $control_ops);
   }
 
   function widget($args, $instance){

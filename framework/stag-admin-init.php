@@ -25,7 +25,7 @@ add_action('init', 'stag_admin_init', 2);
 
 function stag_admin_menu(){
 	$icon = get_template_directory_uri() .'/framework/assets/img/menu-icon.svg';
-	add_object_page( STAG_THEME_NAME, STAG_THEME_NAME, 'manage_options', 'stagframework', 'stag_options_page' );
+	add_menu_page( STAG_THEME_NAME, STAG_THEME_NAME, 'manage_options', 'stagframework', 'stag_options_page', 'dashicons-admin-customizer', 30 );
 	add_submenu_page('stagframework', __('Theme Options', 'stag'), __('Theme Options', 'stag'), 'manage_options', 'stagframework', 'stag_options_page' );
 }
 add_action('admin_menu', 'stag_admin_menu');
