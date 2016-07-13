@@ -7,7 +7,7 @@
 * Several sitewide style tweaks
 * Fixed issue with Blog post cover background color and image
 * Removed default icon fields in Service widget in favor of custom icon fields
-* Updated Flexslider library
+* Updated TGMPA library
 * Updated Flexslider library
 
 = 1.3: May 03, 2016 =
