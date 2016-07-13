@@ -5,6 +5,7 @@
 * Added new Portfolio Section Background Color option
 * Added new Footer Text Color option
 * Several sitewide style tweaks
+* Fixed issue with Blog post cover background color and image
 * Removed default icon fields in Service widget in favor of custom icon fields
 * Updated Flexslider library
 * Updated Flexslider library

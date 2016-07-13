@@ -89,9 +89,9 @@ function stag_show_favicon(){
     $stag_values =  get_option('stag_framework_values');
     if(stag_get_option('general_custom_favicon') != ''){
         echo '<link rel="shortcut icon" href="'.$stag_values['general_custom_favicon'].'" type="image/x-icon" />';
-    }else{
-        echo '<link rel="shortcut icon" href="'.get_template_directory_uri().'/assets/img/favicon.ico" type="image/x-icon" />';
     }
+
+    return;
 }
 add_action('wp_head', 'stag_show_favicon');
 

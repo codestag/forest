@@ -169,7 +169,6 @@ function stag_user_styles_push($content){
 	if($headingfont != ''){
 		$output .= "\nh1, h2, h3, h4, h5, h6, .heading, .intro-text { ";
 		$output .= "font-family: '$heading_font_output'; ";
-		$output .= "font-weight: normal; ";
 		$output .= "}\n";
 	}
 
