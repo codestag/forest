@@ -347,10 +347,11 @@ you can use the generic selector below, but it's slower:
   box-sizing: border-box; }
 
 body {
-  font: 400 18px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 17px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: #929292;
+  color: #444;
+  line-height: 1.5;
   margin-top: 110px; }
 
 a {
@@ -379,12 +380,12 @@ h6 {
   color: #363f48; }
 
 h1 {
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing: -2.6px;
   line-height: 1.1667em; }
 
 h2 {
-  font-size: 33px;
+  font-size: 25px;
   line-height: 1.4em;
   margin: 0 0 1em 0; }
 
@@ -404,6 +405,9 @@ h5 {
 h6 {
   font-size: 15px;
   line-height: 1.6em; }
+
+h1, h2, h3, h4, h5, h6, .heading, .intro-text {
+  font-weight: bold; }
 
 /* $Repeatables */
 .inside {
@@ -491,7 +495,7 @@ textarea {
   padding: 25px 0;
   background: #fff; }
   .site-header .home-link {
-    color: #c0c0c0;
+    color: inherit;
     position: relative; }
   .site-header .inside {
     height: 100%; }
@@ -520,7 +524,8 @@ textarea {
     transition: all 0.3s; } }
 .site-description {
   font-size: 14px;
-  margin: 5px 0 0 0; }
+  margin: 5px 0 0 0;
+  color: #555; }
 
 .navigation a {
   -moz-transition: ease-in 0.07s;
@@ -542,9 +547,10 @@ textarea {
   float: right;
   font-size: 15px; }
   .main-navigation a {
-    color: #c0c0c0; }
+    font-weight: bold;
+    color: #444; }
     .main-navigation a:hover {
-      color: #363f48; }
+      color: #555; }
 
 .navigation li {
   list-style: none;
@@ -620,8 +626,6 @@ textarea {
     z-index: 10; }
   .blog-cover-wrap .grid-3, .blog-cover-wrap .grid-9 {
     margin-bottom: 0; }
-  .blog-cover-wrap .grid-3 {
-    margin-top: 30px; }
 
 /* $Basic */
 .site-main {
@@ -635,7 +639,7 @@ textarea {
     max-width: none; }
 
 .sidebar {
-  font-size: 15px; }
+  font-size: 17px; }
   .sidebar .widget {
     margin-bottom: 40px; }
   .sidebar li {
@@ -646,6 +650,7 @@ textarea {
     padding: 0; }
 
 .widget-title {
+  font-size: 20px;
   margin-bottom: 30px; }
 
 .widget-featured-portfolio .entry-title {
@@ -668,8 +673,7 @@ textarea {
   font-size: 14px; }
 
 .widget_categories, .widget_recent_entries {
-  font-weight: bold;
-  color: #d7d7d7; }
+  color: #555; }
   .sidebar .widget_categories a, .sidebar .widget_recent_entries a {
     color: #363f48; }
   .widget_categories a, .widget_recent_entries a {
@@ -693,8 +697,7 @@ textarea {
   padding: 70px 20px; }
 .widgetized-sections .section-title {
   color: #363f48;
-  font-size: 55px;
-  letter-spacing: -2.6px;
+  font-size: 30px;
   margin-bottom: 75px;
   line-height: 1; }
 
@@ -765,7 +768,7 @@ textarea {
     right: 0;
     padding-top: 25.5%;
     text-align: center;
-    background: rgba(45, 62, 80, 0.7);
+    background: rgba(65, 65, 94, 0.7);
     visibility: hidden;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
@@ -823,7 +826,7 @@ textarea {
     left: 0;
     width: auto;
     background: rgba(43, 55, 60, 0.5);
-    padding: 9px 20px; }
+    padding: 20px 20px 3px; }
     .portfolio-slider .flex-control-nav li {
       margin: 0 6px;
       display: inline-block;
@@ -847,7 +850,9 @@ textarea {
   #slider .flex-container {
     max-width: 1230px;
     margin: 0 auto;
-    padding: 0 20px; }
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000; }
   #slider .flex-control-nav {
     position: absolute;
     bottom: 0px;
@@ -879,7 +884,7 @@ textarea {
     margin: 0;
     letter-spacing: -2px;
     color: #fff;
-    max-width: 800px;
+    max-width: 80%;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
@@ -899,12 +904,12 @@ textarea {
     margin: 0 auto; }
   #slider .button-secondary {
     text-transform: uppercase;
-    font-size: 20px;
-    width: 300px;
+    font-size: 17px;
+    width: auto;
     font-weight: bold;
     max-width: 100%;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center; }
 
 @keyframes slideTransition {
@@ -992,14 +997,15 @@ textarea {
 .section-latest-posts a:not(.read-more) {
   color: #61666a; }
 .section-latest-posts .entry-title {
-  font-size: 28px !important;
+  font-size: 25px !important;
   margin-bottom: 5px; }
 .section-latest-posts .icon-article {
   color: #bebebe;
   font-size: 23px; }
 .section-latest-posts .entry-metadata {
   font-size: 11px;
-  font-weight: bold;
+  font-weight: normal !important;
+  color: #444 !important;
   margin-top: 10px; }
 .section-latest-posts .entry-image {
   margin-bottom: 30px; }
@@ -1007,7 +1013,7 @@ textarea {
     width: 100%; }
 .section-latest-posts .button {
   float: right;
-  margin-top: 9px;
+  margin-top: 0px;
   width: 178px;
   padding: 13px 15px;
   text-align: center;
@@ -1021,26 +1027,28 @@ textarea {
 #slider h2 {
   width: 100%; }
 
-.section-testimonials .testimonials-slideshow {
-  text-align: center; }
-.section-testimonials blockquote {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 0; }
-.section-testimonials i {
-  color: #363f48;
-  font-size: 40px;
-  display: inline-block; }
-.section-testimonials p {
-  color: #363f48;
-  font-weight: 300;
-  font-size: 30px;
-  margin: 40px auto;
-  max-width: 1050px; }
-.section-testimonials footer {
-  font-size: 15px;
-  color: #9b9b9b; }
+.section-testimonials {
+  background: #fbfbfb; }
+  .section-testimonials .testimonials-slideshow {
+    text-align: center; }
+  .section-testimonials blockquote {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0; }
+  .section-testimonials i {
+    color: #ccc;
+    font-size: 40px;
+    display: inline-block; }
+  .section-testimonials p {
+    color: #363f48;
+    font-weight: 300;
+    font-size: 25px;
+    margin: 40px auto;
+    max-width: 1050px; }
+  .section-testimonials footer {
+    font-size: 17px;
+    color: #444; }
 
 .cycle-pager {
   position: relative;
@@ -1127,7 +1135,7 @@ textarea {
 
 .portfolio-hero {
   padding: 50px 0;
-  background: #2d3e50;
+  background: #41415e;
   position: relative;
   z-index: 2;
   color: #fff; }
@@ -1142,8 +1150,8 @@ textarea {
 .call-to-action {
   padding: 75px 0;
   font-weight: bold;
-  color: #61666a;
-  font-size: 30px;
+  color: #444;
+  font-size: 25px;
   line-height: 1.2;
   letter-spacing: -1px; }
   .call-to-action p {
@@ -1152,7 +1160,7 @@ textarea {
   .call-to-action .button {
     font-size: 20px;
     text-align: center;
-    width: 178px;
+    width: auto;
     padding: 13px 15px;
     float: right;
     margin-top: -5px; }
@@ -1409,7 +1417,7 @@ textarea {
   .team-member .member-picture {
     position: relative; }
   .team-member .member-title {
-    font-size: 30px;
+    font-size: 22px;
     margin: 30px 0 20px;
     line-height: 1; }
   .team-member .member-info {
@@ -1420,7 +1428,7 @@ textarea {
 /* $Footer */
 .site-footer {
   font-size: 15px;
-  background: #2d3e50;
+  background: #41415e;
   padding: 50px 0;
   color: white; }
   .site-footer .widget-title {
@@ -1439,6 +1447,9 @@ textarea {
 
 .secondary-footer {
   font-size: 13px; }
+  .secondary-footer a {
+    color: inherit;
+    border-bottom: 1px solid currentColor; }
   .secondary-footer .grid-6 {
     margin-bottom: 0; }
   .secondary-footer .site-info {
@@ -1562,8 +1573,6 @@ textarea {
 
   .section-latest-posts .inner {
     padding: 0 35px 0 27px; }
-  .section-latest-posts .entry-title {
-    margin-left: -27px; }
 
   .comment-form-email {
     margin-left: 2%; }
@@ -1661,3 +1670,58 @@ textarea {
 
   .hentry .entry-title {
     font-size: 45px; } }
+/* Added in v2.0 */
+.section-portfolio,
+.portfolio-hero,
+.blog-cover-wrap {
+  background: #41415e; }
+
+.hentry .entry-title,
+.comments-title,
+.comment-reply-title {
+  font-size: 30px;
+  letter-spacing: 0; }
+
+.stag-intro-text {
+  margin-bottom: 0; }
+
+#respond,
+.blog .hentry,
+.search .hentry,
+.archive .hentry {
+  border-top: 1px solid #cccccc; }
+
+.stag-divider.plain {
+  height: 1px;
+  background: #cccccc; }
+
+.instagram-widget.thumbnail img {
+  max-width: 75px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
+.instagram-widget .stag-button {
+  display: block; }
+
+.site-footer,
+.site-footer a,
+.widget_categories a,
+.widget_recent_entries a {
+  font-size: 17px; }
+
+.sidebar a,
+.site-footer a,
+.entry-content a,
+.main-navigation a,
+.secondary-footer a {
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms; }
+  .sidebar a:hover,
+  .site-footer a:hover,
+  .entry-content a:hover,
+  .main-navigation a:hover,
+  .secondary-footer a:hover {
+    opacity: .8; }

@@ -50,7 +50,7 @@ class stag_widget_latest_posts extends WP_Widget{
 
                 <div class="inner">
                     <h3 class="entry-title">
-                        <i class="icon-article"></i> <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stag' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stag' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
                     </h3>
                     <?php
 

@@ -24,7 +24,7 @@ function stag_blog_settings(){
         'desc'  => __('Choose a default background color for the blog header section.', 'stag'),
         'type'  => 'color',
         'id'    => 'blog_background_color',
-        'val'   => '#363F48'
+        'val'   => '#41415e'
     );
 
     $blog_settings[] = array(
@@ -34,6 +34,6 @@ function stag_blog_settings(){
         'id'    => 'blog_background_opacity',
         'val'   => '70'
     );
-    
+
     stag_add_framework_page( 'Blog Settings', $blog_settings, 15 );
 }

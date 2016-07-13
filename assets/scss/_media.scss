@@ -18,7 +18,7 @@
 	body{
 		margin-top: 0;
 	}
-	
+
 	#primary-menu{
 		display: none;
 	}
@@ -27,17 +27,17 @@
 		display: block;
 		float: none;
 	}
-	
+
 	#mobile-nav{
 		font-size: 30px;
 		float: right;
 		position: absolute;
 		right: 0px;
-		top: -50px;		
+		top: -50px;
 		z-index: 10000;
 		outline: none;
 	}
-	
+
 	.main-navigation{
 		float: none;
 		position: relative;
@@ -116,11 +116,8 @@
 		.inner{
 			padding: 0 35px 0 27px;
 		}
-		.entry-title{
-			margin-left: -27px;
-		}
   }
-	
+
 	.comment-form-email{
 		margin-left: 2%;
 	}
@@ -145,13 +142,13 @@
 
 
 @media (max-width: 480px){
-	
+
 	.widgetized-sections{
 		.section-title{
 			font-size: 35px;
 		}
 	}
-	
+
 	.section-latest-posts .button,
 	.portfolio-button{
 		float: none !important;
@@ -172,7 +169,7 @@
 
 	.section-portfolio{
 		.entry-title{
-			
+
 		}
 	}
 
@@ -239,7 +236,7 @@
 		max-width: 100%;
 		width: 370px;
 	}
-	
+
 }
 
 @media (min-width: 700px){
@@ -263,7 +260,7 @@
 	.site-content{
 		max-width: 100%;
 	}
-	
+
 	.hentry{
 		.entry-title{
 			font-size: 45px;

@@ -70,7 +70,7 @@ function stag_general_settings(){
         'desc'  => __('Enable/Disable WordPress Admin Bar for all users.', 'stag'),
         'type'  => 'checkbox',
         'id'    => 'general_disable_admin_bar',
-        'val'   => 'on'
+        'val'   => 'off'
     );
 
     $general_settings[] = array(
@@ -78,7 +78,7 @@ function stag_general_settings(){
         'desc'  => __('Enable/Disable SEO Settings on single posts and pages.', 'stag'),
         'type'  => 'checkbox',
         'id'    => 'general_disable_seo_settings',
-        'val'   => 'off'
+        'val'   => 'on'
     );
 
     stag_add_framework_page( 'General Settings', $general_settings, 5 );

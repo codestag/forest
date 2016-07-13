@@ -1,5 +1,14 @@
 == Forest Changelog ==
 
+= 2.0: July 13, 2016 =
+* Added new default fonts
+* Added new Portfolio Section Background Color option
+* Added new Footer Text Color option
+* Several sitewide style tweaks
+* Removed default icon fields in Service widget in favor of custom icon fields
+* Updated Flexslider library
+* Updated Flexslider library
+
 = 1.3: May 03, 2016 =
 * Compatible with WordPress 4.5+
 

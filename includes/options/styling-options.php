@@ -21,6 +21,22 @@ function stag_styling_options(){
 	);
 
 	$styling_options[] = array(
+		'title' => __('Portfolio Section Background Color', 'stag'),
+		'desc'  => null,
+		'type'  => 'color',
+		'id'    => 'style_portfolio_background',
+		'val'   => '#41415e'
+	);
+
+	$styling_options[] = array(
+		'title' => __('Footer Text Color', 'stag'),
+		'desc'  => null,
+		'type'  => 'color',
+		'id'    => 'style_footer_color',
+		'val'   => '#444444'
+	);
+
+	$styling_options[] = array(
 		'title' => __('Body Font', 'stag'),
 		'desc'  => __('Quickly add a custom Google Font for body from <a href="//www.google.com/webfonts/" target="_blank">Google Font Directory.</a><br>
 				   <code>Example font name: "Source Sans Pro"</code>, for including font weights type <code>Source Sans Pro:400,700,400italic</code>.', 'stag'),
@@ -137,6 +153,8 @@ function stag_user_styles_push($content){
 	$background_color = stag_get_option('style_background_color');
 
 	$accent = stag_get_option('style_accent_color');
+	$portfolio_background = stag_get_option('style_portfolio_background');
+	$footer_color = stag_get_option('style_footer_color');
 
 	$output = "/* Custom Styles Output */\n";
 
@@ -167,13 +185,21 @@ function stag_user_styles_push($content){
 		$output .= ".cycle-pager-active{ background: $accent !important; }\n\n";
 	}
 
+	if ( '#41415e' != $portfolio_background ) {
+		$output .= ".portfolio-hero, .section-portfolio { background-color: $portfolio_background; }\n";
+	}
+
+	if ( '#444444' != $footer_color ) {
+		$output .= ".secondary-footer { color: $footer_color; }\n";
+	}
+
 	$bg = stag_get_option('blog_background');
 	$color = stag_get_option('blog_background_color');
 	$opacity = stag_get_option('blog_background_opacity');
 	$opacityVal = intval($opacity)/100;
 
-	if($bg != '') $output .= ".the-hero { background-color: {$color}; }\n";
-	if($color != '') $output .= ".the-blog-cover { background-image: url({$bg}); }\n";
+	if($bg != '') $output .= ".the-hero { background-image: url({$bg}); }\n";
+	if($color != '') $output .= ".the-cover { background-color: {$color}; }\n";
 	if($opacity != '' && $bg != '') $output .= ".the-cover { opacity: {$opacityVal}; -ms-filter: 'alpha(opacity=".$opacity.")'; }\n";
 
 	$content .= $output;

@@ -31,10 +31,11 @@ Text Domain: stag
 }
 
 body{
-  font: 400 18px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 17px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: #929292;
+  color: #444;
+  line-height: 1.5;
   margin-top: 110px;
 }
 
@@ -70,13 +71,13 @@ h6{
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing:-2.6px;
   line-height: 1.1667em;
 }
 
 h2 {
-  font-size: 33px;
+  font-size: 25px;
   line-height: 1.4em;
   margin: 0 0 1em 0;
 }
@@ -100,6 +101,10 @@ h5 {
 h6 {
   font-size: 15px;
   line-height: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6, .heading, .intro-text {
+  font-weight: bold;
 }
 
 /* $Repeatables */
@@ -180,7 +185,7 @@ textarea{
   padding: 25px 0;
   background: #fff;
   .home-link{
-    color: #c0c0c0;
+    color: inherit;
     position: relative;
   }
   .inside{
@@ -220,6 +225,7 @@ textarea{
 .site-description{
   font-size: 14px;
   margin: 5px 0 0 0;
+  color: #555;
 }
 
 .navigation a{
@@ -244,9 +250,10 @@ textarea{
 
   font-size: 15px;
   a{
-    color: #c0c0c0;
+    font-weight: bold;
+    color: #444;
     &:hover{
-      color: #363f48;
+      color: #555;
     }
   }
 }
@@ -357,9 +364,6 @@ main .inside{
   .grid-3, .grid-9{
     margin-bottom: 0;
   }
-  .grid-3{
-    margin-top: 30px;
-  }
 }
 
 /* $Basic */
@@ -379,7 +383,7 @@ main .inside{
 }
 
 .sidebar{
-  font-size: 15px;
+  font-size: 17px;
 	.widget{
     margin-bottom: 40px;
   }
@@ -394,6 +398,7 @@ main .inside{
 }
 
 .widget-title{
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -427,8 +432,7 @@ main .inside{
 }
 
 .widget_categories, .widget_recent_entries{
-  font-weight: bold;
-  color: #d7d7d7;
+  color: #555;
   .sidebar & a{
     color: #363f48;
   }
@@ -468,8 +472,7 @@ main .inside{
 
   .section-title{
     color: $sectionTitle;
-    font-size: 55px;
-    letter-spacing: -2.6px;
+    font-size: 30px;
     margin-bottom: 75px;
     line-height: 1;
   }
@@ -560,7 +563,7 @@ main .inside{
     right: 0;
     padding-top: 25.5%;
     text-align: center;
-    background: rgba(#2d3e50, .7);
+    background: rgba(#41415e, .7);
     visibility: hidden;
     @include opacity(0);
     @include transition(all .25s);
@@ -614,7 +617,8 @@ main .inside{
     left: 0;
     width: auto;
     background: rgba(43, 55, 60, 0.5);
-    padding: 9px 20px;
+    padding: 20px 20px 3px;
+
     li{
       margin: 0 6px;
       display: inline-block;
@@ -639,6 +643,8 @@ main .inside{
     max-width: 1230px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 1000;
   }
   .flex-control-nav{
     position: absolute;
@@ -685,7 +691,7 @@ main .inside{
     margin: 0;
     letter-spacing: -2px;
     color: #fff;
-    max-width: 800px;
+    max-width: 80%;
     @include transition(all .2s ease-in);
   }
 
@@ -705,12 +711,12 @@ main .inside{
 
   .button-secondary{
     text-transform: uppercase;
-    font-size: 20px;
-    width: 300px;
+    font-size: 17px;
+    width: auto;
     font-weight: bold;
     max-width: 100%;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
   }
 }
@@ -801,7 +807,7 @@ main .inside{
     color: #61666a;
   }
   .entry-title{
-    font-size: 28px !important;
+    font-size: 25px !important;
     margin-bottom: 5px;
   }
   .icon-article{
@@ -810,7 +816,8 @@ main .inside{
   }
   .entry-metadata{
     font-size: 11px;
-    font-weight: bold;
+    font-weight: normal !important;
+    color: #444 !important;
     margin-top: 10px;
   }
   .entry-image{
@@ -821,7 +828,7 @@ main .inside{
   }
   .button{
     float: right;
-    margin-top: 9px;
+    margin-top: 0px;
     width: 178px;
     padding: 13px 15px;
     text-align: center;
@@ -842,6 +849,7 @@ main .inside{
 
 
 .section-testimonials{
+  background: #fbfbfb;
   .testimonials-slideshow{
     text-align: center;
   }
@@ -852,20 +860,20 @@ main .inside{
     margin: 0;
   }
   i{
-    color: #363f48;
+    color: #ccc;
     font-size: 40px;
     display: inline-block;
   }
   p{
     color: #363f48;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     margin: 40px auto;
     max-width: 1050px;
   }
   footer{
-    font-size: 15px;
-    color: #9b9b9b;
+    font-size: 17px;
+    color: #444;
   }
 }
 
@@ -973,7 +981,7 @@ main .inside{
 
 .portfolio-hero{
   padding: 50px 0;
-  background: #2d3e50;
+  background: #41415e;
   position: relative;
   z-index: 2;
   color: #fff;
@@ -996,8 +1004,8 @@ main .inside{
 .call-to-action{
   padding: 75px 0;
   font-weight: bold;
-  color: #61666a;
-  font-size: 30px;
+  color: #444;
+  font-size: 25px;
   line-height: 1.2;
   letter-spacing: -1px;
   p{
@@ -1007,7 +1015,7 @@ main .inside{
   .button{
     font-size: 20px;
     text-align: center;
-    width: 178px;
+    width: auto;
     padding: 13px 15px;
     float: right;
     // vertical-align: middle;
@@ -1346,7 +1354,7 @@ main .inside{
     position: relative;
   }
   .member-title{
-    font-size: 30px;
+    font-size: 22px;
     margin: 30px 0 20px;
     line-height: 1;
   }
@@ -1362,7 +1370,7 @@ main .inside{
 /* $Footer */
 .site-footer{
   font-size: 15px;
-  background: #2d3e50;
+  background: #41415e;
   padding: 50px 0;
   color: white;
   .widget-title{
@@ -1387,6 +1395,11 @@ main .inside{
 
 .secondary-footer{
   font-size: 13px;
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+  }
 
   .grid-6{
     margin-bottom: 0;
@@ -1432,3 +1445,64 @@ main .inside{
 }
 
 @import "_media";
+
+/* Added in v2.0 */
+.section-portfolio,
+.portfolio-hero,
+.blog-cover-wrap {
+  background: #41415e;
+}
+
+.hentry .entry-title,
+.comments-title,
+.comment-reply-title {
+  font-size: 30px;
+  letter-spacing: 0;
+}
+
+.stag-intro-text {
+  margin-bottom: 0;
+}
+
+#respond,
+.blog .hentry,
+.search .hentry,
+.archive .hentry {
+  border-top: 1px solid #cccccc;
+}
+
+.stag-divider.plain {
+  height: 1px;
+  background: #cccccc;
+}
+
+.instagram-widget.thumbnail img {
+  max-width: 75px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.instagram-widget .stag-button {
+  display: block;
+}
+
+.site-footer,
+.site-footer a,
+.widget_categories a,
+.widget_recent_entries a {
+  font-size: 17px;
+}
+
+.sidebar,
+.site-footer,
+.entry-content,
+.main-navigation,
+.secondary-footer {
+  a {
+    @include transition(all 200ms);
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
