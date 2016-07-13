@@ -26,7 +26,7 @@ function stag_styling_options(){
 				   <code>Example font name: "Source Sans Pro"</code>, for including font weights type <code>Source Sans Pro:400,700,400italic</code>.', 'stag'),
 		'type'  => 'text',
 		'id'    => 'style_body_font',
-		'val'   => ''
+		'val'   => 'Roboto:400,700,400italic,700italic'
 	);
 
 	$styling_options[] = array(
@@ -35,7 +35,7 @@ function stag_styling_options(){
 				   For font type: <code>"Source Sans Pro"</code>, for including specific font weights <code>Source Sans Pro:400,700,400italic</code>.', 'stag'),
 		'type'  => 'text',
 		'id'    => 'style_heading_font',
-		'val'   => ''
+		'val'   => 'Roboto:400,700,400italic,700italic'
 	);
 
 	$styling_options[] = array(
