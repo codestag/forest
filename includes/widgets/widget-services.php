@@ -14,7 +14,6 @@ class stag_widget_services extends WP_Widget{
         // VARS FROM WIDGET SETTINGS
         $title = apply_filters('widget_title', $instance['title'] );
         $description = $instance['description'];
-        $icon = $instance['icon'];
         $custom_icon = $instance['customicon'];
 
         echo $before_widget;
@@ -24,9 +23,7 @@ class stag_widget_services extends WP_Widget{
 
         <?php if(!empty($custom_icon)){
             echo '<div class="custom-icon"><img src="'.$custom_icon.'" alt=""></div>';
-        }else{ ?>
-            <i class="icon icon-service-<?php echo $icon; ?>"></i>
-        <?php } ?>
+        } ?>
 
         <div class="service-content">
             <?php
@@ -47,7 +44,6 @@ class stag_widget_services extends WP_Widget{
         // STRIP TAGS TO REMOVE HTML
         $instance['title'] = $new_instance['title'];
         $instance['description'] = $new_instance['description'];
-        $instance['icon'] = strip_tags($new_instance['icon']);
         $instance['customicon'] = strip_tags($new_instance['customicon']);
 
         return $instance;
@@ -59,7 +55,6 @@ class stag_widget_services extends WP_Widget{
             'title' => '',
             'customicon' => '',
             'description' => '',
-            'icon' => 'settings'
         );
 
         $instance = wp_parse_args((array) $instance, $defaults);
@@ -81,17 +76,7 @@ class stag_widget_services extends WP_Widget{
     <p>
       <label for="<?php echo $this->get_field_id('customicon'); ?>"><?php _e('Custom Icon URL:', 'stag'); ?></label>
       <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'customicon' ); ?>" name="<?php echo $this->get_field_name( 'customicon' ); ?>" value="<?php echo @$instance['customicon']; ?>" />
-      <span class="description"><?php _e('Enter the custom icon URL if you want to use your own icon or choose one below.', 'stag'); ?></span>
-    </p>
-
-    <p>
-        <label for="<?php echo $this->get_field_id('icon'); ?>"><?php _e('Icon:', 'stag'); ?></label>
-        <select name="<?php echo $this->get_field_name( 'icon' ); ?>" id="<?php echo $this->get_field_name( 'icon' ); ?>" class="widefat">
-            <option value="rocket" <?php if ( 'rocket' == $instance['icon'] ) echo 'selected="selected"'; ?>><?php _e('Rocket', 'stag'); ?></option>
-            <option value="pixel" <?php if ( 'pixel' == $instance['icon'] ) echo 'selected="selected"'; ?>><?php _e('Pixel', 'stag'); ?></option>
-            <option value="glass" <?php if ( 'glass' == $instance['icon'] ) echo 'selected="selected"'; ?>><?php _e('Glass', 'stag'); ?></option>
-            <option value="cog" <?php if ( 'cog' == $instance['icon'] ) echo 'selected="selected"'; ?>><?php _e('Cog', 'stag'); ?></option>
-        </select>
+      <span class="description"><?php _e('Enter the custom icon URL if you want to use your own icon or choose one below. Recommended size 100x100px.', 'stag'); ?></span>
     </p>
 
     <?php
