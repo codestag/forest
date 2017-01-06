@@ -62,10 +62,10 @@ class stag_widget_portfolio extends WP_Widget{
       if(!has_post_thumbnail()) continue;
 
       $skills = get_the_terms(get_the_ID(), 'skill');
-      $skill = '';
+      $skill = array();
       if($skills){
         foreach($skills as $ski){
-          $skill[] .= $ski->slug;
+          $skill[] = $ski->slug;
           $unique_skills[] = $ski->slug;
         }
         $skill = implode($skill, ' ');
