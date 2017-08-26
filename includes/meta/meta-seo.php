@@ -57,7 +57,13 @@ function stag_metabox_seo(){
   }
 }
 
-
+/**
+ * Alter WordPress title.
+ *
+ * @deprecated 2.1.0
+ * @param string $title Default WordPress title.
+ * @return void
+ */
 function stag_metabox_seo_title($title){
   global $post;
 
@@ -74,7 +80,7 @@ function stag_metabox_seo_title($title){
   }
   return $title;
 }
-add_filter('wp_title', 'stag_metabox_seo_title', 15);
+// add_filter('wp_title', 'stag_metabox_seo_title', 15);
 
 
 function stag_metabox_seo_description(){

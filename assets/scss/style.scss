@@ -4,7 +4,7 @@ Theme URI: https://codestag.com/themes/forest/
 Description: A portfolio WordPress theme with bold, flat design style and solid code framework.
 Author: Codestag
 Author URI: https://codestag.com
-Version: 2.0
+Version: 2.1.0
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two columns, flexible-width, custom-background, custom-menu, editor-style, featured-images, theme-options, translation ready, threaded-comments
@@ -235,13 +235,24 @@ textarea{
 .home-link{
   display: block;
   float: left;
-  max-width: 300px;
+  max-width: 400px;
   img{
     position: relative;
     width: auto;
     height: auto;
     max-height: 100%;
 
+  }
+}
+
+.site-title {
+  margin: 0;
+  line-height: 1;
+  @include transition(all 200ms ease-in);
+
+  .header-shrink & {
+    font-size: 30px;
+    margin-top: 7px;
   }
 }
 

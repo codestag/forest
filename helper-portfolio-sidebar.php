@@ -15,7 +15,7 @@
 		<h4><?php _e('Project Details', 'stag'); ?></h4>
 		<?php
 
-		$skill = '';
+		$skill = array();
 
 		if ( $skills ) {
 			foreach( $skills as $ski ) {

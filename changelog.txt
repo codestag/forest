@@ -1,5 +1,13 @@
 == Forest Changelog ==
 
+= 2.1.0: Aug 26, 2016 =
+* Compatible with WordPress 4.8+
+* Updated theme scripts to latest versions
+* Added support for `title-tag`
+* Fixed an issue with portfolio meta throwing an error
+* Fixed an issue with site title not resizing properly
+* Remove `wp_title` tag and `dns-prefetch` rules
+
 = 2.0: July 13, 2016 =
 * Added new default fonts
 * Added new Portfolio Section Background Color option

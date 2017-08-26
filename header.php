@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php wp_title('|', true, 'right'); ?></title>
-
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width" />
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <?php stag_meta_head(); ?>
-
-    <!-- Prefetch DNS for external resources to speed up loading time -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
@@ -67,7 +61,7 @@
 
             <?php stag_header_end(); ?>
         </div>
-        
+
     </header><!-- #masthead -->
 
     <?php stag_header_after(); ?>
