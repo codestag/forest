@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Forest\n"
-"POT-Creation-Date: 2016-07-13 13:55+0530\n"
-"PO-Revision-Date: 2016-07-13 13:55+0530\n"
+"POT-Creation-Date: 2017-08-26 13:21+0530\n"
+"PO-Revision-Date: 2017-08-26 13:22+0530\n"
 "Last-Translator: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language-Team: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -739,66 +739,66 @@ msgstr ""
 msgid "Edit Gallery"
 msgstr ""
 
-#: functions.php:31
+#: functions.php:32
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:78
 msgid "Global Sidebar"
 msgstr ""
 
-#: functions.php:75
+#: functions.php:84
 msgid "Blog Widgets Area."
 msgstr ""
 
-#: functions.php:79
+#: functions.php:88
 msgid "Homepage Sections"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:94
 msgid "Here you can configure the layout of the Homepage."
 msgstr ""
 
-#: functions.php:89
+#: functions.php:98
 msgid "About Sections"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:104
 msgid "About template sections."
 msgstr ""
 
-#: functions.php:99
+#: functions.php:108
 msgid "Service Boxes Section"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:114
 msgid ""
 "Use only \"Service Box\" widgets here and they will populate the \"Services"
 "\" widget."
 msgstr ""
 
-#: functions.php:109
+#: functions.php:118
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:124
 msgid "Widget area for footer"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:241
 #, php-format
 msgid "%s ago"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:245
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:354
+#: functions.php:368
 msgid "<i class=\"icon icon-previous\"></i>"
 msgstr ""
 
-#: functions.php:358
+#: functions.php:372
 msgid "<i class=\"icon icon-next\"></i>"
 msgstr ""
 
