@@ -9,7 +9,7 @@
 	<div id="primary" class="portfolio-content section-portfolio">
 		<div class="portfolio-hero">
 			<div class="inside">
-				
+
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
 				<ul class="portfolio-filter">
@@ -47,7 +47,7 @@
 				  if(!has_post_thumbnail()) continue;
 
 				  $skills = get_the_terms(get_the_ID(), 'skill');
-				  $skill = '';
+				  $skill = array();
 				  if($skills){
 				  	foreach($skills as $ski){
 				  		$skill[] .= $ski->slug;
@@ -56,13 +56,13 @@
 				  }
 
 				  $class = "grid-4 mix ".$skill;
-				  
+
 				  ?>
 
 				    <li id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
-				        
+
 				        <figure class="portfolio-thumb">
-				            
+
 				            <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'stag'), get_the_title()); ?>">
 				                <div class="portfolio-preview">
 				                    <button class="button-secondary"><i class="icon-eye"></i> Details</button>
@@ -93,11 +93,11 @@
 				    </li>
 
 				  <?php
-				  
+
 				  endwhile;
-				  
+
 				  endif;
-				  
+
 				  wp_reset_postdata();
 				  ?>
 
@@ -116,7 +116,7 @@
 
 	if( $text != '' ):
 		?>
-		
+
 		<div class="call-to-action <?php if($button_text != '') echo "with-button"; ?>">
 			<div class="inside">
 				<p><?php echo $text; ?></p>
