@@ -25,7 +25,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 	);
 
 	$definitions = array(
-		'colors'           => array(
+		'colors'             => array(
 			'title'       => esc_html__( 'Styling Options', 'stag' ),
 			'description' => 'Configure your theme style & accents',
 			'priority'    => '',
@@ -79,7 +79,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 			),
 		),
 
-		'forest_fonts'     => array(
+		'forest_fonts'       => array(
 			'title'       => esc_html__( 'Fonts', 'stag' ),
 			'panel'       => 'forest_options_panel',
 			'description' => sprintf(
@@ -92,21 +92,21 @@ function forest_customize_get_definitions( $wp_customize ) {
 				)
 			),
 			'options'     => array(
-				'font-body'                      => array(
+				'font-body'          => array(
 					'setting' => array(),
 					'control' => array(
 						'type'  => 'text',
 						'label' => esc_html__( 'Body', 'stag' ),
 					),
 				),
-				'font-headers'                   => array(
+				'font-headers'       => array(
 					'setting' => array(),
 					'control' => array(
 						'type'  => 'text',
 						'label' => esc_html__( 'Headers', 'stag' ),
 					),
 				),
-				'google-font-subset'             => array(
+				'google-font-subset' => array(
 					'setting' => array(),
 					'control' => array(
 						'type'        => 'select',
@@ -148,11 +148,11 @@ function forest_customize_get_definitions( $wp_customize ) {
 				),
 			),
 		),
-		'blog_settings'    => array(
+		'blog_settings'      => array(
 			'title'   => esc_html__( 'Blog Settings', 'stag' ),
 			'panel'   => 'forest_options_panel',
 			'options' => array(
-				'forest_blog_cover_image'     => array(
+				'forest_blog_cover_image'        => array(
 					'setting' => array(
 						'transport' => 'refresh',
 					),
@@ -172,7 +172,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'type'        => 'number',
 					),
 				),
-				'forest_post_excerpt_length'  => array(
+				'forest_post_excerpt_length'     => array(
 					'setting' => array(
 						'transport' => 'refresh',
 					),
@@ -182,7 +182,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'type'        => 'number',
 					),
 				),
-				'forest_post_excerpt_text'    => array(
+				'forest_post_excerpt_text'       => array(
 					'setting' => array(
 						'transport' => 'refresh',
 					),
@@ -192,7 +192,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'type'        => 'text',
 					),
 				),
-				'forest_disable_seo_settings' => array(
+				'forest_disable_seo_settings'    => array(
 					'setting' => array(
 						'transport' => 'refresh',
 					),
@@ -204,7 +204,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 				),
 			),
 		),
-		'general_settings' => array(
+		'general_settings'   => array(
 			'title'   => esc_html__( 'General Settings', 'stag' ),
 			'panel'   => 'forest_options_panel',
 			'options' => array(
@@ -260,146 +260,221 @@ function forest_customize_get_definitions( $wp_customize ) {
 				),
 			),
 		),
+		'portfolio_settings' => array(
+			'title'       => esc_html__( 'Portfolio Settings', 'stag' ),
+			'panel'       => 'forest_options_panel',
+			'description' => esc_html__( 'Customize your portfolio settings.', 'stag' ),
+			'options'     => array(
+				'forest_portfolio_cta_text'          => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => esc_html__( 'Portfolio CTA text', 'stag' ),
+						'description' => esc_html__( 'Enter the call to action text for portfolio page.', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_portfolio_cta_button_text'   => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => esc_html__( 'Portfolio CTA Button text', 'stag' ),
+						'description' => esc_html__( 'Enter the call to action button text for portfolio page.', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_portfolio_cta_button_link'   => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Portfolio CTA Button Link', 'stag' ),
+						'description' => __( 'Enter the call to action button link for portfolio page.', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_portfolio_cta_button_window' => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Open link in new window?', 'stag' ),
+						'description' => __( 'Check to open the call to action button link in new window.', 'stag' ),
+						'type'        => 'checkbox',
+					),
+				),
+				'forest_portfolio_page'              => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Portfolio Page', 'stag' ),
+						'description' => __( 'Select portfolio page, used for link to portfolio page.', 'stag' ),
+						'type'        => 'dropdown-pages',
+					),
+				),
+			),
+		),
 
-		/*
-		 TODO: REUSABLE TEMPLATES */
-		// 'wedding_settings' => array(
-		// 'title'       => esc_html__( 'Wedding Settings', 'stag' ),
-		// 'panel'       => 'forest_options_panel',
-		// 'description' => esc_html__( 'Customize your homepage preferences.', 'stag' ),
-		// 'options'     => array(
-		// 'forest_wedding_date'                  => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => esc_html__( 'Wedding Date', 'stag' ),
-		// 'description' => esc_html__( 'Select the wedding date in dd-mm-yyyy format.', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_time'                  => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => esc_html__( 'Wedding Time', 'stag' ),
-		// 'description' => esc_html__( 'Select the wedding time in H:i:s format. For example: 20:12:55; hours, minutes, and seconds respectively.', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_bridegroom_first_name' => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bridegroom First Name', 'stag' ),
-		// 'description' => __( 'Enter the first name of the Bridegroom', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_bridegroom_last_name'  => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bridegroom Last Name', 'stag' ),
-		// 'description' => __( 'Enter the last name of the Bridegroom', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_bridegroom_avatar'     => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'control_class' => 'WP_CUSTOMIZE_IMAGE_CONTROL',
-		// 'label'         => __( 'Bridegroom Avatar', 'stag' ),
-		// 'description'   => __( 'Upload the avatar of Bridegroom. Ideal size 115px x 115px or 230px x 230px for retina displays', 'stag' ),
-		// ),
-		// ),
-		// 'forest_wedding_bridegroom_bio'        => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bridegroom Short Bio', 'stag' ),
-		// 'description' => __( 'Bio text for bridegroom', 'stag' ),
-		// 'type'        => 'textarea',
-		// ),
-		// ),
-		// 'forest_wedding_bride_first_name'      => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bride First Name', 'stag' ),
-		// 'description' => __( 'Enter the first name of the Bride', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_bride_last_name'       => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bride Last Name', 'stag' ),
-		// 'description' => __( 'Enter the last name of the Bride', 'stag' ),
-		// 'type'        => 'text',
-		// ),
-		// ),
-		// 'forest_wedding_bride_avatar'          => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'control_class' => 'WP_CUSTOMIZE_IMAGE_CONTROL',
-		// 'label'         => __( 'Bride Avatar', 'stag' ),
-		// 'description'   => __( 'Upload the avatar of Bride. Ideal size 115px x 115px or 230px x 230px for retina displays', 'stag' ),
-		// ),
-		// 'forest_wedding_bride_bio'             => array(
-		// ),
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Bride Short Bio', 'stag' ),
-		// 'description' => __( 'Bio text for Bride', 'stag' ),
-		// 'type'        => 'textarea',
-		// ),
-		// ),
-		// 'forest_wedding_slideshow'             => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'control_class' => 'WP_CUSTOMIZE_IMAGE_CONTROL',
-		// 'label'         => __( 'Slideshow Images', 'stag' ),
-		// 'description'   => __( 'Upload slideshow images for the Intro Section slideshow', 'stag' ),
-		// ),
-		// ),
-		// 'forest_wedding_slideshow_duration'    => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Slideshow Duration', 'stag' ),
-		// 'description' => __( 'Enter the duration between slideshows. 1000 is equal to 1 second.', 'stag' ),
-		// 'type'        => 'number',
-		// ),
-		// ),
-		// 'forest_wedding_fade_duration'         => array(
-		// 'setting' => array(
-		// 'transport' => 'refresh',
-		// ),
-		// 'control' => array(
-		// 'label'       => __( 'Fade Duration', 'stag' ),
-		// 'description' => __( 'Enter the duration between slideshows fade animation. 1000 is equal to 1 second.', 'stag' ),
-		// 'type'        => 'number',
-		// ),
-		// ),
-		// ),
-		// ),
+		'social_settings'    => array(
+			'title'       => esc_html__( 'Social Settings', 'stag' ),
+			'panel'       => 'forest_options_panel',
+			'description' => __( 'Customize your social profile URLs.<br/><br/><strong>Quick tip:</strong> you can use shortcode <code>[social url="facebook,twitter,dribbble"]</code> to display social links anywhere between posts.', 'stag' ),
+			'options'     => array(
+				'forest_footer_social_links' => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Footer Social Links', 'stag' ),
+						'description' => __( 'Display social link in footer with the <code>[social url=""]</code> shortcode.', 'stag' ),
+						'type'        => 'textarea',
+					),
+				),
+				'forest_social_facebook'     => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Facebook', 'stag' ),
+						'description' => __( 'Enter your facebook profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_twitter'      => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Twitter', 'stag' ),
+						'description' => __( 'Enter your twitter profile URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_dribbble'     => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Dribbble', 'stag' ),
+						'description' => __( 'Enter your dribbble URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_google_plus'  => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Google+', 'stag' ),
+						'description' => __( 'Enter your Google+ profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_pinterest'    => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Pinterest', 'stag' ),
+						'description' => __( 'Enter your Pinterest profile URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_vimeo'        => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Vimeo', 'stag' ),
+						'description' => __( 'Enter your Vimeo profile URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_linkedin'     => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'LinkedIn', 'stag' ),
+						'description' => __( 'Enter your LinkedIn profile URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_behance'      => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Behance', 'stag' ),
+						'description' => __( 'Enter your Behance profile URL', 'stag' ),
+					),
+					'type'    => 'text',
+				),
+				'forest_social_devianart'    => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'DeviantArt', 'stag' ),
+						'description' => __( 'Enter your DevianArt profile URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_flickr'       => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Flickr', 'stag' ),
+						'description' => __( 'Enter your Flickr profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_instagram'    => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Instagram', 'stag' ),
+						'description' => __( 'Enter your Instagram profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_myspace'      => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Myspace', 'stag' ),
+						'description' => __( 'Enter your Myspace profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_soundcloud'   => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'SoundCloud', 'stag' ),
+						'description' => __( 'Enter your SoundCloud profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+				'forest_social_youtube'      => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => __( 'Youtube', 'stag' ),
+						'description' => __( 'Enter your Youtube profile/page URL', 'stag' ),
+						'type'        => 'text',
+					),
+				),
+			),
+		),
 	);
 
 	/**
