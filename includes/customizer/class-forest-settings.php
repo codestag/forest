@@ -63,41 +63,45 @@ class FOREST_Settings {
 		$settings = apply_filters(
 			'forest_settings_definitions', array(
 				// General Settings.
-				'forest_text_logo'            => array(
+				'forest_text_logo'               => array(
 					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_custom_logo'          => array(
+				'forest_custom_logo'             => array(
 					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_contact_email'        => array(
+				'forest_contact_email'           => array(
 					'default'  => '',
 					'sanitize' => 'sanitize_email',
 				),
-				'forest_tracking_code'        => array(
+				'forest_tracking_code'           => array(
 					'default'  => '',
 					'sanitize' => 'forest_sanitize_text',
 				),
-				'forest_blog_cover_image'     => array(
+				'forest_blog_cover_image'        => array(
 					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_post_excerpt_length'  => array(
+				'forest_post_excerpt_length'     => array(
 					'default'  => '55',
 					'sanitize' => 'absint',
 				),
-				'forest_post_excerpt_text'    => array(
+				'forest_post_excerpt_text'       => array(
 					'default'  => 'Read More..',
 					'sanitize' => 'esc_html',
 				),
-				'forest_disable_seo_settings' => array(
+				'forest_disable_seo_settings'    => array(
 					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_site_footer'          => array(
+				'forest_site_footer'             => array(
 					'default'  => 'Copyright &copy; 2018 Forest ',
 					'sanitize' => 'forest_sanitize_text',
+				),
+				'forest_blog_background_opacity' => array(
+					'default'  => '70',
+					'sanitize' => 'absint',
 				),
 
 				// Styling Settings.
@@ -105,29 +109,39 @@ class FOREST_Settings {
 					'default'  => '#ffffff',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'accent-color'                => array(
-					'default'  => '#d44646',
+				'style_accent_color'             => array(
+					'default'  => '#1bbc9b',
+					'sanitize' => 'maybe_hash_hex_color',
+				),
+				'style_portfolio_background'     => array(
+					'default'  => '#41415e',
+					'sanitize' => 'maybe_hash_hex_color',
+				),
+				'style_footer_color'             => array(
+					'default'  => '#444444',
+					'sanitize' => 'maybe_hash_hex_color',
+				),
+				'style_blog_background_color'    => array(
+					'default'  => '#41415e',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
 
 				// Font Settings.
-				'font-body'                   => array(
+				'font-body'                      => array(
 					'default'  => 'Open Sans: 300, 700',
 					'sanitize' => 'esc_html',
 				),
-				'font-headers'                => array(
+				'font-headers'                   => array(
 					'default'  => 'Nixie One',
 					'sanitize' => 'esc_html',
 				),
-				'google-font-subset'          => array(
+				'google-font-subset'             => array(
 					'default'  => 'latin',
 					'sanitize' => 'esc_html',
 				),
 
 				// TODO: Portfolio Settings
-
 				// TODO: Social Settings
-				
 			)
 		);
 

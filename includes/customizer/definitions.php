@@ -30,7 +30,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 			'description' => 'Configure your theme style & accents',
 			'priority'    => '',
 			'options'     => array(
-				'style_background_color' => array(
+				'style_background_color'      => array(
 					'setting' => array(
 						'transport' => 'postMessage',
 					),
@@ -39,7 +39,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'label'         => esc_html__( 'Background Color', 'stag' ),
 					),
 				),
-				'accent-color'           => array(
+				'style_accent_color'          => array(
 					'setting' => array(
 						'transport' => 'postMessage',
 					),
@@ -48,6 +48,34 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'label'         => esc_html__( 'Accent Color', 'stag' ),
 					),
 				),
+				'style_portfolio_background'  => array(
+					'setting' => array(
+						'transport' => 'postMessage',
+					),
+					'control' => array(
+						'control_class' => 'WP_Customize_Color_Control',
+						'label'         => esc_html__( 'Portfolio Section Background Color', 'stag' ),
+					),
+				),
+				'style_footer_color'          => array(
+					'setting' => array(
+						'transport' => 'postMessage',
+					),
+					'control' => array(
+						'control_class' => 'WP_Customize_Color_Control',
+						'label'         => esc_html__( 'Footer Text Color', 'stag' ),
+					),
+				),
+				'style_blog_background_color' => array(
+					'setting' => array(
+						'transport' => 'postMessage',
+					),
+					'control' => array(
+						'control_class' => 'WP_Customize_Color_Control',
+						'label'         => esc_html__( 'Blog Header Background Color', 'stag' ),
+					),
+				),
+
 			),
 		),
 
@@ -64,21 +92,21 @@ function forest_customize_get_definitions( $wp_customize ) {
 				)
 			),
 			'options'     => array(
-				'font-body'          => array(
+				'font-body'                      => array(
 					'setting' => array(),
 					'control' => array(
 						'type'  => 'text',
 						'label' => esc_html__( 'Body', 'stag' ),
 					),
 				),
-				'font-headers'       => array(
+				'font-headers'                   => array(
 					'setting' => array(),
 					'control' => array(
 						'type'  => 'text',
 						'label' => esc_html__( 'Headers', 'stag' ),
 					),
 				),
-				'google-font-subset' => array(
+				'google-font-subset'             => array(
 					'setting' => array(),
 					'control' => array(
 						'type'        => 'select',
@@ -130,8 +158,18 @@ function forest_customize_get_definitions( $wp_customize ) {
 					),
 					'control' => array(
 						'label'         => esc_html__( 'Blog Cover', 'stag' ),
-						'description'   => esc_html__( 'Choose a cover image for blog.', 'stag' ),
+						'description'   => esc_html__( 'Choose a header cover image for blog.', 'stag' ),
 						'control_class' => 'WP_CUSTOMIZE_IMAGE_CONTROL',
+					),
+				),
+				'forest_blog_background_opacity' => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => esc_html__( 'Background Opacity', 'stag' ),
+						'description' => esc_html__( 'Choose a default value for background image at the blog header section. For no opacity give a value of 100.', 'stag' ),
+						'type'        => 'number',
 					),
 				),
 				'forest_post_excerpt_length'  => array(
@@ -223,7 +261,8 @@ function forest_customize_get_definitions( $wp_customize ) {
 			),
 		),
 
-		/* TODO: REUSABLE TEMPLATES */
+		/*
+		 TODO: REUSABLE TEMPLATES */
 		// 'wedding_settings' => array(
 		// 'title'       => esc_html__( 'Wedding Settings', 'stag' ),
 		// 'panel'       => 'forest_options_panel',
