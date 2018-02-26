@@ -1,34 +1,4 @@
 <?php
-
-/**
- * Fetching the legacy theme values
- * using StagFramework
- */
-function get_legacy_theme_option( $key = '' ) {
-	$options = get_option( 'stag_framework_values' );
-
-	if ( '' !== $key && is_array( $options ) ) {
-		$value = '';
-
-		switch ( $key ) {
-			case 'style_body_font':
-			case 'style_heading_font':
-				$font_stack = explode( ':', $options[ $key ] );
-				$value      = $font_stack[0];
-				break;
-
-			default:
-				$value = $options[ $key ];
-
-				break;
-		}
-
-		return $value;
-	}
-
-	return false;
-}
-
 /**
  * Register Customizer Settings
  * using $wp_customize object
@@ -200,7 +170,6 @@ function stag_customize_register( $wp_customize ) {
 			'type'        => 'text',
 		)
 	);
-		
 
 	// Add a setting for Post Excerpt Length.
 	$wp_customize->add_setting(
