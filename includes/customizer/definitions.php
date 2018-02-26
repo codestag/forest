@@ -222,6 +222,8 @@ function forest_customize_get_definitions( $wp_customize ) {
 				),
 			),
 		),
+
+		/* TODO: REUSABLE TEMPLATES */
 		// 'wedding_settings' => array(
 		// 'title'       => esc_html__( 'Wedding Settings', 'stag' ),
 		// 'panel'       => 'forest_options_panel',
