@@ -63,66 +63,71 @@ class FOREST_Settings {
 		$settings = apply_filters(
 			'forest_settings_definitions', array(
 				// General Settings.
-				'forest_text_logo'                     => array(
-					'default'  => get_legacy_theme_option( 'general_text_logo' ),
-					'sanitize' => '',
+				'forest_text_logo'            => array(
+					'default'  => false,
+					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_custom_logo'                   => array(
-					'default'  => get_legacy_theme_option( 'general_custom_logo' ),
+				'forest_custom_logo'          => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_contact_email'                 => array(
-					'default'  => get_legacy_theme_option( 'general_contact_email' ),
+				'forest_contact_email'        => array(
+					'default'  => '',
+					'sanitize' => 'sanitize_email',
+				),
+				'forest_tracking_code'        => array(
+					'default'  => '',
+					'sanitize' => 'forest_sanitize_text',
+				),
+				'forest_blog_cover_image'     => array(
+					'default'  => '',
+					'sanitize' => 'esc_url_raw',
+				),
+				'forest_post_excerpt_length'  => array(
+					'default'  => '55',
+					'sanitize' => 'absint',
+				),
+				'forest_post_excerpt_text'    => array(
+					'default'  => 'Read More..',
 					'sanitize' => 'esc_html',
 				),
-				'forest_tracking_code'                 => array(
-					'default'  => get_legacy_theme_option( 'general_tracking_code' ),
-					'sanitize' => '',
+				'forest_disable_seo_settings' => array(
+					'default'  => false,
+					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_post_excerpt_length'           => array(
-					'default'  => get_legacy_theme_option( 'general_post_excerpt_length' ),
-					'sanitize' => 'esc_html',
-				),
-				'forest_guestbook_count'               => array(
-					'default'  => get_legacy_theme_option( 'general_guestbook_count' ),
-					'sanitize' => 'esc_html',
-				),
-				'forest_post_excerpt_text'             => array(
-					'default'  => get_legacy_theme_option( 'general_post_excerpt_text' ),
-					'sanitize' => 'esc_html',
-				),
-				'forest_disable_seo_settings'          => array(
-					'default'  => get_legacy_theme_option( 'general_disable_seo_settings' ),
-					'sanitize' => '',
-				),
-				'forest_site_footer'                   => array(
-					'default'  => get_legacy_theme_option( 'blog_footer' ),
-					'sanitize' => '',
+				'forest_site_footer'          => array(
+					'default'  => 'Copyright &copy; 2018 Forest ',
+					'sanitize' => 'forest_sanitize_text',
 				),
 
 				// Styling Settings.
-				'style_background_color'               => array(
-					'default'  => get_legacy_theme_option( 'style_background_color' ),
+				'style_background_color'      => array(
+					'default'  => '#ffffff',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'accent-color'                         => array(
-					'default'  => get_legacy_theme_option( 'accent_color' ),
+				'accent-color'                => array(
+					'default'  => '#d44646',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
 
 				// Font Settings.
-				'font-body'                            => array(
-					'default'  => get_legacy_theme_option( 'style_body_font' ),
-					'sanitize' => 'forest_sanitize_font_choice',
+				'font-body'                   => array(
+					'default'  => 'Open Sans: 300, 700',
+					'sanitize' => 'esc_html',
 				),
-				'font-headers'                         => array(
-					'default'  => get_legacy_theme_option( 'style_heading_font' ),
-					'sanitize' => 'forest_sanitize_font_choice',
+				'font-headers'                => array(
+					'default'  => 'Nixie One',
+					'sanitize' => 'esc_html',
 				),
-				'google-font-subset'                   => array(
-					'default'  => '13',
-					'sanitize' => 'forest_sanitize_font_subset',
+				'google-font-subset'          => array(
+					'default'  => 'latin',
+					'sanitize' => 'esc_html',
 				),
+
+				// TODO: Portfolio Settings
+
+				// TODO: Social Settings
+				
 			)
 		);
 
@@ -301,34 +306,6 @@ class FOREST_Settings {
 	}
 }
 
-/**
- * Fetching the legacy theme values
- * using StagFramework
- */
-function get_legacy_theme_option( $key = '' ) {
-	$options = get_option( 'stag_framework_values' );
-
-	if ( '' !== $key && is_array( $options ) ) {
-		$value = '';
-
-		switch ( $key ) {
-			case 'style_body_font':
-			case 'style_heading_font':
-				$font_stack = explode( ':', $options[ $key ] );
-				$value      = $font_stack[0];
-				break;
-
-			default:
-				$value = $options[ $key ];
-
-				break;
-		}
-
-		return $value;
-	}
-
-	return false;
-}
 
 if ( ! function_exists( 'sanitize_hex_color' ) ) :
 	/**
@@ -443,7 +420,6 @@ function forest_allowed_html() {
 	$expandedtags['h4'] = array();
 	$expandedtags['h5'] = array();
 	$expandedtags['h6'] = array();
-
 	// Enable id, class, and style attributes for each tag.
 	foreach ( $expandedtags as $tag => $attributes ) {
 		$expandedtags[ $tag ]['id']    = true;
@@ -463,6 +439,9 @@ function forest_allowed_html() {
 		'title'  => true,
 	);
 
+	// script tag
+	$expandedtags['script'] = array();
+
 	/**
 	 * Customize the tags and attributes that are allows during text sanitization.
 	 *
@@ -473,3 +452,7 @@ function forest_allowed_html() {
 	 */
 	return apply_filters( 'forest_allowed_html', $expandedtags );
 }
+
+global $forest_settings;
+
+$forest_settings = new FOREST_Settings();

@@ -25,34 +25,6 @@ add_action( 'customize_register', 'forest_customize_register', 30 );
 
 
 /**
- * Add Customizer scripts.
- *
- * @return void
- */
-function forest_customize_controls_enqueue_scripts() {
-	$localize = array(
-		'fontOptions'               => forest_get_font_property_option_keys(),
-		'chosen_no_results_default' => esc_html__( 'No results match', 'stag' ),
-		'chosen_no_results_fonts'   => esc_html__( 'No matching fonts', 'stag' ),
-		'l10n'                      => array(
-			'required'  => esc_html__( 'You must supply a valid width.', 'stag' ),
-			'too_small' => esc_html__( 'Width is too small, minimum is 1220.', 'stag' ),
-			'too_big'   => esc_html__( 'Width is too big, max is 2000.', 'stag' ),
-		),
-	);
-
-	// Localize the script.
-	wp_localize_script(
-		'customizer-sections',
-		'forestCustomizerSettings',
-		$localize
-	);
-}
-
-add_action( 'customize_controls_enqueue_scripts', 'forest_customize_controls_enqueue_scripts' );
-
-
-/**
  * Add sections and controls to the customizer.
  *
  * @since  1.0.0.
@@ -194,33 +166,6 @@ function forest_customize_add_section_options( $section, $args, $initial_priorit
 
 	return $priority->get();
 }
-/**
- *
- */
-function proxy_customize_css() {
-	?>
-<style type="text/css">
-
-body, .container{ background-color:<?php echo get_theme_mod( 'style_background_color' ); ?>; }
-
-hr.section-divider:after{ background-color:<?php echo get_theme_mod( 'style_background_color' ); ?>; }
-
-.accent-color, a, .wedding-couple-wrap h2, [class*="icon-"], [data-icon]:before, .hentry:before, .countdown-section:before, .section-title, #reply-title,h3#comments,.comment-author, .commentlist li:after, .entry-content h2,.stag-toggle .ui-state-active,.stag-tabs ul.stag-nav .ui-state-active a,.stag-divider.plain:after{ color:<?php echo get_theme_mod( 'accent-color' ); ?>; }
-
-::selection{ background-color:<?php echo get_theme_mod( 'accent-color' ); ?>; }
-::-moz-selection{ background-color:<?php echo get_theme_mod( 'accent-color' ); ?>; color: #fff; }
-.wedding-couple-wrap .person-info:first-child:before{ background-color:<?php echo get_theme_mod( 'accent-color' ); ?>; }
-
-.meta-data,.accent-background, #navigation, #primary-menu ul,#mobile-nav,#mobile-primary-nav,input[type="submit"], button, .button, .stag-button, .countdown-section, .nav-next a, .nav-prev a, .page-numbers, blockquote{ background-color:<?php echo get_theme_mod( 'accent-color' ); ?>; }
-
-.person-info:first-child:after{ background-color:<?php echo get_theme_mod( 'accent-color' ); ?>; }
-
-
-</style>
-	<?php
-}
-add_action( 'wp_head', 'proxy_customize_css' );
-
 /**
  * To output the tracking code
  * clone as in includes/options/general-settings.php
