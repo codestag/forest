@@ -100,12 +100,16 @@ class FOREST_Settings {
 					'sanitize' => 'wp_validate_boolean',
 				),
 				'forest_site_footer'                 => array(
-					'default'  => 'Copyright &copy; 2018 Forest by Codestag',
+					'default'  => '',
 					'sanitize' => 'forest_sanitize_text',
 				),
 				'forest_blog_background_opacity'     => array(
 					'default'  => '70',
 					'sanitize' => 'absint',
+				),
+				'forest_theme_credit' => array(
+					'default' => false,
+					'sanitize' => 'wp_validate_boolean',
 				),
 
 				// Styling Settings.

@@ -25,6 +25,9 @@
 			<div class="grids">
 				<div class="site-info grid-6">
 					<?php echo stripslashes( forest_get_thememod_value( 'forest_site_footer' ) ); ?>
+					<?php if ( true !== forest_get_thememod_value( 'forest_theme_credit' ) ) : ?>
+						<p>Forest theme <em>by</em> <a href="https://codestag.com">Codestag</a></p>
+					<?php endif; ?>
 				</div><!-- .site-info -->
 
 				<div class="grid-6">

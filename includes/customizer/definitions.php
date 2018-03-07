@@ -262,9 +262,18 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'transport' => 'refresh',
 					),
 					'control' => array(
-						'label'       => esc_html__( 'Footer Credit Text', 'stag' ),
+						'label'       => esc_html__( 'Footer Text', 'stag' ),
 						'description' => esc_html__( 'Enter the site footer text.', 'stag' ),
 						'type'        => 'textarea',
+					),
+				),
+				'forest_theme_credit' => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label' => esc_html__( 'Hide Theme Credit', 'stag' ),
+						'type' => 'checkbox',
 					),
 				),
 			),
