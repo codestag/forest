@@ -1,4 +1,5 @@
 <?php
+
 /* Theme Shortcode for social links ------------------------------------------------------------------------------------*/
 function stag_social_shortcode( $atts ) {
 	extract(
@@ -22,8 +23,8 @@ function stag_social_shortcode( $atts ) {
 			$output .= "<a target='_blank' href='" . get_bloginfo( 'rss_url' ) . "'><i class='icon icon-{$u}'></i></a>";
 		}
 
-		if ( '' !== forest_get_thememod_value( 'social_' . $u ) ) {
-			$output .= "<a target='_blank' href='" . forest_get_thememod_value( 'social_' . $u ) . "' target='_blank'><i class='icon icon-{$u}'></i></a>";
+		if ( '' !== forest_get_thememod_value( 'forest_social_' . $u ) ) {
+			$output .= "<a target='_blank' href='" . forest_get_thememod_value( 'forest_social_' . $u ) . "' target='_blank'><i class='icon icon-{$u}'></i></a>";
 		}
 	}
 

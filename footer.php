@@ -28,7 +28,7 @@
 				</div><!-- .site-info -->
 
 				<div class="grid-6">
-					<?php echo do_shortcode( stripcslashes( stag_get_option( 'footer_social_links' ) ) ); ?>
+					<?php echo do_shortcode( stripcslashes( forest_get_thememod_value( 'forest_footer_social_links' ) ) ); ?>
 				</div>
 			</div>
 		</div>
