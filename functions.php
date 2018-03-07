@@ -213,7 +213,7 @@ function stag_scripts_styles() {
 		wp_localize_script(
 			'stag-custom', 'stag', array(
 				'ajaxurl'  => admin_url( 'admin-ajax.php' ),
-				'accent'   => stag_get_option( 'style_accent_color' ),
+				'accent'   => forest_get_thememod_value( 'style_accent_color' ),
 				'menuIcon' => ( function_exists( 'stag_icon' ) ) ? stag_icon( array( 'icon' => 'bars' ) ) : '',
 			)
 		);
@@ -292,7 +292,7 @@ function stag_list_pings( $comment, $args, $depth ) {
 */
 if ( ! function_exists( 'custom_excerpt_length' ) ) {
 	function custom_excerpt_length( $length ) {
-		return stag_get_option( 'general_post_excerpt_length' );
+		return forest_get_thememod_value( 'forest_post_excerpt_length' );
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
@@ -301,7 +301,7 @@ if ( ! function_exists( 'custom_excerpt_length' ) ) {
 if ( ! function_exists( 'new_excerpt_more' ) ) {
 	function new_excerpt_more( $more ) {
 		global $post;
-		return ' <a class="read-more" href="' . get_permalink( $post->ID ) . '">' . stag_get_option( 'general_post_excerpt_text' ) . '</a>';
+		return ' <a class="read-more" href="' . get_permalink( $post->ID ) . '">' . forest_get_thememod_value( 'forest_post_excerpt_text' ) . '</a>';
 	}
 	add_filter( 'excerpt_more', 'new_excerpt_more' );
 }

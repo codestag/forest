@@ -2,7 +2,7 @@
 /**
  * Customizer settings definitions.
  *
- * @package Slope
+ * @package Forest
  */
 
 /**
@@ -26,7 +26,6 @@ function forest_customize_get_definitions( $wp_customize ) {
 
 	$definitions = array(
 		'colors'             => array(
-			'title'       => esc_html__( 'Styling Options', 'stag' ),
 			'description' => 'Configure your theme style & accents',
 			'priority'    => '',
 			'options'     => array(
@@ -152,6 +151,16 @@ function forest_customize_get_definitions( $wp_customize ) {
 			'title'   => esc_html__( 'Blog Settings', 'stag' ),
 			'panel'   => 'forest_options_panel',
 			'options' => array(
+				'forest_blog_title'              => array(
+					'setting' => array(
+						'transport' => 'refresh',
+					),
+					'control' => array(
+						'label'       => esc_html__( 'Blog Title', 'stag' ),
+						'description' => esc_html__( 'Enter the default title for the blog header section.', 'stag' ),
+						'type'        => 'text',
+					),
+				),
 				'forest_blog_cover_image'        => array(
 					'setting' => array(
 						'transport' => 'refresh',

@@ -63,168 +63,166 @@ class FOREST_Settings {
 		$settings = apply_filters(
 			'forest_settings_definitions', array(
 				// General Settings.
-				'forest_text_logo'               => array(
+				'forest_text_logo'                   => array(
 					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_custom_logo'             => array(
+				'forest_custom_logo'                 => array(
 					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_contact_email'           => array(
+				'forest_contact_email'               => array(
 					'default'  => '',
 					'sanitize' => 'sanitize_email',
 				),
-				'forest_tracking_code'           => array(
+				'forest_tracking_code'               => array(
 					'default'  => '',
 					'sanitize' => 'forest_sanitize_text',
 				),
-				'forest_blog_cover_image'        => array(
+				'forest_blog_title'                  => array(
+					'default'  => '',
+					'sanitize' => 'forest_sanitize_text',
+				),
+				'forest_blog_cover_image'            => array(
 					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_post_excerpt_length'     => array(
+				'forest_post_excerpt_length'         => array(
 					'default'  => '55',
 					'sanitize' => 'absint',
 				),
-				'forest_post_excerpt_text'       => array(
+				'forest_post_excerpt_text'           => array(
 					'default'  => 'Read More..',
 					'sanitize' => 'esc_html',
 				),
-				'forest_disable_seo_settings'    => array(
+				'forest_disable_seo_settings'        => array(
 					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_site_footer'             => array(
+				'forest_site_footer'                 => array(
 					'default'  => 'Copyright &copy; 2018 Forest by Codestag',
 					'sanitize' => 'forest_sanitize_text',
 				),
-				'forest_blog_background_opacity' => array(
+				'forest_blog_background_opacity'     => array(
 					'default'  => '70',
 					'sanitize' => 'absint',
 				),
 
 				// Styling Settings.
-				'style_background_color'      => array(
+				'style_background_color'             => array(
 					'default'  => '#ffffff',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'style_accent_color'             => array(
+				'style_accent_color'                 => array(
 					'default'  => '#1bbc9b',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'style_portfolio_background'     => array(
+				'style_portfolio_background'         => array(
 					'default'  => '#41415e',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'style_footer_color'             => array(
+				'style_footer_color'                 => array(
 					'default'  => '#444444',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
-				'style_blog_background_color'    => array(
+				'style_blog_background_color'        => array(
 					'default'  => '#41415e',
 					'sanitize' => 'maybe_hash_hex_color',
 				),
 
 				// Font Settings.
-				'font-body'                      => array(
+				'font-body'                          => array(
 					'default'  => 'Open Sans: 300, 700',
 					'sanitize' => 'esc_html',
 				),
-				'font-headers'                   => array(
+				'font-headers'                       => array(
 					'default'  => 'Nixie One',
 					'sanitize' => 'esc_html',
 				),
-				'google-font-subset'             => array(
+				'google-font-subset'                 => array(
 					'default'  => 'latin',
 					'sanitize' => 'esc_html',
 				),
 
-				// TODO: Portfolio Settings
-				'forest_portfolio_cta_text' => array(
-					'default' => '',
+				'forest_portfolio_cta_text'          => array(
+					'default'  => '',
 					'sanitize' => 'esc_html',
 				),
-				'forest_portfolio_cta_button_text' => array(
-					'default' => '',
+				'forest_portfolio_cta_button_text'   => array(
+					'default'  => '',
 					'sanitize' => 'esc_html',
 				),
-				'forest_portfolio_cta_button_link' => array(
-					'default' => '',
-					'sanitize' => 'esc_html',
-				),
-				'forest_portfolio_cta_text' => array(
-					'default' => '',
+				'forest_portfolio_cta_button_link'   => array(
+					'default'  => '',
 					'sanitize' => 'esc_html',
 				),
 				'forest_portfolio_cta_button_window' => array(
-					'default' => false,
+					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
-				'forest_portfolio_page' => array(
-					'default' => '',
+				'forest_portfolio_page'              => array(
+					'default'  => '',
 					'sanitize' => 'esc_html',
 				),
 
-				// TODO: Social Settings
-				'forest_footer_social_links' => array(
-					'default' => '',
+				'forest_footer_social_links'         => array(
+					'default'  => '',
 					'sanitize' => 'esc_html',
 				),
-				'forest_social_facebook' => array(
-					'default' => '',
+				'forest_social_facebook'             => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_twitter' => array(
-					'default' => '',
+				'forest_social_twitter'              => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_dribbble' => array(
-					'default' => '',
+				'forest_social_dribbble'             => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_google_plus' => array(
-					'default' => '',
+				'forest_social_google_plus'          => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_pinterest' => array(
-					'default' => '',
+				'forest_social_pinterest'            => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_vimeo' => array(
-					'default' => '',
+				'forest_social_vimeo'                => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_linkedin' => array(
-					'default' => '',
+				'forest_social_linkedin'             => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_behance' => array(
-					'default' => '',
+				'forest_social_behance'              => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_devianart' => array(
-					'default' => '',
+				'forest_social_devianart'            => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_flickr' => array(
-					'default' => '',
+				'forest_social_flickr'               => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_instagram' => array(
-					'default' => '',
+				'forest_social_instagram'            => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_myspace' => array(
-					'default' => '',
+				'forest_social_myspace'              => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_soundcloud' => array(
-					'default' => '',
+				'forest_social_soundcloud'           => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
-				'forest_social_youtube' => array(
-					'default' => '',
+				'forest_social_youtube'              => array(
+					'default'  => '',
 					'sanitize' => 'esc_url_raw',
 				),
 			)
