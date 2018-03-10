@@ -107,8 +107,8 @@ class FOREST_Settings {
 					'default'  => '70',
 					'sanitize' => 'absint',
 				),
-				'forest_theme_credit' => array(
-					'default' => false,
+				'forest_theme_credit'                => array(
+					'default'  => false,
 					'sanitize' => 'wp_validate_boolean',
 				),
 
@@ -136,7 +136,7 @@ class FOREST_Settings {
 
 				// Font Settings.
 				'font-body'                          => array(
-					'default'  => 'Open Sans: 300, 700',
+					'default'  => 'Open Sans',
 					'sanitize' => 'esc_html',
 				),
 				'font-headers'                       => array(
@@ -144,7 +144,7 @@ class FOREST_Settings {
 					'sanitize' => 'esc_html',
 				),
 				'google-font-subset'                 => array(
-					'default'  => 'latin',
+					'default'  => '14',
 					'sanitize' => 'esc_html',
 				),
 

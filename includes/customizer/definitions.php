@@ -16,6 +16,8 @@
  */
 function forest_customize_get_definitions( $wp_customize ) {
 
+	$google_fonts = forest_all_font_choices();
+
 	$wp_customize->add_panel(
 		'forest_options_panel', array(
 			'title'       => esc_html__( 'Theme Options', 'stag' ),
@@ -94,45 +96,24 @@ function forest_customize_get_definitions( $wp_customize ) {
 				'font-body'          => array(
 					'setting' => array(),
 					'control' => array(
-						'type'  => 'text',
-						'label' => esc_html__( 'Body', 'stag' ),
+						'type'    => 'select',
+						'choices' => $google_fonts,
+						'label'   => esc_html__( 'Body', 'stag' ),
 					),
 				),
 				'font-headers'       => array(
 					'setting' => array(),
 					'control' => array(
-						'type'  => 'text',
-						'label' => esc_html__( 'Headers', 'stag' ),
+						'type'    => 'select',
+						'choices' => $google_fonts,
+						'label'   => esc_html__( 'Headers', 'stag' ),
 					),
 				),
 				'google-font-subset' => array(
 					'setting' => array(),
 					'control' => array(
 						'type'        => 'select',
-						'choices'     => array(
-							'arabic'       => __( 'Arabic', 'stag' ),
-							'bengali'      => __( 'Bengali', 'stag' ),
-							'cyrillic'     => __( 'Cyrillic', 'stag' ),
-							'cyrillic-ext' => __( 'Cyrillic Extended', 'stag' ),
-							'devanagari'   => __( 'Devanagari', 'stag' ),
-							'greek'        => __( 'Greek', 'stag' ),
-							'greek-ext'    => __( 'Greek Extended', 'stag' ),
-							'gujarati'     => __( 'Gujarati', 'stag' ),
-							'gurmukhi'     => __( 'Gurmukhi', 'stag' ),
-							'hebrew'       => __( 'Hebrew', 'stag' ),
-							'kannada'      => __( 'Kannada', 'stag' ),
-							'khmer'        => __( 'Khmer', 'stag' ),
-							'latin'        => __( 'Latin', 'stag' ),
-							'latin-ext'    => __( 'Latin Extended', 'stag' ),
-							'malayalam'    => __( 'Malayalam', 'stag' ),
-							'myanmar'      => __( 'Myanmar', 'stag' ),
-							'oriya'        => __( 'Oriya', 'stag' ),
-							'sinhala'      => __( 'Sinhala', 'stag' ),
-							'tamil'        => __( 'Tamil', 'stag' ),
-							'telugu'       => __( 'Telugu', 'stag' ),
-							'thai'         => __( 'Thai', 'stag' ),
-							'vietnamese'   => __( 'Vietnamese', 'stag' ),
-						),
+						'choices'     => forest_get_google_font_subsets(),
 						'label'       => esc_html__( 'Google Font Subset', 'stag' ),
 						'description' => sprintf(
 							/* translators: Link to Google fonts website */

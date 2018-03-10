@@ -190,14 +190,25 @@ function stag_scripts_styles() {
 			wp_enqueue_script( 'cycle2' );
 		}
 
+		// Google fonts.
+		$google_request = forest_get_google_font_uri();
+
+		if ( '' !== $google_request ) {
+			// Enqueue the fonts.
+			wp_enqueue_style(
+				'forest-google-fonts',
+				$google_request,
+				'',
+				STAG_THEME_VERSION
+			);
+		}
+
 		/* Enqueue Styles ---------------------------------------------------*/
 		wp_dequeue_style( 'stag-shortcode-styles' );
 		wp_enqueue_style( 'shortcode-styles', get_template_directory_uri() . '/assets/css/shortcodes.css', '', STAG_THEME_VERSION );
 
 		wp_enqueue_style( 'stag-style', get_stylesheet_uri(), '', STAG_THEME_VERSION );
 		wp_enqueue_style( 'stag-custom-style', get_template_directory_uri() . '/assets/css/stag-custom-styles.php', 'stag-style', STAG_THEME_VERSION );
-		wp_enqueue_style( 'forest-fonts', stag_google_font_url(), array(), null );
-
 		if ( is_page() && post_type_exists( 'portfolio' ) || is_page_template( 'template-homepage.php' ) ) {
 			wp_enqueue_script( 'mixitup' );
 		}

@@ -23,6 +23,52 @@ function forest_customize_register( $wp_customize ) {
 
 add_action( 'customize_register', 'forest_customize_register', 30 );
 
+/**
+ * Add Customizer scripts.
+ *
+ * @return void
+ */
+function forest_customize_controls_enqueue_scripts() {
+	// Styles.
+	wp_enqueue_style(
+		'chosen',
+		get_template_directory_uri() . '/assets/lib/chosen/chosen.min.css',
+		array(),
+		'1.8.3'
+	);
+
+	// Scripts.
+	wp_enqueue_script(
+		'chosen',
+		get_template_directory_uri() . '/assets/lib/chosen/chosen.jquery.min.js',
+		array( 'jquery', 'customize-controls' ),
+		'1.8.3',
+		true
+	);
+
+	wp_enqueue_script(
+		'customizer-sections',
+		get_template_directory_uri() . '/assets/js/customizer-sections.js',
+		array( 'customize-controls', 'chosen', 'jquery', 'jquery-ui-sortable' ),
+		STAG_THEME_VERSION,
+		true
+	);
+
+	$localize = array(
+		'fontOptions'               => forest_get_font_property_option_keys(),
+		'chosen_no_results_default' => esc_html__( 'No results match', 'stag' ),
+		'chosen_no_results_fonts'   => esc_html__( 'No matching fonts', 'stag' ),
+	);
+
+	// Localize the script.
+	wp_localize_script(
+		'customizer-sections',
+		'forestCustomizerSettings',
+		$localize
+	);
+}
+
+add_action( 'customize_controls_enqueue_scripts', 'forest_customize_controls_enqueue_scripts' );
 
 /**
  * Add sections and controls to the customizer.
