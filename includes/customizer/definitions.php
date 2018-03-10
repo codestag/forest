@@ -219,7 +219,7 @@ function forest_customize_get_definitions( $wp_customize ) {
 			'options' => array(
 				'forest_text_logo'     => array(
 					'setting' => array(
-						'transport' => 'postMessage',
+						'transport' => 'refresh',
 					),
 					'control' => array(
 						'type'        => 'checkbox',
@@ -267,13 +267,13 @@ function forest_customize_get_definitions( $wp_customize ) {
 						'type'        => 'textarea',
 					),
 				),
-				'forest_theme_credit' => array(
+				'forest_theme_credit'  => array(
 					'setting' => array(
 						'transport' => 'refresh',
 					),
 					'control' => array(
 						'label' => esc_html__( 'Hide Theme Credit', 'stag' ),
-						'type' => 'checkbox',
+						'type'  => 'checkbox',
 					),
 				),
 			),
