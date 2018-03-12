@@ -148,6 +148,7 @@ class FOREST_Settings {
 					'sanitize' => 'esc_html',
 				),
 
+				// Portfolio Settings
 				'forest_portfolio_cta_text'          => array(
 					'default'  => '',
 					'sanitize' => 'esc_html',
@@ -169,6 +170,7 @@ class FOREST_Settings {
 					'sanitize' => 'esc_html',
 				),
 
+				// Social Settings. 
 				'forest_footer_social_links'         => array(
 					'default'  => '',
 					'sanitize' => 'esc_html',

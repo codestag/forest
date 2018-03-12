@@ -62,6 +62,9 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		add_theme_support( 'stag-slides' );
 		add_theme_support( 'stag-testimonials' );
 		add_theme_support( 'stag-team' );
+
+		// Upgrade theme settings.
+		forest_theme_upgrade();
 	}
 }
 add_action( 'after_setup_theme', 'stag_theme_setup' );
@@ -503,3 +506,4 @@ require_once get_template_directory() . '/framework/stag-framework.php';
 require_once get_template_directory() . '/includes/customizer/load.php';
 require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/_init.php';
+require_once get_template_directory() . '/includes/upgrade.php';
