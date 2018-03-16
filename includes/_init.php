@@ -1,12 +1,5 @@
 <?php
 
-/* Include Theme Options -------------------------------------------------------------------------*/
-require_once 'options/general-settings.php';
-require_once 'options/styling-options.php';
-
-require_once 'options/blog-settings.php';
-require_once 'options/portfolio-settings.php';
-require_once 'options/social-settings.php';
 
 
 /* Include Theme Widgets -------------------------------------------------------------------------*/
