@@ -29,6 +29,7 @@ if ( ! function_exists( 'forest_theme_upgrade' ) ) :
 				}
 			}
 
+			add_action( 'admin_notices', 'forest_upgrade_notice' );
 			set_theme_mod( 'has_forest_migrated', true );
 		}
 	}
@@ -136,4 +137,25 @@ function forest_filter_legacy_value( $key, $value ) {
 	}
 
 	return $filtered_value;
+}
+
+/**
+ * Add admin notice info for new settings location.
+ *
+ * @return void
+ */
+
+function forest_upgrade_notice() {
+	$class = 'notice notice-info is-dismissible';
+
+	$message = sprintf(
+
+		/* translators: %s: Link to customizer. */
+
+		__( 'Looking for theme settings? It has been moved under Appearance &rarr; <a href="%s">Customize</a>.', 'stag' ),
+		admin_url( 'customize.php' )
+	);
+
+	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), $message ); // WPCS: XSS ok.
+
 }
