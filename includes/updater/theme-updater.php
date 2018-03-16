@@ -1,4 +1,4 @@
-<?php91
+<?php
 /**
  * Easy Digital Downloads Theme Updater.
  *
