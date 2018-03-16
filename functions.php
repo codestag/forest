@@ -507,3 +507,7 @@ require_once get_template_directory() . '/includes/customizer/load.php';
 require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/_init.php';
 require_once get_template_directory() . '/includes/upgrade.php';
+/**
+ * Include theme updater file
+ */
+require_once get_template_directory() . '/includes/updater/theme-updater.php';
