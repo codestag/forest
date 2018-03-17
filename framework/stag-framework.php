@@ -9,27 +9,26 @@
  * @author Ram Ratan Maurya (Codestag)
  * @link https://mauryaratan.me
  * @link https://codestag.com
- *
  */
 
-class StagFramework{
+class StagFramework {
 	public $version = '2.0.0';
 
-	function __construct(){
+	function __construct() {
 		define( 'STAG_FRAMEWORK_VERSION', $this->version );
 
-		if(function_exists('wp_get_theme')){
-		  if(is_child_theme()){
-		    $temp_obj = wp_get_theme();
-		    $theme_obj = wp_get_theme( $temp_obj->get('Template') );
-		  }else{
-		    $theme_obj = wp_get_theme();
-		  }
-		  $theme_version = $theme_obj->get('Version');
-		  $theme_name = $theme_obj->get('Name');
-		  $theme_uri = $theme_obj->get('ThemeURI');
-		  $theme_author = $theme_obj->get('Author');
-		  $theme_author_uri = $theme_obj->get('AuthorURI');
+		if ( function_exists( 'wp_get_theme' ) ) {
+			if ( is_child_theme() ) {
+				$temp_obj  = wp_get_theme();
+				$theme_obj = wp_get_theme( $temp_obj->get( 'Template' ) );
+			} else {
+				$theme_obj = wp_get_theme();
+			}
+			$theme_version    = $theme_obj->get( 'Version' );
+			$theme_name       = $theme_obj->get( 'Name' );
+			$theme_uri        = $theme_obj->get( 'ThemeURI' );
+			$theme_author     = $theme_obj->get( 'Author' );
+			$theme_author_uri = $theme_obj->get( 'AuthorURI' );
 		}
 
 		define( 'STAG_THEME_NAME', $theme_name );
@@ -46,4 +45,4 @@ class StagFramework{
 
 $GLOBALS['stagFramework'] = new StagFramework();
 
-require_once ( get_template_directory() . '/framework/stag-admin-init.php' );
+require_once get_template_directory() . '/framework/stag-admin-init.php';
