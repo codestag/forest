@@ -71,7 +71,7 @@ function stag_user_styles_push( $content ) {
 	$bodyfont         = forest_get_thememod_value( 'font-body' );
 	$body_font_output = stag_get_font_face( $bodyfont );
 
-	$headingfont         = stag_get_option( 'font-headers' );
+	$headingfont         = forest_get_thememod_value( 'font-headers' );
 	$heading_font_output = stag_get_font_face( $headingfont );
 
 	$background_color = forest_get_thememod_value( 'style_background_color' );

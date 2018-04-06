@@ -84,18 +84,6 @@ function stag_general_settings() {
 	stag_add_framework_page( 'General Settings', $general_settings, 5 );
 }
 
-// OUTPUT THE FAVICON
-function stag_show_favicon() {
-	$stag_values = get_option( 'stag_framework_values' );
-	if ( stag_get_option( 'general_custom_favicon' ) != '' ) {
-		echo '<link rel="shortcut icon" href="' . $stag_values['general_custom_favicon'] . '" type="image/x-icon" />';
-	}
-
-	return;
-}
-add_action( 'wp_head', 'stag_show_favicon' );
-
-
 /**
  * Output the tracking code
  */
