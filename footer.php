@@ -1,5 +1,5 @@
 	</main>
-	
+
 	<?php stag_footer_before(); ?>
 
 	<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
@@ -8,7 +8,7 @@
 
 		<div class="inside">
 			<?php stag_footer_start(); ?>
-			
+
 			<div class="grids">
 				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 			</div>

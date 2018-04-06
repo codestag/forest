@@ -173,7 +173,7 @@ class FOREST_Settings {
 				// Social Settings.
 				'forest_footer_social_links'         => array(
 					'default'  => '',
-					'sanitize' => 'esc_html',
+					'sanitize' => 'wp_kses_post',
 				),
 				'forest_social_facebook'             => array(
 					'default'  => '',
