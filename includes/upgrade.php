@@ -10,7 +10,7 @@ if ( ! function_exists( 'forest_theme_upgrade' ) ) :
 	/**
 	 * Handle theme upgrade.
 	 *
-	 * @since 3.0.0.
+	 * @since 2.2.0.
 	 * @return bool|void
 	 */
 	function forest_theme_upgrade() {
@@ -39,7 +39,7 @@ endif; // End of forest_theme_upgrade.
 /**
  * Map old theme key settings to new.
  *
- * @since 3.0.0
+ * @since 2.2.0
  * @return array
  */
 function forest_mapped_settings() {

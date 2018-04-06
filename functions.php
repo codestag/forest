@@ -501,12 +501,13 @@ add_filter( 'stag_custom_sidebars_widget_args', 'stag_custom_sidebar_widget_wrap
 /**
  * Include framework and other files
  */
-
 require_once get_template_directory() . '/framework/stag-framework.php';
 require_once get_template_directory() . '/includes/customizer/load.php';
 require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/_init.php';
 require_once get_template_directory() . '/includes/upgrade.php';
+require_once get_template_directory() . '/includes/extras.php';
+
 /**
  * Include theme updater file
  */
