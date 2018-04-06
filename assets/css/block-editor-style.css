@@ -158,6 +158,10 @@ you can use the generic selector below, but it's slower:
 	content: '\e01d';
 }
 
+.edit-post-layout__content {
+	background-color: var(--style-background-color, #ffffff);
+  }
+
 .edit-post-visual-editor,
 .edit-post-visual-editor p {
 	font-family: var(--font-body, 'Noto Serif');
