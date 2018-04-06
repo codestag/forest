@@ -80,7 +80,7 @@ class FOREST_Settings {
 					'sanitize' => 'forest_sanitize_text',
 				),
 				'forest_blog_title'                  => array(
-					'default'  => '',
+					'default'  => 'Blog Entries',
 					'sanitize' => 'forest_sanitize_text',
 				),
 				'forest_blog_cover_image'            => array(
@@ -136,11 +136,11 @@ class FOREST_Settings {
 
 				// Font Settings.
 				'font-body'                          => array(
-					'default'  => 'Open Sans',
+					'default'  => 'Roboto',
 					'sanitize' => 'esc_html',
 				),
 				'font-headers'                       => array(
-					'default'  => 'Nixie One',
+					'default'  => 'Roboto',
 					'sanitize' => 'esc_html',
 				),
 				'google-font-subset'                 => array(
@@ -170,7 +170,7 @@ class FOREST_Settings {
 					'sanitize' => 'esc_html',
 				),
 
-				// Social Settings. 
+				// Social Settings.
 				'forest_footer_social_links'         => array(
 					'default'  => '',
 					'sanitize' => 'esc_html',
