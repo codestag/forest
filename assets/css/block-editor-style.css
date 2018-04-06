@@ -226,6 +226,29 @@ you can use the generic selector below, but it's slower:
   line-height: 1.6em;
 }
 
+.edit-post-visual-editor a {
+	text-decoration: none;
+	color: var(--accent-color, #1bbc9b);
+  }
+  
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+	text-decoration: none;
+	color: inherit;
+  }
+  .edit-post-visual-editor .editor-block-list__block h1 a:visited,
+  .edit-post-visual-editor .editor-block-list__block h2 a:visited,
+  .edit-post-visual-editor .editor-block-list__block h3 a:visited,
+  .edit-post-visual-editor .editor-block-list__block h4 a:visited,
+  .edit-post-visual-editor .editor-block-list__block h5 a:visited,
+  .edit-post-visual-editor .editor-block-list__block h6 a:visited {
+	color: inherit;
+  }
+
 .edit-post-visual-editor .wp-block-quote:not(.is-large) {
   padding-left: 100px;
 }
