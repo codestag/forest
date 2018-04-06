@@ -178,6 +178,7 @@ you can use the generic selector below, but it's slower:
 
 .edit-post-visual-editor,
 .edit-post-visual-editor p {
+  font-size: 17px;
   font-family: var(--font-body, "Noto Serif");
 }
 
@@ -187,7 +188,42 @@ you can use the generic selector below, but it's slower:
 .edit-post-visual-editor h4,
 .edit-post-visual-editor h5,
 .edit-post-visual-editor h6 {
+  font-weight: bold;
   font-family: var(--font-header, "Noto Serif");
+  color: #363f48;
+}
+
+.edit-post-visual-editor h1 {
+  font-size: 45px;
+  letter-spacing: -2.6px;
+  line-height: 1.1667em;
+}
+
+.edit-post-visual-editor h2 {
+  font-size: 25px;
+  line-height: 1.4em;
+  margin: 0 0 1em 0;
+}
+
+.edit-post-visual-editor h3 {
+  font-size: 23px;
+  line-height: 1.429em;
+  margin: 0 0 0.5em 0;
+}
+
+.edit-post-visual-editor h4 {
+  font-size: 22px;
+  line-height: 1.2857em;
+}
+
+.edit-post-visual-editor h5 {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.edit-post-visual-editor h6 {
+  font-size: 15px;
+  line-height: 1.6em;
 }
 
 .wp-block-pullquote {
