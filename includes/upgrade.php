@@ -3,7 +3,7 @@
  * Handle theme upgrade process.
  *
  * @package Forest
- * @since 3.0.0
+ * @since 2.2.0
  */
 
 if ( ! function_exists( 'forest_theme_upgrade' ) ) :
@@ -29,6 +29,7 @@ if ( ! function_exists( 'forest_theme_upgrade' ) ) :
 				}
 			}
 
+			// TODO: Remove custom framework values in future release.
 			add_action( 'admin_notices', 'forest_upgrade_notice' );
 			set_theme_mod( 'has_forest_migrated', true );
 		}
@@ -43,7 +44,7 @@ endif; // End of forest_theme_upgrade.
  */
 function forest_mapped_settings() {
 	$settings = [
-		// General Settings
+		// General Settings.
 		'general_text_logo'            => 'forest_text_logo',
 		'general_custom_logo'          => 'forest_custom_logo',
 		'general_contact_email'        => 'forest_contact_email',
@@ -53,7 +54,7 @@ function forest_mapped_settings() {
 		'general_disable_seo_settings' => 'forest_disable_seo_settings',
 		'general_site_footer'          => 'forest_site_footer',
 
-		// Styling Options
+		// Styling Options.
 		'style_background_color'       => 'style_background_color',
 		'style_accent_color'           => 'style_accent_color',
 		'style_portfolio_background'   => 'style_portfolio_background',
@@ -62,20 +63,20 @@ function forest_mapped_settings() {
 		'style_heading_font'           => 'font-headers',
 		'style_font_script'            => 'google-font-subset',
 
-		// Blog Settings
+		// Blog Settings.
 		'blog_background'              => 'forest_blog_cover_image',
 		'blog_title'                   => 'forest_blog_title',
 		'blog_background_color'        => 'style_blog_background_color',
 		'blog_background_opacity'      => 'forest_blog_background_opacity',
 
-		// Portfolio Settings
+		// Portfolio Settings.
 		'portfolio_cta_text'           => 'forest_portfolio_cta_text',
 		'portfolio_cta_button_text'    => 'forest_portfolio_cta_button_text',
 		'portfolio_cta_button_link'    => 'forest_portfolio_cta_button_link',
 		'portfolio_cta_button_window'  => 'forest_portfolio_cta_button_window',
 		'portfolio_page'               => 'forest_portfolio_page',
 
-		// Social Settings
+		// Social Settings.
 		'footer_social_links'          => 'forest_footer_social_links',
 		'social_facebook'              => 'forest_social_facebook',
 		'social_twitter'               => 'forest_social_twitter',
@@ -110,7 +111,7 @@ function forest_filter_legacy_value( $key, $value ) {
 
 	switch ( $key ) {
 		case 'style_body_font':
-		case 'style_header_font':
+		case 'style_heading_font':
 			$font           = explode( ':', $value );
 			$filtered_value = $font[0];
 			break;
@@ -128,6 +129,7 @@ function forest_filter_legacy_value( $key, $value ) {
 			break;
 
 		case 'general_site_footer':
+		case 'forest_footer_social_links':
 			$filtered_value = stripslashes( $value );
 			break;
 
@@ -144,18 +146,14 @@ function forest_filter_legacy_value( $key, $value ) {
  *
  * @return void
  */
-
 function forest_upgrade_notice() {
 	$class = 'notice notice-info is-dismissible';
 
 	$message = sprintf(
-
 		/* translators: %s: Link to customizer. */
-
 		__( 'Looking for theme settings? It has been moved under Appearance &rarr; <a href="%s">Customize</a>.', 'stag' ),
 		admin_url( 'customize.php' )
 	);
 
 	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), $message ); // WPCS: XSS ok.
-
 }
