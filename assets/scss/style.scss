@@ -938,7 +938,6 @@ main .inside {
 }
 
 .alignnone {
-	display: block;
 	margin: 30px 0;
 }
 
@@ -1562,4 +1561,34 @@ main .inside {
 .widget_recent_entries,
 .site-footer a {
 	color: #fff;
+}
+
+@media (min-width: 750px) {
+	body.no-sidebar {
+		.alignfull {
+			margin-left: calc(50% - 50vw);
+			margin-right: calc(50% - 50vw);
+			width: auto;
+			max-width: 1000%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.alignwide {
+			margin-left: calc(25% - 25vw);
+			margin-right: calc(25% - 25vw);
+			width: auto;
+			max-width: 1000%;
+		}
+	}
+}
+
+.wp-block-pullquote {
+	border: none;
+	text-align: left;
+	cite {
+		color: inherit;
+	}
 }

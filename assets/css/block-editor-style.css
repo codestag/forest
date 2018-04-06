@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'stag';
-	src: url('assets/fonts/stag.eot');
-	src: url('assets/fonts/stag.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/stag.woff') format('woff'),
-		url('assets/fonts/stag.ttf') format('truetype'),
-		url('assets/fonts/stag.svg#stag') format('svg');
+	src: url('../fonts/stag.eot');
+	src: url('../fonts/stag.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/stag.woff') format('woff'),
+		url('../fonts/stag.ttf') format('truetype'),
+		url('../fonts/stag.svg#stag') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: optional;
@@ -156,4 +156,47 @@ you can use the generic selector below, but it's slower:
 }
 .icon-dribbble:before {
 	content: '\e01d';
+}
+
+.edit-post-visual-editor,
+.edit-post-visual-editor p {
+	font-family: var(--font-body, 'Noto Serif');
+}
+
+.edit-post-visual-editor h1,
+.edit-post-visual-editor h2,
+.edit-post-visual-editor h3,
+.edit-post-visual-editor h4,
+.edit-post-visual-editor h5,
+.edit-post-visual-editor h6 {
+	font-family: var(--font-header, 'Noto Serif');
+}
+
+.wp-block-pullquote {
+	border: none;
+	text-align: left;
+	background: #363f48;
+	color: #fff;
+	margin: 30px 0;
+	padding: 20px 20px 20px 100px;
+	position: relative;
+}
+
+.wp-block-pullquote cite {
+	color: inherit;
+}
+
+.wp-block-pullquote:before {
+	font-family: 'stag';
+	content: '\e00a';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-size: 40px;
+	position: absolute;
+	top: 28px;
+	left: 25px;
 }

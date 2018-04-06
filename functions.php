@@ -1,10 +1,5 @@
 <?php
 
-/* Set Content Width ---------------------------------------------------*/
-if ( ! isset( $content_width ) ) {
-	$content_width = 940;
-}
-
 /* Set Retina Cookie -------------------------------------------------------*/
 global $is_retina;
 ( isset( $_COOKIE['retina'] ) ) ? $is_retina = true : $is_retina = false;
@@ -21,7 +16,7 @@ global $is_retina;
 if ( ! function_exists( 'stag_theme_setup' ) ) {
 	function stag_theme_setup() {
 
-		/* Load translation domain ---------------------------------------------*/
+		// Load translation domain.
 		load_theme_textdomain( 'stag', get_template_directory() . '/languages' );
 
 		$locale      = get_locale();
@@ -30,11 +25,9 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 			require_once $locale_file;
 		}
 
-		/* Register Menus ------------------------------------------------------*/
+		// Register Menus.
 		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'stag' ) );
 
-		// This theme styles the visual editor with editor-style.css to match the theme style.
-		// add_editor_style( 'framework/assets/css/editor-style.css' );
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 770, 99999, true );
 
@@ -49,6 +42,21 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		 * @version 2.1.0
 		 */
 		add_theme_support( 'title-tag' );
+
+		/**
+		 * Add Gutenberg specific theme support.
+		 *
+		 * @since 2.2.0.
+		 */
+		add_theme_support( 'editor-color-palette',
+			forest_get_thememod_value( 'style_background_color' ),
+			forest_get_thememod_value( 'style_accent_color' ),
+			forest_get_thememod_value( 'style_portfolio_background' ),
+			forest_get_thememod_value( 'style_footer_color' ),
+			forest_get_thememod_value( 'style_blog_background_color' )
+		);
+
+		add_theme_support( 'align-wide' );
 
 		/**
 		 * Add StagFramework specific theme support
@@ -69,6 +77,23 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'stag_theme_setup' );
 
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function forest_content_width() {
+	$width = 750;
+
+	if ( ! is_active_sidebar( 'sidebar-main' ) ) {
+		$width = 1170;
+	}
+
+	$GLOBALS['content_width'] = apply_filters( 'forest_content_width', 750 );
+}
+add_action( 'after_setup_theme', 'forest_content_width', 0 );
 
 /**
 * Register widget areas.
@@ -165,6 +190,42 @@ if ( ! function_exists( 'stag_wp_title' ) ) {
 	}
 }
 // add_filter('wp_title', 'stag_wp_title', 10, 2);
+
+/**
+ * Add Gutenberg related resources.
+ *
+ * @return void
+ */
+function forest_block_editor_styles() {
+	$style_dependencies = array();
+	$fonts              = forest_get_google_font_uri();
+	if ( '' !== $fonts ) {
+		// Enqueue the fonts.
+		wp_enqueue_style( 'forest-google-fonts', $fonts, array(), STAG_THEME_VERSION );
+
+		$style_dependencies[] = 'forest-google-fonts';
+	}
+
+	// Editor styles.
+	wp_enqueue_style( 'forest-block-editor-style', get_template_directory_uri() . '/assets/css/block-editor-style.css', $style_dependencies, '1.0.0' );
+
+	$font_header  = forest_get_thememod_value( 'font-headers' );
+	$font_body    = forest_get_thememod_value( 'font-body' );
+	$accent_color = forest_get_thememod_value( 'style_accent_color' );
+
+	wp_add_inline_style(
+		'forest-block-editor-style', "
+		.edit-post-layout__content{
+			--accent-color: {$accent_color};
+		}
+		.edit-post-visual-editor {
+			--font-body: '{$font_body}';
+			--font-header: '{$font_header}';
+		}"
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'forest_block_editor_styles' );
+
 /**
  * Enqueues scripts and styles for front end.
  *
