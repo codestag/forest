@@ -226,6 +226,25 @@ you can use the generic selector below, but it's slower:
   line-height: 1.6em;
 }
 
+.edit-post-visual-editor .wp-block-quote:not(.is-large) {
+  padding-left: 100px;
+}
+
+.edit-post-visual-editor blockquote {
+  border: 0 !important;
+  font-size: 20px;
+  background: #363f48;
+  color: #fff;
+  margin: 30px 0;
+  padding: 20px 20px 20px 100px;
+  position: relative;
+  min-height: 90px;
+}
+.edit-post-visual-editor blockquote p {
+  margin: 0;
+  font-size: 20px;
+}
+
 .wp-block-pullquote {
   border: none;
   text-align: left;
