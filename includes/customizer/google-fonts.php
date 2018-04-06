@@ -7,11 +7,11 @@ if ( ! function_exists( 'forest_get_google_fonts' ) ) :
 /**
  * Return an array of all available Google Fonts.
  *
- * Updated: 2018-03-05T07:47:36+00:00.
+ * Updated: 2018-04-06T05:43:45+00:00.
  *
- * Total 854 Fonts.
+ * Total 877 Fonts.
  *
- * @since  3.0.0.
+ * @since  2.2.0.
  *
  * @return array    All Google Fonts.
  */
@@ -1593,6 +1593,28 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Black And White Picture' => array(
+			'label' => 'Black And White Picture',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Black Han Sans' => array(
+			'label' => 'Black Han Sans',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Black Ops One' => array(
 			'label' => 'Black Ops One',
 			'variants' => array(
@@ -2749,6 +2771,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Cute Font' => array(
+			'label' => 'Cute Font',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'display',
+		),
 		'Cutive' => array(
 			'label' => 'Cutive',
 			'variants' => array(
@@ -2962,6 +2995,28 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Do Hyeon' => array(
+			'label' => 'Do Hyeon',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Dokdo' => array(
+			'label' => 'Dokdo',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Domine' => array(
 			'label' => 'Domine',
 			'variants' => array(
@@ -3089,6 +3144,17 @@ function forest_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+			),
+			'category' => 'handwriting',
+		),
+		'East Sea Dokdo' => array(
+			'label' => 'East Sea Dokdo',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
 			),
 			'category' => 'handwriting',
 		),
@@ -3941,6 +4007,19 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Gaegu' => array(
+			'label' => 'Gaegu',
+			'variants' => array(
+				'300',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Gafata' => array(
 			'label' => 'Gafata',
 			'variants' => array(
@@ -3983,6 +4062,17 @@ function forest_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'display',
+		),
+		'Gamja Flower' => array(
+			'label' => 'Gamja Flower',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'handwriting',
 		),
 		'Gentium Basic' => array(
 			'label' => 'Gentium Basic',
@@ -4150,6 +4240,25 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Gothic A1' => array(
+			'label' => 'Gothic A1',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Goudy Bookletter 1911' => array(
 			'label' => 'Goudy Bookletter 1911',
 			'variants' => array(
@@ -4236,6 +4345,17 @@ function forest_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'sans-serif',
+		),
+		'Gugi' => array(
+			'label' => 'Gugi',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Gurajada' => array(
 			'label' => 'Gurajada',
@@ -4400,6 +4520,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Hi Melody' => array(
+			'label' => 'Hi Melody',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Hind' => array(
 			'label' => 'Hind',
 			'variants' => array(
@@ -4509,6 +4640,112 @@ function forest_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'sans-serif',
+		),
+		'IBM Plex Mono' => array(
+			'label' => 'IBM Plex Mono',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'monospace',
+		),
+		'IBM Plex Sans' => array(
+			'label' => 'IBM Plex Sans',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'IBM Plex Sans Condensed' => array(
+			'label' => 'IBM Plex Sans Condensed',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'IBM Plex Serif' => array(
+			'label' => 'IBM Plex Serif',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
 		),
 		'IM Fell DW Pica' => array(
 			'label' => 'IM Fell DW Pica',
@@ -4899,6 +5136,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Jua' => array(
+			'label' => 'Jua',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Judson' => array(
 			'label' => 'Judson',
 			'variants' => array(
@@ -5224,6 +5472,17 @@ function forest_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'sans-serif',
+		),
+		'Kirang Haerang' => array(
+			'label' => 'Kirang Haerang',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Kite One' => array(
 			'label' => 'Kite One',
@@ -8025,6 +8284,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Poor Story' => array(
+			'label' => 'Poor Story',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'display',
+		),
 		'Poppins' => array(
 			'label' => 'Poppins',
 			'variants' => array(
@@ -9638,6 +9908,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Song Myung' => array(
+			'label' => 'Song Myung',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'serif',
+		),
 		'Sonsie One' => array(
 			'label' => 'Sonsie One',
 			'variants' => array(
@@ -9938,6 +10219,17 @@ function forest_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Stylish' => array(
+			'label' => 'Stylish',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Sue Ellen Francisco' => array(
 			'label' => 'Sue Ellen Francisco',
 			'variants' => array(
@@ -9972,6 +10264,19 @@ function forest_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'serif',
+		),
+		'Sunflower' => array(
+			'label' => 'Sunflower',
+			'variants' => array(
+				'300',
+				'500',
+				'700',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
 		),
 		'Sunshiney' => array(
 			'label' => 'Sunshiney',
@@ -10055,6 +10360,23 @@ function forest_get_google_fonts() {
 				'regular',
 			),
 			'subsets' => array(
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Tajawal' => array(
+			'label' => 'Tajawal',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'arabic',
 				'latin',
 			),
 			'category' => 'sans-serif',
@@ -10842,6 +11164,17 @@ function forest_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'handwriting',
+		),
+		'Yeon Sung' => array(
+			'label' => 'Yeon Sung',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Yeseva One' => array(
 			'label' => 'Yeseva One',
