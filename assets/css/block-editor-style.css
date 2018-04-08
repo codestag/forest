@@ -170,7 +170,7 @@ you can use the generic selector below, but it's slower:
 .editor-post-title,
 .editor-post-title .editor-post-title__input {
   line-height: 1.2;
-  max-width: 970px !important;
+  max-width: 840px !important;
   font-family: var(--font-header);
   word-wrap: break-word;
   background-color: var(--style-background-color, #ffffff);
@@ -282,6 +282,7 @@ you can use the generic selector below, but it's slower:
   color: inherit;
 }
 
+.edit-post-visual-editor blockquote::before,
 .wp-block-pullquote:before {
   font-family: "stag";
   content: "\e00a";
