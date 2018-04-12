@@ -1,43 +1,46 @@
-    </main>
-    
-    <?php stag_footer_before(); ?>
+	</main>
 
-    <?php if( is_active_sidebar( 'sidebar-footer' )): ?>
+	<?php stag_footer_before(); ?>
 
-    <footer id="colophon" class="site-footer" role="contentinfo">
+	<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 
-        <div class="inside">
-            <?php stag_footer_start(); ?>
-            
-            <div class="grids">
-                <?php dynamic_sidebar( 'sidebar-footer' ); ?>
-            </div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
 
-            <?php stag_footer_end(); ?>
-        </div>
+		<div class="inside">
+			<?php stag_footer_start(); ?>
 
-    </footer><!-- .site-footer -->
+			<div class="grids">
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			</div>
 
-    <?php endif; ?>
+			<?php stag_footer_end(); ?>
+		</div>
 
-    <footer class="secondary-footer">
-        <div class="inside">
-            <div class="grids">
-                <div class="site-info grid-6">
-                    <?php echo stripslashes(stag_get_option('general_footer_text')); ?>
-                </div><!-- .site-info -->
+	</footer><!-- .site-footer -->
 
-                <div class="grid-6">
-                    <?php echo do_shortcode(stripcslashes(stag_get_option('footer_social_links'))); ?>
-                </div>
-            </div>
-        </div>
-    </footer><!-- /.secondary-footer -->
+	<?php endif; ?>
 
-    <?php stag_footer_after(); ?>
+	<footer class="secondary-footer">
+		<div class="inside">
+			<div class="grids">
+				<div class="site-info grid-6">
+					<?php echo wpautop( stripslashes( forest_get_thememod_value( 'forest_site_footer' ) ) ); ?>
+					<?php if ( true !== forest_get_thememod_value( 'forest_theme_credit' ) ) : ?>
+						<p>Forest theme <em>by</em> <a href="https://codestag.com">Codestag</a></p>
+					<?php endif; ?>
+				</div><!-- .site-info -->
 
-    <?php stag_body_end(); ?>
+				<div class="grid-6">
+					<?php echo do_shortcode( stripcslashes( forest_get_thememod_value( 'forest_footer_social_links' ) ) ); ?>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.secondary-footer -->
 
-    <?php wp_footer(); ?>
+	<?php stag_footer_after(); ?>
+
+	<?php stag_body_end(); ?>
+
+	<?php wp_footer(); ?>
 </body>
 </html>

@@ -2,21 +2,23 @@
 
 /**
  * Add a custom meta box
- * 
+ *
  * @package StagFramework
  * @param array $meta_box Meta box input data
  */
 function stag_add_meta_box( $meta_box ) {
 	if( !is_array( $meta_box) ) return false;
 
-	$callback = create_function( '$post,$meta_box', 'stag_create_meta_box( $post, $meta_box["args"] );' );
+	$callback = function( $post, $meta_box ) {
+		return stag_create_meta_box( $post, $meta_box['args'] );
+	};
 
 	add_meta_box( $meta_box['id'], $meta_box['title'], $callback, $meta_box['page'], $meta_box['context'], $meta_box['priority'], $meta_box );
 }
 
 /**
  * Create content for the custom meta box
- * 
+ *
  * @param array $meta_box Meta box input data
  */
 function stag_create_meta_box( $post, $meta_box ) {
@@ -76,7 +78,7 @@ function stag_create_meta_box( $post, $meta_box ) {
 									var models = frame.state().get('selection'),
 										url = models.first().attributes.url;
 
-									$('#<?php echo $field['id']; ?>').val( url ); 
+									$('#<?php echo $field['id']; ?>').val( url );
 
 									frame.close();
 								}
@@ -112,7 +114,7 @@ function stag_create_meta_box( $post, $meta_box ) {
 			            }
 
 			            frame = wp.media(options).open();
-			            
+
 			            // Tweak Views
 			            frame.menu.get('view').unset('cancel');
 			            frame.menu.get('view').unset('separateCancel');
@@ -166,11 +168,11 @@ function stag_create_meta_box( $post, $meta_box ) {
 			                            $.ajax({
 			                                type: 'POST',
 			                                url: ajaxurl,
-			                                data: { 
-			                                    ids: ids, 
-			                                    action: 'stag_save_images', 
-			                                    post_id: stag_ajax.post_id, 
-			                                    nonce: stag_ajax.nonce 
+			                                data: {
+			                                    ids: ids,
+			                                    action: 'stag_save_images',
+			                                    post_id: stag_ajax.post_id,
+			                                    nonce: stag_ajax.nonce
 			                                },
 			                                success: function(){
 			                                    selection = loadImages(ids);
@@ -212,7 +214,7 @@ function stag_create_meta_box( $post, $meta_box ) {
 			                    selection.unmirror();
 			                    selection.props.unset('orderby');
 			                });
-			                
+
 			                return selection;
 			            }
 			            return false;
@@ -245,10 +247,10 @@ function stag_create_meta_box( $post, $meta_box ) {
 				echo'<td><select name="stag_meta['. $field['id'] .']" id="'. $field['id'] .'">';
 				foreach( $field['options'] as $key => $option ){
 					echo '<option value="' . $key . '"';
-					if( $meta ){ 
-						if( $meta == $key ) echo ' selected="selected"'; 
+					if( $meta ){
+						if( $meta == $key ) echo ' selected="selected"';
 					} else {
-						if( $field['std'] == $key ) echo ' selected="selected"'; 
+						if( $field['std'] == $key ) echo ' selected="selected"';
 					}
 					echo'>'. $option .'</option>';
 				}
@@ -259,8 +261,8 @@ function stag_create_meta_box( $post, $meta_box ) {
 				echo '<td>';
 				foreach( $field['options'] as $key => $option ){
 					echo '<label class="radio-label"><input type="radio" name="stag_meta['. $field['id'] .']" value="'. $key .'" class="radio"';
-					if( $meta ){ 
-						if( $meta == $key ) echo ' checked="checked"'; 
+					if( $meta ){
+						if( $meta == $key ) echo ' checked="checked"';
 					} else {
 						if( $field['std'] == $key ) echo ' checked="checked"';
 					}
@@ -303,7 +305,7 @@ function stag_create_meta_box( $post, $meta_box ) {
  */
 function stag_save_meta_box( $post_id ) {
 
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 		return;
 
 	if ( !isset($_POST['stag_meta']) || !isset($_POST['stag_meta_box_nonce']) || !wp_verify_nonce( $_POST['stag_meta_box_nonce'], basename( __FILE__ ) ) )
