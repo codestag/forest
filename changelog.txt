@@ -1,5 +1,13 @@
 == Forest Changelog ==
 
+= 2.2.0: April 12, 2018 =
+* New: Added compatibility with Gutenberg
+* New: Move settings to customizer, dropped old options StagFramework
+* New: Added support for partial customizer widget refresh
+* Fix: Error with variable type on portfolio page
+* Fix: Remove deprecated function calls, compatible with PHP v7.2
+* Updated Google fonts library
+
 = 2.1.0: Aug 26, 2016 =
 * Compatible with WordPress 4.8+
 * Updated theme scripts to latest versions

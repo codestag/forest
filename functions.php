@@ -44,6 +44,13 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		add_theme_support( 'title-tag' );
 
 		/**
+		 * Add theme support for selective refresh for widgets.
+		 *
+		 * @since 2.2.0.
+		 */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/**
 		 * Add Gutenberg specific theme support.
 		 *
 		 * @since 2.2.0.
