@@ -1592,3 +1592,16 @@ main .inside {
 		color: inherit;
 	}
 }
+
+
+.stag-latest-tweets li {
+	padding-bottom: 1em;
+	
+	.time { 
+		display: block; 
+	  } 
+	.time a {
+		color: #ffffff; 
+		opacity: 0.6; 
+	}
+   } 
