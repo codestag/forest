@@ -15,8 +15,6 @@ Text Domain: stag
 @import 'compass/css3';
 @import '_mixin';
 
-// @import "_debug";
-
 /* $Reset */
 @import '_reset';
 
@@ -962,7 +960,8 @@ main .inside {
 	color: inherit;
 }
 
-.hentry {
+.hentry,
+.entry-content {
 	.entry-thumbnail {
 		margin-bottom: 30px;
 	}
@@ -1593,15 +1592,14 @@ main .inside {
 	}
 }
 
-
 .stag-latest-tweets li {
 	padding-bottom: 1em;
-	
-	.time { 
-		display: block; 
-	  } 
-	.time a {
-		color: #ffffff; 
-		opacity: 0.6; 
+
+	.time {
+		display: block;
+		a {
+			color: #ffffff;
+			opacity: 0.6;
+		}
 	}
-   } 
+}
