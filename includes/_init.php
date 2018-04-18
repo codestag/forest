@@ -1,8 +1,14 @@
 <?php
+/**
+ * Includes theme files such as widgets and post meta boxes.
+ *
+ * @package Stag_Customizer
+ */
 
-
-
-/* Include Theme Widgets -------------------------------------------------------------------------*/
+/**
+ * Include Theme Widgets.
+ */
+require_once 'widgets/class-forest-widget.php';
 require_once 'widgets/widget-portfolio.php';
 require_once 'widgets/widget-static-content.php';
 require_once 'widgets/widget-services-section.php';
@@ -15,7 +21,9 @@ require_once 'widgets/widget-team.php';
 require_once 'widgets/widget-featured-portfolio.php';
 
 
-/* Include Meta Boxes -------------------------------------------------------------------------*/
+/**
+ * Include Meta Boxes.
+ */
 if ( false === forest_get_thememod_value( 'general_disable_seo_settings' ) ) {
 	require_once 'meta/meta-seo.php';
 }
