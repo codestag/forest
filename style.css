@@ -1122,8 +1122,13 @@ textarea {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
   z-index: 1000;
+  position: absolute;
+  bottom: -4px;
+  width: 100%;
+  min-height: 7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #slider .flex-control-nav {
   position: absolute;
