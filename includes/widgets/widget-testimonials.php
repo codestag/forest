@@ -26,34 +26,34 @@ class stag_widget_testimonials extends WP_Widget {
 		if ( $title ) {
 			echo $before_title . $title . $after_title; }
 
-		query_posts(
-			array(
-				'post_type'      => 'testimonials',
-				'posts_per_page' => -1,
-			)
-		);
+		$testimonials = new WP_Query( array(
+			'post_type'      => 'testimonials',
+			'post_status'    => 'publish',
+			'posts_per_page' => 50,
+		) );
 
 		echo "<div class='testimonials-slideshow' data-cycle-speed='400' data-cycle-swipe='true'>";
 
-		if ( have_posts() ) :
-			while ( have_posts() ) :
-				the_post();
+		if ( $testimonials->have_posts() ) :
+			while ( $testimonials->have_posts() ) :
+				$testimonials->the_post();
+				?>
 
-					?>
-
-					<blockquote>
+				<blockquote>
 					<i class="icon-testimonial"></i>
 					<?php the_content(); ?>
-		<footer><?php the_title(); ?></footer>
-				  </blockquote>
+					<footer><?php the_title(); ?></footer>
+				</blockquote>
 
-					<?php
-	  endwhile;
-	  endif;
-		wp_reset_query();
+				<?php
+			endwhile;
+
+			wp_reset_postdata();
+		endif;
+
 		?>
 		<div class="cycle-pager"></div>
-	  </div>
+		</div>
 		<?php
 		echo $after_widget;
 
@@ -80,10 +80,10 @@ class stag_widget_testimonials extends WP_Widget {
 		/* HERE GOES THE FORM */
 		?>
 
-	  <p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'stag' ); ?></label>
-	  <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
-	</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'stag' ); ?></label>
+			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
+		</p>
 
 	<?php
 	}
