@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Forest\n"
-"POT-Creation-Date: 2017-08-26 13:21+0530\n"
-"PO-Revision-Date: 2017-08-26 13:22+0530\n"
+"POT-Creation-Date: 2018-04-12 14:31+0530\n"
+"PO-Revision-Date: 2018-04-12 14:31+0530\n"
 "Last-Translator: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language-Team: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -94,13 +94,13 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content.php:22 includes/widgets/widget-latest-posts.php:62
+#: content.php:22 includes/widgets/widget-latest-posts.php:74
 msgid ", "
 msgstr ""
 
-#: content.php:35 includes/widgets/widget-latest-posts.php:47
-#: includes/widgets/widget-latest-posts.php:53
-#: includes/widgets/widget-latest-posts.php:59
+#: content.php:35 includes/widgets/widget-latest-posts.php:58
+#: includes/widgets/widget-latest-posts.php:64
+#: includes/widgets/widget-latest-posts.php:71
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -109,8 +109,8 @@ msgstr ""
 msgid "Read More&hellip;"
 msgstr ""
 
-#: content.php:43 includes/widgets/widget-static-content.php:45 page.php:22
-#: single-portfolio.php:73 template-archives.php:24 template-contact.php:86
+#: content.php:43 includes/widgets/widget-static-content.php:58 page.php:22
+#: single-portfolio.php:80 template-archives.php:24 template-contact.php:91
 #: template-full-width.php:27
 msgid "Pages:"
 msgstr ""
@@ -206,13 +206,11 @@ msgstr ""
 msgid "Install Plugins"
 msgstr ""
 
-#. translators: %s: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#. translators: %s: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
@@ -222,7 +220,6 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
@@ -230,7 +227,6 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:349
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
@@ -238,7 +234,6 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:355
 #, php-format
 msgid ""
@@ -250,7 +245,6 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:361
 #, php-format
 msgid "There is an update available for: %1$s."
@@ -258,7 +252,6 @@ msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:367
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
@@ -266,7 +259,6 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name(s).
 #: framework/classes/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -315,13 +307,11 @@ msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#. translators: 1: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -329,7 +319,6 @@ msgid ""
 "Please update the plugin."
 msgstr ""
 
-#. translators: 1: dashboard link.
 #: framework/classes/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
@@ -382,7 +371,6 @@ msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#. translators: %s: version number
 #: framework/classes/class-tgm-plugin-activation.php:2067
 #, php-format
 msgid "TGMPA v%s"
@@ -432,14 +420,12 @@ msgstr ""
 msgid "Update recommended"
 msgstr ""
 
-#. translators: 1: install status, 2: update status
 #: framework/classes/class-tgm-plugin-activation.php:2427
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
-#. translators: 1: number of plugins.
 #: framework/classes/class-tgm-plugin-activation.php:2473
 #, php-format
 msgctxt "plugins"
@@ -448,7 +434,6 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: number of plugins.
 #: framework/classes/class-tgm-plugin-activation.php:2477
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
@@ -456,7 +441,6 @@ msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: number of plugins.
 #: framework/classes/class-tgm-plugin-activation.php:2481
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
@@ -464,7 +448,6 @@ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#. translators: 1: number of plugins.
 #: framework/classes/class-tgm-plugin-activation.php:2485
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
@@ -513,19 +496,16 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#. translators: %2$s: plugin name in screen reader markup
 #: framework/classes/class-tgm-plugin-activation.php:2688
 #, php-format
 msgid "Install %2$s"
 msgstr ""
 
-#. translators: %2$s: plugin name in screen reader markup
 #: framework/classes/class-tgm-plugin-activation.php:2693
 #, php-format
 msgid "Update %2$s"
 msgstr ""
 
-#. translators: %2$s: plugin name in screen reader markup
 #: framework/classes/class-tgm-plugin-activation.php:2699
 #, php-format
 msgid "Activate %2$s"
@@ -575,19 +555,16 @@ msgstr ""
 msgid "Plugin activation failed."
 msgstr ""
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: framework/classes/class-tgm-plugin-activation.php:3583
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#. translators: 1: plugin name, 2: error message.
 #: framework/classes/class-tgm-plugin-activation.php:3586
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#. translators: 1: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:3588
 #, php-format
 msgid "The installation of %1$s failed."
@@ -599,7 +576,6 @@ msgid ""
 "while on some hosts, so please be patient."
 msgstr ""
 
-#. translators: 1: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:3594
 #, php-format
 msgid "%1$s installed and activated successfully."
@@ -619,7 +595,6 @@ msgstr ""
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: framework/classes/class-tgm-plugin-activation.php:3597
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
@@ -631,7 +606,6 @@ msgid ""
 "hosts, so please be patient."
 msgstr ""
 
-#. translators: 1: plugin name.
 #: framework/classes/class-tgm-plugin-activation.php:3602
 #, php-format
 msgid "%1$s installed successfully."
@@ -641,7 +615,6 @@ msgstr ""
 msgid "All installations have been completed."
 msgstr ""
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
 #: framework/classes/class-tgm-plugin-activation.php:3605
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
@@ -663,11 +636,11 @@ msgstr ""
 msgid "Upload or Choose your own Image file"
 msgstr ""
 
-#: framework/stag-admin-functions.php:218 framework/stag-admin-metaboxes.php:73
+#: framework/stag-admin-functions.php:218 framework/stag-admin-metaboxes.php:75
 msgid "Insert"
 msgstr ""
 
-#: framework/stag-admin-init.php:29
+#: framework/stag-admin-init.php:26 includes/customizer/definitions.php:23
 msgid "Theme Options"
 msgstr ""
 
@@ -717,88 +690,88 @@ msgstr ""
 msgid "You do not have sufficient permissions to reset these options."
 msgstr ""
 
-#: framework/stag-admin-metaboxes.php:104
+#: framework/stag-admin-metaboxes.php:106
 msgid "Create Featured Gallery"
 msgstr ""
 
-#: framework/stag-admin-metaboxes.php:111
-#: framework/stag-admin-metaboxes.php:119
+#: framework/stag-admin-metaboxes.php:113
+#: framework/stag-admin-metaboxes.php:121
 msgid "Edit Featured Gallery"
 msgstr ""
 
-#: framework/stag-admin-metaboxes.php:155
+#: framework/stag-admin-metaboxes.php:157
 msgid "Save Featured Gallery"
 msgstr ""
 
-#: framework/stag-admin-metaboxes.php:164
+#: framework/stag-admin-metaboxes.php:166
 msgid "Saving..."
 msgstr ""
 
-#: framework/stag-admin-metaboxes.php:227
 #: framework/stag-admin-metaboxes.php:229
+#: framework/stag-admin-metaboxes.php:231
 msgid "Edit Gallery"
 msgstr ""
 
-#: functions.php:32
+#: functions.php:29
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:78
+#: functions.php:116
 msgid "Global Sidebar"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:122
 msgid "Blog Widgets Area."
 msgstr ""
 
-#: functions.php:88
+#: functions.php:128
 msgid "Homepage Sections"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:134
 msgid "Here you can configure the layout of the Homepage."
 msgstr ""
 
-#: functions.php:98
+#: functions.php:140
 msgid "About Sections"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:146
 msgid "About template sections."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:152
 msgid "Service Boxes Section"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:158
 msgid ""
 "Use only \"Service Box\" widgets here and they will populate the \"Services"
 "\" widget."
 msgstr ""
 
-#: functions.php:118
+#: functions.php:164
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:170
 msgid "Widget area for footer"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:339
 #, php-format
 msgid "%s ago"
 msgstr ""
 
-#: functions.php:245
+#: functions.php:352
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:368
+#: functions.php:486
 msgid "<i class=\"icon icon-previous\"></i>"
 msgstr ""
 
-#: functions.php:372
+#: functions.php:490
 msgid "<i class=\"icon icon-next\"></i>"
 msgstr ""
 
@@ -822,6 +795,397 @@ msgstr ""
 msgid "Go to Project"
 msgstr ""
 
+#: includes/customizer/customizer.php:59
+msgid "No results match"
+msgstr ""
+
+#: includes/customizer/customizer.php:60
+msgid "No matching fonts"
+msgstr ""
+
+#: includes/customizer/definitions.php:24
+msgid "Configure your theme settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:40 includes/meta/meta-background.php:30
+msgid "Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:49
+msgid "Accent Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:58
+msgid "Portfolio Section Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:67
+msgid "Footer Text Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:76
+msgid "Blog Header Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:84
+msgid "Fonts"
+msgstr ""
+
+#: includes/customizer/definitions.php:88
+#, php-format
+msgid ""
+"The list of Google fonts is long! You can %s before making your choices."
+msgstr ""
+
+#: includes/customizer/definitions.php:92
+msgid "preview"
+msgstr ""
+
+#: includes/customizer/definitions.php:101
+msgid "Body"
+msgstr ""
+
+#: includes/customizer/definitions.php:109
+msgid "Headers"
+msgstr ""
+
+#: includes/customizer/definitions.php:117
+msgid "Google Font Subset"
+msgstr ""
+
+#: includes/customizer/definitions.php:120
+#, php-format
+msgid ""
+"Not all fonts provide each of these subsets. Please visit the %s to see "
+"which subsets are available for each font."
+msgstr ""
+
+#: includes/customizer/definitions.php:124
+msgid "Google Fonts website"
+msgstr ""
+
+#: includes/customizer/definitions.php:132
+msgid "Blog Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:140
+msgid "Blog Title"
+msgstr ""
+
+#: includes/customizer/definitions.php:141
+msgid "Enter the default title for the blog header section."
+msgstr ""
+
+#: includes/customizer/definitions.php:150
+msgid "Blog Cover"
+msgstr ""
+
+#: includes/customizer/definitions.php:151
+msgid "Choose a header cover image for blog."
+msgstr ""
+
+#: includes/customizer/definitions.php:160 includes/meta/meta-background.php:23
+msgid "Background Opacity"
+msgstr ""
+
+#: includes/customizer/definitions.php:161
+msgid ""
+"Choose a default value for background image at the blog header section. For "
+"no opacity give a value of 100."
+msgstr ""
+
+#: includes/customizer/definitions.php:170
+msgid "Post Excerpt Length"
+msgstr ""
+
+#: includes/customizer/definitions.php:171
+msgid "Enter the length of post excerpt for blog page."
+msgstr ""
+
+#: includes/customizer/definitions.php:180
+msgid "Post Excerpt Text"
+msgstr ""
+
+#: includes/customizer/definitions.php:181
+msgid "Enter the text for post excerpt read more on blog page."
+msgstr ""
+
+#: includes/customizer/definitions.php:190
+msgid "Disable SEO Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:191
+msgid "Enable/Disable SEO Settings on single posts and pages."
+msgstr ""
+
+#: includes/customizer/definitions.php:198
+msgid "General Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:207
+msgid "Plain Text Logo"
+msgstr ""
+
+#: includes/customizer/definitions.php:216
+msgid "Custom Logo Upload"
+msgstr ""
+
+#: includes/customizer/definitions.php:217
+msgid "Upload a logo for your theme."
+msgstr ""
+
+#: includes/customizer/definitions.php:226
+msgid "Contact Form Email Address"
+msgstr ""
+
+#: includes/customizer/definitions.php:227
+msgid ""
+"Enter the email address where you'd like to receive emails from the contact "
+"form, or leave blank to use admin email."
+msgstr ""
+
+#: includes/customizer/definitions.php:236
+msgid "Tracking Code"
+msgstr ""
+
+#: includes/customizer/definitions.php:237
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. It will be "
+"inserted before the closing body tag of your theme."
+msgstr ""
+
+#: includes/customizer/definitions.php:246
+msgid "Footer Text"
+msgstr ""
+
+#: includes/customizer/definitions.php:247
+msgid "Enter the site footer text."
+msgstr ""
+
+#: includes/customizer/definitions.php:256
+msgid "Hide Theme Credit"
+msgstr ""
+
+#: includes/customizer/definitions.php:263 includes/meta/meta-portfolio.php:9
+msgid "Portfolio Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:265
+msgid "Customize your portfolio settings."
+msgstr ""
+
+#: includes/customizer/definitions.php:272
+msgid "Portfolio CTA text"
+msgstr ""
+
+#: includes/customizer/definitions.php:273
+msgid "Enter the call to action text for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:282
+msgid "Portfolio CTA Button text"
+msgstr ""
+
+#: includes/customizer/definitions.php:283
+msgid "Enter the call to action button text for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:292
+msgid "Portfolio CTA Button Link"
+msgstr ""
+
+#: includes/customizer/definitions.php:293
+msgid "Enter the call to action button link for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:302
+msgid "Open link in new window?"
+msgstr ""
+
+#: includes/customizer/definitions.php:303
+msgid "Check to open the call to action button link in new window."
+msgstr ""
+
+#: includes/customizer/definitions.php:312
+msgid "Portfolio Page"
+msgstr ""
+
+#: includes/customizer/definitions.php:313
+msgid "Select portfolio page, used for link to portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:321
+msgid "Social Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:323
+msgid ""
+"Customize your social profile URLs.<br/><br/><strong>Quick tip:</strong> you "
+"can use shortcode <code>[social url=\"facebook,twitter,dribbble\"]</code> to "
+"display social links anywhere between posts."
+msgstr ""
+
+#: includes/customizer/definitions.php:330
+msgid "Footer Social Links"
+msgstr ""
+
+#: includes/customizer/definitions.php:331
+msgid ""
+"Display social link in footer with the <code>[social url=\"\"]</code> "
+"shortcode."
+msgstr ""
+
+#: includes/customizer/definitions.php:340
+msgid "Facebook"
+msgstr ""
+
+#: includes/customizer/definitions.php:341
+msgid "Enter your facebook profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:350
+msgid "Twitter"
+msgstr ""
+
+#: includes/customizer/definitions.php:351
+msgid "Enter your twitter profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:360
+msgid "Dribbble"
+msgstr ""
+
+#: includes/customizer/definitions.php:361
+msgid "Enter your dribbble URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:370
+msgid "Google+"
+msgstr ""
+
+#: includes/customizer/definitions.php:371
+msgid "Enter your Google+ profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:380
+msgid "Pinterest"
+msgstr ""
+
+#: includes/customizer/definitions.php:381
+msgid "Enter your Pinterest profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:390
+msgid "Vimeo"
+msgstr ""
+
+#: includes/customizer/definitions.php:391
+msgid "Enter your Vimeo profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:400
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/customizer/definitions.php:401
+msgid "Enter your LinkedIn profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:410
+msgid "Behance"
+msgstr ""
+
+#: includes/customizer/definitions.php:411
+msgid "Enter your Behance profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:420
+msgid "DeviantArt"
+msgstr ""
+
+#: includes/customizer/definitions.php:421
+msgid "Enter your DevianArt profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:430
+msgid "Flickr"
+msgstr ""
+
+#: includes/customizer/definitions.php:431
+msgid "Enter your Flickr profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:440
+msgid "Instagram"
+msgstr ""
+
+#: includes/customizer/definitions.php:441
+msgid "Enter your Instagram profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:450
+msgid "Myspace"
+msgstr ""
+
+#: includes/customizer/definitions.php:451
+msgid "Enter your Myspace profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:460
+msgid "SoundCloud"
+msgstr ""
+
+#: includes/customizer/definitions.php:461
+msgid "Enter your SoundCloud profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:470
+msgid "Youtube"
+msgstr ""
+
+#: includes/customizer/definitions.php:471
+msgid "Enter your Youtube profile/page URL"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:311
+msgid "Standard Fonts"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:316
+msgid "Serif Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:319
+msgid "Sans Serif Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:322
+msgid "Display Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:325
+msgid "Handwriting Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:328
+msgid "Monospace Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:355
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:359
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:363
+msgctxt "font style"
+msgid "Monospaced"
+msgstr ""
+
 #: includes/meta/meta-background.php:9
 msgid "Title Background Settings"
 msgstr ""
@@ -839,19 +1203,11 @@ msgstr ""
 msgid " Choose background image for the title of this post/page."
 msgstr ""
 
-#: includes/meta/meta-background.php:23
-msgid "Background Opacity"
-msgstr ""
-
 #: includes/meta/meta-background.php:24
 #, php-format
 msgid ""
 "Choose background image's opacity for the title of this post/page e.g. 30 "
 "for 30% opacity. Choose 100 for no opacity"
-msgstr ""
-
-#: includes/meta/meta-background.php:30 includes/options/styling-options.php:8
-msgid "Background Color"
 msgstr ""
 
 #: includes/meta/meta-background.php:31
@@ -881,10 +1237,6 @@ msgstr ""
 
 #: includes/meta/meta-background.php:46
 msgid "Choose background color for the top section."
-msgstr ""
-
-#: includes/meta/meta-portfolio.php:9
-msgid "Portfolio Settings"
 msgstr ""
 
 #: includes/meta/meta-portfolio.php:10
@@ -1054,591 +1406,349 @@ msgstr ""
 msgid "Enter team member's linkedin profile URL."
 msgstr ""
 
-#: includes/options/blog-settings.php:4
-msgid "Customize your blog settings"
+#: includes/updater/theme-updater-admin.php:260
+msgid "Error"
 msgstr ""
 
-#: includes/options/blog-settings.php:7
-msgid "Blog Title"
+#: includes/updater/theme-updater-admin.php:291
+#: includes/updater/theme-updater-admin.php:330
+#: includes/updater/theme-updater-admin.php:386
+msgid "An error occurred, please try again."
 msgstr ""
 
-#: includes/options/blog-settings.php:8
-msgid "Enter the default title for the blog header section."
+#: includes/updater/theme-updater-admin.php:303
+#, php-format
+msgid "Your license key expired on %s."
 msgstr ""
 
-#: includes/options/blog-settings.php:15
-msgid "Blog Background Image"
+#: includes/updater/theme-updater-admin.php:309
+msgid "Your license key has been disabled."
 msgstr ""
 
-#: includes/options/blog-settings.php:16
-msgid "Upload a default background image for the blog header section."
+#: includes/updater/theme-updater-admin.php:313
+msgid "Invalid license."
 msgstr ""
 
-#: includes/options/blog-settings.php:19
-msgid "Upload Background"
+#: includes/updater/theme-updater-admin.php:318
+msgid "Your license is not active for this URL."
 msgstr ""
 
-#: includes/options/blog-settings.php:23
-msgid "Blog Background Color"
+#: includes/updater/theme-updater-admin.php:322
+#, php-format
+msgid "This appears to be an invalid license key for %s."
 msgstr ""
 
-#: includes/options/blog-settings.php:24
-msgid "Choose a default background color for the blog header section."
+#: includes/updater/theme-updater-admin.php:326
+msgid "Your license key has reached its activation limit."
 msgstr ""
 
-#: includes/options/blog-settings.php:31
-msgid "Blog Background Opacity"
+#: includes/updater/theme-updater.php:29
+msgid "Theme License"
 msgstr ""
 
-#: includes/options/blog-settings.php:32
+#: includes/updater/theme-updater.php:31
 msgid ""
-"Choose a default value for background image at the blog header section. For "
-"no opacity give a value of 100."
+"Enter your theme license key received upon purchase from <a target=\"_blank"
+"\" href=\"https://codestag.com/account/\">Codestag</a>.<br><br>\n"
+"\t\t\t\t\t\t\t\t\t\t\tIf you're coming from ThemeForest, please download <a "
+"href=\"https://envato.com/market-plugin/\" target=\"_blank\">Envato Market</"
+"a> plugin instead to receive automatic updates."
 msgstr ""
 
-#: includes/options/general-settings.php:7
-msgid "Plain Text Logo"
+#: includes/updater/theme-updater.php:34
+msgid "License Key"
 msgstr ""
 
-#: includes/options/general-settings.php:8
+#: includes/updater/theme-updater.php:35
+msgid "License Action"
+msgstr ""
+
+#: includes/updater/theme-updater.php:36
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/updater/theme-updater.php:37
+msgid "Activate License"
+msgstr ""
+
+#: includes/updater/theme-updater.php:38 includes/updater/theme-updater.php:51
+msgid "License status is unknown."
+msgstr ""
+
+#: includes/updater/theme-updater.php:39
+msgid "Renew?"
+msgstr ""
+
+#: includes/updater/theme-updater.php:40
+msgid "unlimited"
+msgstr ""
+
+#: includes/updater/theme-updater.php:41
+msgid "License key is active."
+msgstr ""
+
+#: includes/updater/theme-updater.php:42
+#, php-format
+msgid "Expires %s."
+msgstr ""
+
+#: includes/updater/theme-updater.php:43
+msgid "Lifetime License."
+msgstr ""
+
+#: includes/updater/theme-updater.php:44
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: includes/updater/theme-updater.php:45
+#, php-format
+msgid "License key expired %s."
+msgstr ""
+
+#: includes/updater/theme-updater.php:46
+msgid "License key has expired."
+msgstr ""
+
+#: includes/updater/theme-updater.php:47
+msgid "License keys do not match."
+msgstr ""
+
+#: includes/updater/theme-updater.php:48
+msgid "License is inactive."
+msgstr ""
+
+#: includes/updater/theme-updater.php:49
+msgid "License key is disabled."
+msgstr ""
+
+#: includes/updater/theme-updater.php:50
+msgid "Site is inactive."
+msgstr ""
+
+#: includes/updater/theme-updater.php:52
 msgid ""
-"Check this box to enable a plain text logo rather than an image logo. Will "
-"use your site title."
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
 msgstr ""
 
-#: includes/options/general-settings.php:15
-msgid "Custom Logo Upload"
-msgstr ""
-
-#: includes/options/general-settings.php:16
-msgid "Upload a logo for your theme."
-msgstr ""
-
-#: includes/options/general-settings.php:19
-#: includes/options/general-settings.php:27
-msgid "Upload Image"
-msgstr ""
-
-#: includes/options/general-settings.php:23
-msgid "Custom Favicon Upload"
-msgstr ""
-
-#: includes/options/general-settings.php:24
+#: includes/updater/theme-updater.php:53
+#, php-format
 msgid ""
-"Upload a 16px x 16px Png/Gif image that will represent your website's "
-"favicon. Use <a href=\"//www.xiconeditor.com/\" target=\"_blank\" rel="
-"\"nofollow\">X-Icon Editor</a> to easily create a favicon."
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
 msgstr ""
 
-#: includes/options/general-settings.php:31
-msgid "Contact Form Email Address"
-msgstr ""
-
-#: includes/options/general-settings.php:32
+#: includes/upgrade.php:154
+#, php-format
 msgid ""
-"Enter the <code>email address</code> where you'd like to receive emails from "
-"the contact form, or leave blank to use admin email."
-msgstr ""
-
-#: includes/options/general-settings.php:38
-msgid "Tracking Code"
-msgstr ""
-
-#: includes/options/general-settings.php:39
-msgid ""
-"Paste your Google Analytics (or other) tracking code here. It will be "
-"inserted before the closing body tag of your theme."
-msgstr ""
-
-#: includes/options/general-settings.php:45
-msgid "Footer Copyright Text"
-msgstr ""
-
-#: includes/options/general-settings.php:46
-msgid "Enter the text to display in footer copyright area."
-msgstr ""
-
-#: includes/options/general-settings.php:53
-msgid "Post Excerpt Length"
-msgstr ""
-
-#: includes/options/general-settings.php:54
-#: includes/options/general-settings.php:62
-msgid "Enter the length of post excerpt for blog page."
-msgstr ""
-
-#: includes/options/general-settings.php:61
-msgid "Post Excerpt Text"
-msgstr ""
-
-#: includes/options/general-settings.php:69
-msgid "Disable Admin Bar"
-msgstr ""
-
-#: includes/options/general-settings.php:70
-msgid "Enable/Disable WordPress Admin Bar for all users."
-msgstr ""
-
-#: includes/options/general-settings.php:77
-msgid "Disable SEO Settings"
-msgstr ""
-
-#: includes/options/general-settings.php:78
-msgid "Enable/Disable SEO Settings on single posts and pages."
-msgstr ""
-
-#: includes/options/portfolio-settings.php:5
-msgid "Customize your portfolio settings"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:8
-msgid "Portfolio CTA text"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:9
-msgid "Enter the call to action text for portfolio page."
-msgstr ""
-
-#: includes/options/portfolio-settings.php:16
-msgid "Portfolio CTA Button text"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:17
-msgid "Enter the call to action button text for portfolio page."
-msgstr ""
-
-#: includes/options/portfolio-settings.php:24
-msgid "Portfolio CTA Button Link"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:25
-msgid "Enter the call to action button link for portfolio page."
-msgstr ""
-
-#: includes/options/portfolio-settings.php:32
-msgid "Open link in new window?"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:33
-msgid "Check to open the call to action button link in new window."
-msgstr ""
-
-#: includes/options/portfolio-settings.php:40
-msgid "Portfolio Page"
-msgstr ""
-
-#: includes/options/portfolio-settings.php:41
-msgid "Select portfolio page, used for link to portfolio page."
-msgstr ""
-
-#: includes/options/social-settings.php:5
-msgid ""
-"Customize your social profile URLs.<br>Quick tip: you can use shortcode "
-"<code>[social url=\"facebook,twitter,dribbble\"]</code> to display social "
-"links anywhere between posts."
-msgstr ""
-
-#: includes/options/social-settings.php:8
-msgid "Footer Social Links"
-msgstr ""
-
-#: includes/options/social-settings.php:9
-msgid ""
-"Display social link in footer with the <code>[social url=\"\"]</code> "
-"shortcode."
-msgstr ""
-
-#: includes/options/social-settings.php:16
-msgid "Facebook"
-msgstr ""
-
-#: includes/options/social-settings.php:17
-msgid "Enter your facebook profile/page URL"
-msgstr ""
-
-#: includes/options/social-settings.php:24
-msgid "Twitter"
-msgstr ""
-
-#: includes/options/social-settings.php:25
-msgid "Enter your twitter profile URL"
-msgstr ""
-
-#: includes/options/social-settings.php:32
-msgid "Dribbble"
-msgstr ""
-
-#: includes/options/social-settings.php:33
-msgid "Enter your dribbble URL"
-msgstr ""
-
-#: includes/options/social-settings.php:40
-msgid "Google+"
-msgstr ""
-
-#: includes/options/social-settings.php:41
-msgid "Enter your Google+ profile/page URL"
-msgstr ""
-
-#: includes/options/social-settings.php:48
-msgid "Pinterest"
-msgstr ""
-
-#: includes/options/social-settings.php:49
-msgid "Enter your Pinterest profile URL"
-msgstr ""
-
-#: includes/options/social-settings.php:56
-msgid "Vimeo"
-msgstr ""
-
-#: includes/options/social-settings.php:57
-msgid "Enter your Vimeo profile URL"
-msgstr ""
-
-#: includes/options/social-settings.php:64
-msgid "Forrrst"
-msgstr ""
-
-#: includes/options/social-settings.php:65
-msgid "Enter your Forrrst profile URL"
-msgstr ""
-
-#: includes/options/social-settings.php:72
-msgid "LinkedIn"
-msgstr ""
-
-#: includes/options/social-settings.php:73
-msgid "Enter your LinkedIn profile URL"
-msgstr ""
-
-#: includes/options/social-settings.php:80
-msgid "Behance"
-msgstr ""
-
-#: includes/options/social-settings.php:88
-msgid "DeviantArt"
-msgstr ""
-
-#: includes/options/social-settings.php:95
-msgid "Flickr"
-msgstr ""
-
-#: includes/options/social-settings.php:102
-msgid "Instagram"
-msgstr ""
-
-#: includes/options/social-settings.php:109
-msgid "Myspace"
-msgstr ""
-
-#: includes/options/social-settings.php:116
-msgid "SoundCloud"
-msgstr ""
-
-#: includes/options/social-settings.php:123
-msgid "YouTube"
-msgstr ""
-
-#: includes/options/styling-options.php:5
-msgid ""
-"Configure the visual appearance of your theme, or insert any custom CSS."
-msgstr ""
-
-#: includes/options/styling-options.php:9
-msgid "Choose the background color of your site"
-msgstr ""
-
-#: includes/options/styling-options.php:16
-msgid "Accent Color"
-msgstr ""
-
-#: includes/options/styling-options.php:17
-msgid "Choose the accent color of your site"
-msgstr ""
-
-#: includes/options/styling-options.php:24
-msgid "Portfolio Section Background Color"
-msgstr ""
-
-#: includes/options/styling-options.php:32
-msgid "Footer Text Color"
-msgstr ""
-
-#: includes/options/styling-options.php:40
-msgid "Body Font"
-msgstr ""
-
-#: includes/options/styling-options.php:41
-msgid ""
-"Quickly add a custom Google Font for body from <a href=\"//www.google.com/"
-"webfonts/\" target=\"_blank\">Google Font Directory.</a><br>\n"
-"\t\t\t\t   <code>Example font name: \"Source Sans Pro\"</code>, for "
-"including font weights type <code>Source Sans Pro:400,700,400italic</code>."
-msgstr ""
-
-#: includes/options/styling-options.php:49
-msgid "Heading Font"
-msgstr ""
-
-#: includes/options/styling-options.php:50
-msgid ""
-"Quickly add a custom Google Font for Headings from <a href=\"//www.google."
-"com/webfonts/\" target=\"_blank\">Google Font Directory.</a><br>\n"
-"\t\t\t\t   For font type: <code>\"Source Sans Pro\"</code>, for including "
-"specific font weights <code>Source Sans Pro:400,700,400italic</code>."
-msgstr ""
-
-#: includes/options/styling-options.php:58
-msgid "Google Font Script"
-msgstr ""
-
-#: includes/options/styling-options.php:59
-msgid "Choose the character sets you want for Google Web Font"
-msgstr ""
-
-#: includes/options/styling-options.php:64
-msgid "Cyrillic"
-msgstr ""
-
-#: includes/options/styling-options.php:65
-msgid "Cyrillic Extended"
-msgstr ""
-
-#: includes/options/styling-options.php:66
-msgid "Greek"
-msgstr ""
-
-#: includes/options/styling-options.php:67
-msgid "Greek Extended"
-msgstr ""
-
-#: includes/options/styling-options.php:68
-msgid "Khmer"
-msgstr ""
-
-#: includes/options/styling-options.php:69
-msgid "Latin"
-msgstr ""
-
-#: includes/options/styling-options.php:70
-msgid "Latin Extended"
-msgstr ""
-
-#: includes/options/styling-options.php:71
-msgid "Vietnamese"
-msgstr ""
-
-#: includes/options/styling-options.php:76
-msgid "Custom CSS"
-msgstr ""
-
-#: includes/options/styling-options.php:77
-msgid "Quickly add some CSS to your theme by adding it to this block."
-msgstr ""
-
-#: includes/widgets/widget-clients.php:6
-msgid "Displays multiple images as a showcase."
+"Looking for theme settings? It has been moved under Appearance &rarr; <a "
+"href=\"%s\">Customize</a>."
 msgstr ""
 
 #: includes/widgets/widget-clients.php:8
+msgid "Displays multiple images as a showcase."
+msgstr ""
+
+#: includes/widgets/widget-clients.php:15
 msgid "Section: Clients"
 msgstr ""
 
-#: includes/widgets/widget-clients.php:60
-#: includes/widgets/widget-featured-portfolio.php:78
-#: includes/widgets/widget-latest-posts.php:107
-#: includes/widgets/widget-portfolio.php:162
-#: includes/widgets/widget-services-section.php:52
-#: includes/widgets/widget-services.php:66
-#: includes/widgets/widget-static-content.php:86
-#: includes/widgets/widget-team.php:88
-#: includes/widgets/widget-testimonials.php:72
+#: includes/widgets/widget-clients.php:68
+#: includes/widgets/widget-featured-portfolio.php:92
+#: includes/widgets/widget-latest-posts.php:119
+#: includes/widgets/widget-portfolio.php:180
+#: includes/widgets/widget-services-section.php:60
+#: includes/widgets/widget-services.php:77
+#: includes/widgets/widget-static-content.php:103
+#: includes/widgets/widget-team.php:112
+#: includes/widgets/widget-testimonials.php:84
 msgid "Title:"
 msgstr ""
 
-#: includes/widgets/widget-clients.php:65
+#: includes/widgets/widget-clients.php:73
 msgid "Image URLs:"
 msgstr ""
 
-#: includes/widgets/widget-featured-portfolio.php:6
-#: includes/widgets/widget-testimonials.php:6
+#: includes/widgets/widget-featured-portfolio.php:8
+#: includes/widgets/widget-testimonials.php:8
 msgid "Displays testimonials."
 msgstr ""
 
-#: includes/widgets/widget-featured-portfolio.php:8
+#: includes/widgets/widget-featured-portfolio.php:15
 msgid "Featured Portfolio"
 msgstr ""
 
-#: includes/widgets/widget-featured-portfolio.php:83
+#: includes/widgets/widget-featured-portfolio.php:97
 msgid "Post ID:"
 msgstr ""
 
-#: includes/widgets/widget-featured-portfolio.php:85
+#: includes/widgets/widget-featured-portfolio.php:99
 msgid "Enter the Post ID of portfolio page."
 msgstr ""
 
-#: includes/widgets/widget-latest-posts.php:6
+#: includes/widgets/widget-latest-posts.php:8
 msgid "Displays latest blog posts."
 msgstr ""
 
-#: includes/widgets/widget-latest-posts.php:8
+#: includes/widgets/widget-latest-posts.php:15
 msgid "Section: Latest Posts"
 msgstr ""
 
-#: includes/widgets/widget-latest-posts.php:112
-#: includes/widgets/widget-portfolio.php:173
+#: includes/widgets/widget-latest-posts.php:124
+#: includes/widgets/widget-portfolio.php:191
 msgid "Button Text:"
 msgstr ""
 
-#: includes/widgets/widget-latest-posts.php:114
+#: includes/widgets/widget-latest-posts.php:126
 msgid "Enter the text for blog button"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:6
+#: includes/widgets/widget-portfolio.php:8
 msgid "Display portfolio items."
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:8
+#: includes/widgets/widget-portfolio.php:15
 msgid "Section: Portfolio"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:33 template-portfolio.php:16
+#: includes/widgets/widget-portfolio.php:43 template-portfolio.php:16
 msgid "All"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:82
-#: includes/widgets/widget-portfolio.php:101 template-portfolio.php:66
-#: template-portfolio.php:85
+#: includes/widgets/widget-portfolio.php:98
+#: includes/widgets/widget-portfolio.php:117 template-portfolio.php:69
+#: template-portfolio.php:88
 #, php-format
 msgid "Permanent Link to %s"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:84
+#: includes/widgets/widget-portfolio.php:100
 msgid "Details"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:167
+#: includes/widgets/widget-portfolio.php:185
 msgid "Portfolio Link:"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:169
+#: includes/widgets/widget-portfolio.php:187
 msgid "Enter the portfolio page URL."
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:175
+#: includes/widgets/widget-portfolio.php:193
 msgid "Enter text for the portfolio button."
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:179
+#: includes/widgets/widget-portfolio.php:197
 msgid "Post Count:"
 msgstr ""
 
-#: includes/widgets/widget-portfolio.php:181
+#: includes/widgets/widget-portfolio.php:199
 msgid "Enter the number of recent portfolio items to display at homepage."
 msgstr ""
 
-#: includes/widgets/widget-services-section.php:6
+#: includes/widgets/widget-services-section.php:8
 msgid "Display widgets from Services Sidebar."
 msgstr ""
 
-#: includes/widgets/widget-services-section.php:8
+#: includes/widgets/widget-services-section.php:15
 msgid "Section: Services Section"
 msgstr ""
 
-#: includes/widgets/widget-services-section.php:48
+#: includes/widgets/widget-services-section.php:56
 msgid ""
 "Configure this area by adding \"Service Box\" widget at \"Service Boxes "
 "Section\"."
 msgstr ""
 
-#: includes/widgets/widget-services.php:6
+#: includes/widgets/widget-services.php:8
 msgid "Display latest posts from blog."
 msgstr ""
 
-#: includes/widgets/widget-services.php:8
+#: includes/widgets/widget-services.php:15
 msgid "Service Box"
 msgstr ""
 
-#: includes/widgets/widget-services.php:71
+#: includes/widgets/widget-services.php:82
 msgid "Description:"
 msgstr ""
 
-#: includes/widgets/widget-services.php:73
+#: includes/widgets/widget-services.php:84
 msgid "Some HTML would not harm."
 msgstr ""
 
-#: includes/widgets/widget-services.php:77
+#: includes/widgets/widget-services.php:88
 msgid "Custom Icon URL:"
 msgstr ""
 
-#: includes/widgets/widget-services.php:79
+#: includes/widgets/widget-services.php:90
 msgid ""
 "Enter the custom icon URL if you want to use your own icon or choose one "
 "below. Recommended size 100x100px."
 msgstr ""
 
-#: includes/widgets/widget-slider.php:6
+#: includes/widgets/widget-slider.php:8
 msgid "Displays the slideshow."
 msgstr ""
 
-#: includes/widgets/widget-slider.php:8
+#: includes/widgets/widget-slider.php:15
 msgid "Section: Slider"
 msgstr ""
 
-#: includes/widgets/widget-slider.php:82
+#: includes/widgets/widget-slider.php:92
 msgid "Yay! No options to set!"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:6
+#: includes/widgets/widget-static-content.php:8
 msgid "Displays content from a specific page."
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:8
+#: includes/widgets/widget-static-content.php:15
 msgid "Section: Static Content"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:44
+#: includes/widgets/widget-static-content.php:55
 msgid "Continue Reading"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:91
+#: includes/widgets/widget-static-content.php:108
 msgid "Select Page:"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:112
+#: includes/widgets/widget-static-content.php:136
 msgid "Background Color:"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:118
+#: includes/widgets/widget-static-content.php:142
 msgid "Background Image URL:"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:123
+#: includes/widgets/widget-static-content.php:147
 msgid "Background Opacity:"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:128
+#: includes/widgets/widget-static-content.php:152
 msgid "Text Color:"
 msgstr ""
 
-#: includes/widgets/widget-static-content.php:134
+#: includes/widgets/widget-static-content.php:158
 msgid "Link Color:"
 msgstr ""
 
-#: includes/widgets/widget-team.php:6
+#: includes/widgets/widget-team.php:8
 msgid "Displays team members."
 msgstr ""
 
-#: includes/widgets/widget-team.php:8
+#: includes/widgets/widget-team.php:15
 msgid "Section: Team"
 msgstr ""
 
-#: includes/widgets/widget-testimonials.php:8
+#: includes/widgets/widget-testimonials.php:15
 msgid "Section: Testimonials"
 msgstr ""
 
-#: page.php:21 single-portfolio.php:72 template-contact.php:85
+#: page.php:21 single-portfolio.php:77 template-contact.php:88
 #: template-full-width.php:26
 msgid "Continue Reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
@@ -1684,26 +1794,26 @@ msgstr ""
 msgid "Please enter a message."
 msgstr ""
 
-#: template-contact.php:100
+#: template-contact.php:109
 msgid "Thanks, your email was sent successfully."
 msgstr ""
 
-#: template-contact.php:109
+#: template-contact.php:118
 msgid "Send us a Message"
 msgstr ""
 
-#: template-contact.php:113
+#: template-contact.php:122
 msgid "Your Name"
 msgstr ""
 
-#: template-contact.php:121
+#: template-contact.php:135
 msgid "Your Email"
 msgstr ""
 
-#: template-contact.php:133
+#: template-contact.php:152
 msgid "Your Message"
 msgstr ""
 
-#: template-contact.php:141
+#: template-contact.php:169
 msgid "Send Message"
 msgstr ""
