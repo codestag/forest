@@ -106,6 +106,7 @@ function stag_user_styles_push( $content ) {
 		$output .= ".ui-tabs-nav .ui-state-active { border-color: $accent; }";
 		$output .= ".stag-toggle span.ui-icon:before { color: $accent; }";
 		$output .= ".cycle-pager-active{ background: $accent !important; }\n\n";
+		$output .= ".stag-twitter .twitter-follow-button{ background: $accent; } .stag-latest-tweets a{ color: $accent; }";
 	}
 
 	if ( '#41415e' != $portfolio_background ) {

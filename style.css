@@ -1825,3 +1825,14 @@ textarea {
   text-align: left; }
   .wp-block-pullquote cite {
     color: inherit; }
+
+  .stag-latest-tweets li {
+     padding-bottom: 1em; 
+    } 
+  .stag-latest-tweets li .time { 
+    display: block; 
+  } 
+  .stag-latest-tweets li .time a {
+     color: #ffffff; 
+     opacity: 0.6; 
+  }
