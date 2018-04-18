@@ -1,5 +1,12 @@
 == Forest Changelog ==
 
+= 2.2.1: April 18, 2018 =
+* New: Testmonials widget rewritten, added option to specify count and slideshow speed
+* Fix: Stagtools Twitter widget styling
+* Fix: Blockquotes styling for all post types
+* Fix: Flexslider height issue on resize, updated to v2.7.0
+* Improve: Testimonials widget caching
+
 = 2.2.0: April 12, 2018 =
 * New: Added compatibility with Gutenberg
 * New: Move settings to customizer, dropped old options StagFramework

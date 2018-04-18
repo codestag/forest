@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Forest\n"
-"POT-Creation-Date: 2018-04-12 14:31+0530\n"
-"PO-Revision-Date: 2018-04-12 14:31+0530\n"
+"POT-Creation-Date: 2018-04-18 17:26+0530\n"
+"PO-Revision-Date: 2018-04-18 17:26+0530\n"
 "Last-Translator: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language-Team: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language: en_US\n"
@@ -629,6 +629,7 @@ msgid "Upload"
 msgstr ""
 
 #: framework/stag-admin-functions.php:196
+#: includes/widgets/class-forest-widget.php:242
 msgid "Remove"
 msgstr ""
 
@@ -1547,6 +1548,26 @@ msgid ""
 "href=\"%s\">Customize</a>."
 msgstr ""
 
+#: includes/widgets/class-forest-widget.php:241
+msgid "Choose Image"
+msgstr ""
+
+#: includes/widgets/class-forest-widget.php:368
+msgid "All Categories"
+msgstr ""
+
+#: includes/widgets/class-forest-widget.php:369
+msgid "No Categories"
+msgstr ""
+
+#: includes/widgets/class-forest-widget.php:392
+msgid "All Tags"
+msgstr ""
+
+#: includes/widgets/class-forest-widget.php:393
+msgid "No Tags"
+msgstr ""
+
 #: includes/widgets/widget-clients.php:8
 msgid "Displays multiple images as a showcase."
 msgstr ""
@@ -1563,7 +1584,7 @@ msgstr ""
 #: includes/widgets/widget-services.php:77
 #: includes/widgets/widget-static-content.php:103
 #: includes/widgets/widget-team.php:112
-#: includes/widgets/widget-testimonials.php:84
+#: includes/widgets/widget-testimonials.php:25
 msgid "Title:"
 msgstr ""
 
@@ -1572,7 +1593,7 @@ msgid "Image URLs:"
 msgstr ""
 
 #: includes/widgets/widget-featured-portfolio.php:8
-#: includes/widgets/widget-testimonials.php:8
+#: includes/widgets/widget-testimonials.php:20
 msgid "Displays testimonials."
 msgstr ""
 
@@ -1744,8 +1765,16 @@ msgstr ""
 msgid "Section: Team"
 msgstr ""
 
-#: includes/widgets/widget-testimonials.php:15
+#: includes/widgets/widget-testimonials.php:19
 msgid "Section: Testimonials"
+msgstr ""
+
+#: includes/widgets/widget-testimonials.php:33
+msgid "Testimonials count:"
+msgstr ""
+
+#: includes/widgets/widget-testimonials.php:41
+msgid "Slideshow speed:"
 msgstr ""
 
 #: page.php:21 single-portfolio.php:77 template-contact.php:88
