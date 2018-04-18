@@ -27,6 +27,9 @@ if ( ! class_exists( 'Forest_Widget_Testimonials' ) ) :
 				'count' => array(
 					'type'  => 'number',
 					'std'   => '',
+					'step'  => '1',
+					'min'   => '1',
+					'max'   => '50',
 					'label' => esc_html__( 'Testimonials count:', 'stag' ),
 				),
 			);
