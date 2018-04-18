@@ -26,11 +26,19 @@ if ( ! class_exists( 'Forest_Widget_Testimonials' ) ) :
 				),
 				'count' => array(
 					'type'  => 'number',
-					'std'   => '',
+					'std'   => '3',
 					'step'  => '1',
 					'min'   => '1',
 					'max'   => '50',
 					'label' => esc_html__( 'Testimonials count:', 'stag' ),
+				),
+				'cycle_speed' => array(
+					'type'  => 'number',
+					'std'   => '4000',
+					'step'  => '1000',
+					'min'   => '1000',
+					'max'   => '100000000',
+					'label' => esc_html__( 'Slideshow speed:', 'stag' ),
 				),
 			);
 
@@ -46,8 +54,9 @@ if ( ! class_exists( 'Forest_Widget_Testimonials' ) ) :
 		 * @param array $instance Settings for the current widget instance.
 		 */
 		public function widget( $args, $instance ) {
-			$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-			$count = isset( $instance['count'] ) ? esc_attr( $instance['count'] ) : '3';
+			$title       = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+			$count       = isset( $instance['count'] ) ? esc_attr( $instance['count'] ) : '3';
+			$cycle_speed = isset( $instance['cycle_speed'] ) ? esc_attr( $instance['cycle_speed'] ) : '4000';
 
 			$testimonials = new WP_Query( array(
 				'post_type'      => 'testimonials',
@@ -60,7 +69,7 @@ if ( ! class_exists( 'Forest_Widget_Testimonials' ) ) :
 
 				echo $args['before_title'] . $title . $args['after_title']; // WPCS: XSS ok.
 
-				echo '<div class="testimonials-slideshow" data-cycle-speed="400" data-cycle-swipe="true">';
+				echo "<div class='testimonials-slideshow' data-cycle-timeout='{$cycle_speed}' data-cycle-speed='400' data-cycle-swipe='true'>"; // WPCS: XSS ok.
 
 				while ( $testimonials->have_posts() ) :
 					$testimonials->the_post();
