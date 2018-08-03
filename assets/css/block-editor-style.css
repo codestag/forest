@@ -230,7 +230,7 @@ you can use the generic selector below, but it's slower:
 	text-decoration: none;
 	color: var(--accent-color, #1bbc9b);
   }
-  
+
   h1 a,
   h2 a,
   h3 a,
@@ -266,6 +266,12 @@ you can use the generic selector below, but it's slower:
 .edit-post-visual-editor blockquote p {
   margin: 0;
   font-size: 20px;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.edit-post-visual-editor blockquote cite {
+  color: #fff;
 }
 
 .wp-block-pullquote {
@@ -296,4 +302,12 @@ you can use the generic selector below, but it's slower:
   position: absolute;
   top: 28px;
   left: 25px;
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	padding: 30px 30px 30px 100px;
+}
+
+.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+  top: 40px;
 }

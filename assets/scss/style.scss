@@ -1008,7 +1008,7 @@ main .inside {
 			left: 25px;
 		}
 		p {
-			margin: 0;
+			margin: 0 0 1em 0;
 		}
 	}
 }
@@ -1589,11 +1589,13 @@ main .inside {
 	}
 }
 
-.wp-block-pullquote {
+.wp-block-quote {
 	border: none;
 	text-align: left;
 	cite {
 		color: inherit;
+		font-style: normal;
+		font-size: 13px;
 	}
 }
 
@@ -1606,5 +1608,13 @@ main .inside {
 			color: #ffffff;
 			opacity: 0.6;
 		}
+	}
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	padding: 30px 30px 30px 100px;
+
+	&:before {
+		top: 40px;
 	}
 }

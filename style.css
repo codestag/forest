@@ -1477,7 +1477,7 @@ textarea {
 }
 .hentry blockquote p,
 .entry-content blockquote p {
-  margin: 0;
+  margin: 0 0 1em 0;
 }
 
 .portfolio-hero {
@@ -2271,12 +2271,14 @@ textarea {
     max-width: 1000%;
   }
 }
-.wp-block-pullquote {
+.wp-block-quote {
   border: none;
   text-align: left;
 }
-.wp-block-pullquote cite {
+.wp-block-quote cite {
   color: inherit;
+  font-style: normal;
+  font-size: 13px;
 }
 
 .stag-latest-tweets li {
@@ -2288,4 +2290,11 @@ textarea {
 .stag-latest-tweets li .time a {
   color: #ffffff;
   opacity: 0.6;
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  padding: 30px 30px 30px 100px;
+}
+.wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
+  top: 40px;
 }

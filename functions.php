@@ -55,15 +55,6 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		 *
 		 * @since 2.2.0.
 		 */
-		add_theme_support(
-			'editor-color-palette',
-			forest_get_thememod_value( 'style_background_color' ),
-			forest_get_thememod_value( 'style_accent_color' ),
-			forest_get_thememod_value( 'style_portfolio_background' ),
-			forest_get_thememod_value( 'style_footer_color' ),
-			forest_get_thememod_value( 'style_blog_background_color' )
-		);
-
 		add_theme_support( 'align-wide' );
 
 		/**
@@ -214,7 +205,7 @@ function forest_block_editor_styles() {
 	}
 
 	// Editor styles.
-	wp_enqueue_style( 'forest-block-editor-style', get_template_directory_uri() . '/assets/css/block-editor-style.css', $style_dependencies, '1.0.0' );
+	wp_enqueue_style( 'forest-block-editor-style', get_template_directory_uri() . '/assets/css/block-editor-style.css', $style_dependencies, STAG_THEME_VERSION );
 
 	$font_header      = forest_get_thememod_value( 'font-headers' );
 	$font_body        = forest_get_thememod_value( 'font-body' );
