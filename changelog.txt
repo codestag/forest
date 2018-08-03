@@ -1,5 +1,8 @@
 == Forest Changelog ==
 
+= 2.2.2: Aug 03, 2018 =
+* Compatibility with Gutenberg 3.4
+
 = 2.2.1: April 18, 2018 =
 * New: Testmonials widget rewritten, added option to specify count and slideshow speed
 * Fix: Stagtools Twitter widget styling
