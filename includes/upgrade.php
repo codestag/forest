@@ -15,7 +15,12 @@ if ( ! function_exists( 'forest_theme_upgrade' ) ) :
 	 */
 	function forest_theme_upgrade() {
 		// Grab old theme values.
-		$legacy_options = array_filter( get_option( 'stag_framework_values' ) );
+		$framework_values = get_option( 'stag_framework_values' );
+
+		// Bail early if old framework values are not found.
+		if ( ! is_array( $framework_values ) ) return;
+
+		$legacy_options = array_filter( $framework_values );
 		$has_updated    = get_theme_mod( 'has_forest_migrated' );
 
 		if ( ! $has_updated && $legacy_options && '' !== $legacy_options['settings_updated'] ) {

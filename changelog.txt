@@ -1,5 +1,8 @@
 == Forest Changelog ==
 
+= 2.2.3: Aug 08, 2018 =
+* Fixed an issue with theme upgrade process throwing error
+
 = 2.2.2: Aug 03, 2018 =
 * Compatibility with Gutenberg 3.4
 
