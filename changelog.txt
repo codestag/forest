@@ -1,5 +1,8 @@
 == Forest Changelog ==
 
+= 2.2.4: Dec 27, 2018 =
+* Compatibility with WordPress 5.0+
+
 = 2.2.3: Aug 08, 2018 =
 * Fixed an issue with theme upgrade process throwing error
 
