@@ -311,3 +311,10 @@ you can use the generic selector below, but it's slower:
 .wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
   top: 40px;
 }
+
+.wp-block-pullquote.alignleft {
+	padding-left: 0;
+}
+.wp-block-pullquote.alignright {
+	padding-right: 0;
+}
