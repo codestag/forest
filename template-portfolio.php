@@ -117,21 +117,21 @@
 	$text             = forest_get_thememod_value( 'forest_portfolio_cta_text' );
 	$button_text      = forest_get_thememod_value( 'forest_portfolio_cta_button_text' );
 	$button_text_link = forest_get_thememod_value( 'forest_portfolio_cta_button_link' );
-	$button_window    = ( forest_get_thememod_value( true === 'forest_portfolio_cta_button_window' ) ) ? " target='_blank'" : false;
+	$button_window    = ( forest_get_thememod_value( true === 'forest_portfolio_cta_button_window' ) ) ? " target=_blank" : false;
 
 	if ( $text != '' ) :
 		?>
 
-		<div class="call-to-action 
+		<div class="call-to-action
 		<?php
 		if ( $button_text != '' ) {
 			echo 'with-button';}
 ?>
 ">
 			<div class="inside">
-				<p><?php echo $text; ?></p>
+				<p><?php echo esc_html( $text ); ?></p>
 				<?php if ( $button_text != '' ) : ?>
-				<a href="<?php echo esc_url( $button_text_link ); ?>" class="button" <?php echo $button_window; ?>><?php echo $button_text; ?></a>
+				<a href="<?php echo esc_url( $button_text_link ); ?>" class="button" <?php echo esc_attr( $button_window ); ?>><?php echo esc_html( $button_text ); ?></a>
 				<?php endif; ?>
 			</div>
 		</div>
