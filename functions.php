@@ -527,16 +527,16 @@ add_action( 'tgmpa_register', 'stag_required_plugins' );
  * @since 1.1
  */
 function stag_check_third_party_seo() {
-	include_once ABSPATH . 'wp-admin/includes/plugin.php';
-	if ( is_plugin_active( 'headspace2/headspace.php' ) ) {
+	if ( class_exists( 'HeadSpace2_Admin' ) ) {
 		return true;
 	}
-	if ( is_plugin_active( 'all-in-one-seo-pack/all_in_one_seo_pack.php' ) ) {
+	if ( defined( 'AIOSEOP_VERSION' ) ) {
 		return true;
 	}
-	if ( is_plugin_active( 'wordpres-seo/wp-seo.php' ) ) {
+	if ( defined( 'WPSEO_VERSION' ) ) {
 		return true;
 	}
+
 	return false;
 }
 
