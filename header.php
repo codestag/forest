@@ -6,11 +6,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<?php stag_meta_head(); ?>
 
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
-
 	<?php stag_head(); ?>
 	<?php wp_head(); ?>
 </head>
