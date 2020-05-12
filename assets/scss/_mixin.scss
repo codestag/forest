@@ -1,4 +1,4 @@
-$main-font-size: 16px; 
+$main-font-size: 16px;
 @mixin x-rem ($property, $value) {
   #{$property}: $value * $main-font-size;
   #{$property}: #{$value}rem;
