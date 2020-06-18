@@ -56,6 +56,8 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		 * @since 2.2.0.
 		 */
 		add_theme_support( 'align-wide' );
+		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'responsive-embeds' );
 
 		/**
 		 * Add StagFramework specific theme support
@@ -214,11 +216,9 @@ function forest_block_editor_styles() {
 
 	wp_add_inline_style(
 		'forest-block-editor-style', "
-		.edit-post-layout__content{
+		.editor-styles-wrapper {
 			--accent-color: {$accent_color};
 			--style-background-color: {$background_color};
-		}
-		.edit-post-visual-editor {
 			--font-body: '{$font_body}';
 			--font-header: '{$font_header}';
 		}"
@@ -232,6 +232,7 @@ add_action( 'enqueue_block_editor_assets', 'forest_block_editor_styles' );
  * @return void
  */
 function stag_scripts_styles() {
+	global $is_IE;
 	if ( ! is_admin() ) {
 		wp_register_style( 'flexslider', get_template_directory_uri() . '/assets/css/flexslider.css', '', '2.6.4' );
 
