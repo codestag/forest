@@ -1,0 +1,761 @@
+# Copyright (C) 2020 forest
+# This file is distributed under the same license as the forest package.
+msgid ""
+msgstr ""
+"Project-Id-Version: forest\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Codestag <hello@codestag.com>\n"
+"Last-Translator: Krishna Kant <krishna@codestag.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/codestag/forest/issues\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:5
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: 404.php:13
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:25
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:23
+msgid "All posts by"
+msgstr ""
+
+#: archive.php:21, archive.php:19, archive.php:17
+msgid "Archive for"
+msgstr ""
+
+#: archive.php:15
+msgid "All posts tagged %s"
+msgstr ""
+
+#: archive.php:13
+msgid "All posts in %s"
+msgstr ""
+
+#: comments.php:35
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:42
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:51
+msgid "Submit a Comment"
+msgstr ""
+
+#: comments.php:52
+msgid "Submit Comment"
+msgstr ""
+
+#: content-none.php:3
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: content-none.php:13
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr ""
+
+#: content-none.php:9
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content.php:22
+msgid ", "
+msgstr ""
+
+#: content.php:35
+msgid "Permalink to %s"
+msgstr ""
+
+#: content.php:42
+msgid "Read More&hellip;"
+msgstr ""
+
+#: content.php:43, page.php:22, single-portfolio.php:80, template-archives.php:24, template-contact.php:33, template-full-width.php:27
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:29
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:107
+msgid "Global Sidebar"
+msgstr ""
+
+#: functions.php:113
+msgid "Blog Widgets Area."
+msgstr ""
+
+#: functions.php:119
+msgid "Homepage Sections"
+msgstr ""
+
+#: functions.php:125
+msgid "Here you can configure the layout of the Homepage."
+msgstr ""
+
+#: functions.php:131
+msgid "About Sections"
+msgstr ""
+
+#: functions.php:137
+msgid "About template sections."
+msgstr ""
+
+#: functions.php:143
+msgid "Service Boxes Section"
+msgstr ""
+
+#: functions.php:149
+msgid "Use only \"Service Box\" widgets here and they will populate the \"Services\" widget."
+msgstr ""
+
+#: functions.php:155
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php:161
+msgid "Widget area for footer"
+msgstr ""
+
+#: functions.php:337
+msgid "%s ago"
+msgstr ""
+
+#: functions.php:350
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:484
+msgid "<i class=\"icon icon-previous\"></i>"
+msgstr ""
+
+#: functions.php:488
+msgid "<i class=\"icon icon-next\"></i>"
+msgstr ""
+
+#: functions.php:513
+msgid "StagTools"
+msgstr ""
+
+#: functions.php:518
+msgid "Forest Assistant"
+msgstr ""
+
+#: helper-portfolio-sidebar.php:15
+msgid "Project Details"
+msgstr ""
+
+#: helper-portfolio-sidebar.php:28
+msgid "Category"
+msgstr ""
+
+#: helper-portfolio-sidebar.php:32
+msgid "Project Date"
+msgstr ""
+
+#: helper-portfolio-sidebar.php:36
+msgid "Client"
+msgstr ""
+
+#: helper-portfolio-sidebar.php:40
+msgid "Go to Project"
+msgstr ""
+
+#: includes/customizer/customizer.php:59
+msgid "No results match"
+msgstr ""
+
+#: includes/customizer/customizer.php:60
+msgid "No matching fonts"
+msgstr ""
+
+#: includes/customizer/definitions.php:23
+msgid "Theme Options"
+msgstr ""
+
+#: includes/customizer/definitions.php:24
+msgid "Configure your theme settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:40
+msgid "Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:49
+msgid "Accent Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:58
+msgid "Portfolio Section Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:67
+msgid "Footer Text Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:76
+msgid "Blog Header Background Color"
+msgstr ""
+
+#: includes/customizer/definitions.php:84
+msgid "Fonts"
+msgstr ""
+
+#. translators: Link to Google Fonts website
+#: includes/customizer/definitions.php:88
+msgid "The list of Google fonts is long! You can %s before making your choices."
+msgstr ""
+
+#: includes/customizer/definitions.php:92
+msgid "preview"
+msgstr ""
+
+#: includes/customizer/definitions.php:101
+msgid "Body"
+msgstr ""
+
+#: includes/customizer/definitions.php:109
+msgid "Headers"
+msgstr ""
+
+#: includes/customizer/definitions.php:117
+msgid "Google Font Subset"
+msgstr ""
+
+#. translators: Link to Google fonts website
+#: includes/customizer/definitions.php:120
+msgid "Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font."
+msgstr ""
+
+#: includes/customizer/definitions.php:124
+msgid "Google Fonts website"
+msgstr ""
+
+#: includes/customizer/definitions.php:132
+msgid "Blog Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:140
+msgid "Blog Title"
+msgstr ""
+
+#: includes/customizer/definitions.php:141
+msgid "Enter the default title for the blog header section."
+msgstr ""
+
+#: includes/customizer/definitions.php:150
+msgid "Blog Cover"
+msgstr ""
+
+#: includes/customizer/definitions.php:151
+msgid "Choose a header cover image for blog."
+msgstr ""
+
+#: includes/customizer/definitions.php:160
+msgid "Background Opacity"
+msgstr ""
+
+#: includes/customizer/definitions.php:161
+msgid "Choose a default value for background image at the blog header section. For no opacity give a value of 100."
+msgstr ""
+
+#: includes/customizer/definitions.php:170
+msgid "Post Excerpt Length"
+msgstr ""
+
+#: includes/customizer/definitions.php:171
+msgid "Enter the length of post excerpt for blog page."
+msgstr ""
+
+#: includes/customizer/definitions.php:180
+msgid "Post Excerpt Text"
+msgstr ""
+
+#: includes/customizer/definitions.php:181
+msgid "Enter the text for post excerpt read more on blog page."
+msgstr ""
+
+#: includes/customizer/definitions.php:190
+msgid "Disable SEO Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:191
+msgid "Enable/Disable SEO Settings on single posts and pages."
+msgstr ""
+
+#: includes/customizer/definitions.php:198
+msgid "General Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:207
+msgid "Plain Text Logo"
+msgstr ""
+
+#: includes/customizer/definitions.php:216
+msgid "Custom Logo Upload"
+msgstr ""
+
+#: includes/customizer/definitions.php:217
+msgid "Upload a logo for your theme."
+msgstr ""
+
+#: includes/customizer/definitions.php:226
+msgid "Contact Form Email Address"
+msgstr ""
+
+#: includes/customizer/definitions.php:227
+msgid "Enter the email address where you'd like to receive emails from the contact form, or leave blank to use admin email."
+msgstr ""
+
+#: includes/customizer/definitions.php:236
+msgid "Tracking Code"
+msgstr ""
+
+#: includes/customizer/definitions.php:237
+msgid "Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme."
+msgstr ""
+
+#: includes/customizer/definitions.php:246
+msgid "Footer Text"
+msgstr ""
+
+#: includes/customizer/definitions.php:247
+msgid "Enter the site footer text."
+msgstr ""
+
+#: includes/customizer/definitions.php:256
+msgid "Hide Theme Credit"
+msgstr ""
+
+#: includes/customizer/definitions.php:263
+msgid "Portfolio Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:265
+msgid "Customize your portfolio settings."
+msgstr ""
+
+#: includes/customizer/definitions.php:272
+msgid "Portfolio CTA text"
+msgstr ""
+
+#: includes/customizer/definitions.php:273
+msgid "Enter the call to action text for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:282
+msgid "Portfolio CTA Button text"
+msgstr ""
+
+#: includes/customizer/definitions.php:283
+msgid "Enter the call to action button text for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:292
+msgid "Portfolio CTA Button Link"
+msgstr ""
+
+#: includes/customizer/definitions.php:293
+msgid "Enter the call to action button link for portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:302
+msgid "Open link in new window?"
+msgstr ""
+
+#: includes/customizer/definitions.php:303
+msgid "Check to open the call to action button link in new window."
+msgstr ""
+
+#: includes/customizer/definitions.php:312
+msgid "Portfolio Page"
+msgstr ""
+
+#: includes/customizer/definitions.php:313
+msgid "Select portfolio page, used for link to portfolio page."
+msgstr ""
+
+#: includes/customizer/definitions.php:321
+msgid "Social Settings"
+msgstr ""
+
+#: includes/customizer/definitions.php:323
+msgid "Customize your social profile URLs.<br/><br/><strong>Quick tip:</strong> you can use shortcode <code>[social url=\"facebook,twitter,dribbble\"]</code> to display social links anywhere between posts."
+msgstr ""
+
+#: includes/customizer/definitions.php:330
+msgid "Footer Social Links"
+msgstr ""
+
+#: includes/customizer/definitions.php:331
+msgid "Display social link in footer with the <code>[social url=\"\"]</code> shortcode."
+msgstr ""
+
+#: includes/customizer/definitions.php:340
+msgid "Facebook"
+msgstr ""
+
+#: includes/customizer/definitions.php:341
+msgid "Enter your facebook profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:350
+msgid "Twitter"
+msgstr ""
+
+#: includes/customizer/definitions.php:351
+msgid "Enter your twitter profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:360
+msgid "Dribbble"
+msgstr ""
+
+#: includes/customizer/definitions.php:361
+msgid "Enter your dribbble URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:370
+msgid "Google+"
+msgstr ""
+
+#: includes/customizer/definitions.php:371
+msgid "Enter your Google+ profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:380
+msgid "Pinterest"
+msgstr ""
+
+#: includes/customizer/definitions.php:381
+msgid "Enter your Pinterest profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:390
+msgid "Vimeo"
+msgstr ""
+
+#: includes/customizer/definitions.php:391
+msgid "Enter your Vimeo profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:400
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/customizer/definitions.php:401
+msgid "Enter your LinkedIn profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:410
+msgid "Behance"
+msgstr ""
+
+#: includes/customizer/definitions.php:411
+msgid "Enter your Behance profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:420
+msgid "DeviantArt"
+msgstr ""
+
+#: includes/customizer/definitions.php:421
+msgid "Enter your DevianArt profile URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:430
+msgid "Flickr"
+msgstr ""
+
+#: includes/customizer/definitions.php:431
+msgid "Enter your Flickr profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:440
+msgid "Instagram"
+msgstr ""
+
+#: includes/customizer/definitions.php:441
+msgid "Enter your Instagram profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:450
+msgid "Myspace"
+msgstr ""
+
+#: includes/customizer/definitions.php:451
+msgid "Enter your Myspace profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:460
+msgid "SoundCloud"
+msgstr ""
+
+#: includes/customizer/definitions.php:461
+msgid "Enter your SoundCloud profile/page URL"
+msgstr ""
+
+#: includes/customizer/definitions.php:470
+msgid "Youtube"
+msgstr ""
+
+#: includes/customizer/definitions.php:471
+msgid "Enter your Youtube profile/page URL"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:311
+msgid "Standard Fonts"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:316
+msgid "Serif Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:319
+msgid "Sans Serif Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:322
+msgid "Display Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:325
+msgid "Handwriting Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:328
+msgid "Monospace Fonts (Google)"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:355
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:359
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: includes/customizer/helper-fonts.php:363
+msgctxt "font style"
+msgid "Monospaced"
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:260
+msgid "Error"
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:303
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:309
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:313
+msgid "Invalid license."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:318
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:322
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:326
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: includes/updater/theme-updater-admin.php:330, includes/updater/theme-updater-admin.php:291, includes/updater/theme-updater-admin.php:386
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: includes/updater/theme-updater.php:29
+msgid "Theme License"
+msgstr ""
+
+#: includes/updater/theme-updater.php:30
+msgid ""
+"Enter your theme license key received upon purchase from <a target=\"_blank\" href=\"https://codestag.com/account/\">Codestag</a>.<br><br>\n"
+"											If you're coming from ThemeForest, please download <a href=\"https://envato.com/market-plugin/\" target=\"_blank\">Envato Market</a> plugin instead to receive automatic updates."
+msgstr ""
+
+#: includes/updater/theme-updater.php:34
+msgid "License Key"
+msgstr ""
+
+#: includes/updater/theme-updater.php:35
+msgid "License Action"
+msgstr ""
+
+#: includes/updater/theme-updater.php:36
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/updater/theme-updater.php:37
+msgid "Activate License"
+msgstr ""
+
+#: includes/updater/theme-updater.php:38, includes/updater/theme-updater.php:51
+msgid "License status is unknown."
+msgstr ""
+
+#: includes/updater/theme-updater.php:39
+msgid "Renew?"
+msgstr ""
+
+#: includes/updater/theme-updater.php:40
+msgid "unlimited"
+msgstr ""
+
+#: includes/updater/theme-updater.php:41
+msgid "License key is active."
+msgstr ""
+
+#: includes/updater/theme-updater.php:42
+msgid "Expires %s."
+msgstr ""
+
+#: includes/updater/theme-updater.php:43
+msgid "Lifetime License."
+msgstr ""
+
+#: includes/updater/theme-updater.php:44
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: includes/updater/theme-updater.php:45
+msgid "License key expired %s."
+msgstr ""
+
+#: includes/updater/theme-updater.php:46
+msgid "License key has expired."
+msgstr ""
+
+#: includes/updater/theme-updater.php:47
+msgid "License keys do not match."
+msgstr ""
+
+#: includes/updater/theme-updater.php:48
+msgid "License is inactive."
+msgstr ""
+
+#: includes/updater/theme-updater.php:49
+msgid "License key is disabled."
+msgstr ""
+
+#: includes/updater/theme-updater.php:50
+msgid "Site is inactive."
+msgstr ""
+
+#: includes/updater/theme-updater.php:52
+msgid "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update."
+msgstr ""
+
+#: includes/updater/theme-updater.php:53
+msgid "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
+msgstr ""
+
+#. translators: %s: Link to customizer.
+#: includes/upgrade.php:159
+msgid "Looking for theme settings? It has been moved under Appearance &rarr; <a href=\"%s\">Customize</a>."
+msgstr ""
+
+#: page.php:21, single-portfolio.php:77, template-contact.php:30, template-full-width.php:26
+msgid "Continue Reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: search.php:5
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:2
+msgid "Enter your query here..."
+msgstr ""
+
+#: template-about.php:3
+msgid "About"
+msgstr ""
+
+#: template-archives.php:3
+msgid "Archives"
+msgstr ""
+
+#: template-archives.php:23
+msgid "Read more..."
+msgstr ""
+
+#: template-archives.php:28
+msgid "Last 30 Posts"
+msgstr ""
+
+#: template-archives.php:37
+msgid "Archives by Month"
+msgstr ""
+
+#: template-archives.php:43
+msgid "Archives by Subject"
+msgstr ""
+
+#: template-contact.php:3
+msgid "Contact Form"
+msgstr ""
+
+#: template-contact.php:52
+msgid "Please install Forest Assistant plugin for Contact Form template to work!"
+msgstr ""
+
+#: template-full-width.php:3
+msgid "Full Width"
+msgstr ""
+
+#: template-homepage.php:3
+msgid "Homepage"
+msgstr ""
+
+#: template-portfolio.php:3
+msgid "Portfolio"
+msgstr ""
+
+#: template-portfolio.php:16
+msgid "All"
+msgstr ""
+
+#: template-portfolio.php:69, template-portfolio.php:88
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: template-widgetized.php:3
+msgid "Widgetized"
+msgstr ""
