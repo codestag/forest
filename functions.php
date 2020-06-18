@@ -575,6 +575,26 @@ function stag_custom_sidebar_widget_wrapper() {
 }
 add_filter( 'stag_custom_sidebars_widget_args', 'stag_custom_sidebar_widget_wrapper' );
 
+
+if ( ! function_exists( 'forest_assistant_notice' ) ) {
+	/**
+	 * Alerts if assistant plugin is not activated.
+	 *
+	 * @since 2.3.0
+	 * @return void
+	 */
+	function forest_assistant_notice() {
+		if ( ! class_exists( 'Forest_Assistant' ) && current_user_can( 'activate_plugins' ) ) {
+			$page_link = self_admin_url( 'themes.php?page=tgmpa-install-plugins' );
+			$message       = '<p>' . sprintf( '%1$s<br><strong>%2$s<a href="%3$s">this page</a>.', __('As per ThemeForest guidelines, some functionalities are now excluded from theme and moved to an assistant plugin.', 'forest' ), __( 'To use Forest with full features, please activate Forest Assistant from ', 'forest' ), esc_url( $page_link ) ) . '</strong></p>';
+
+			echo '<div class="error">' . $message . '</div>'; // phpcs:ignore
+		}
+	}
+
+}
+add_action( 'admin_notices', 'forest_assistant_notice' );
+
 /**
  * Include framework and other files
  */
