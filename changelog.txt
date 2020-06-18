@@ -4,6 +4,7 @@
 * Add new Forest Assistant plugin, includes widgets, metaboxes & shortcodes from theme, and is now required to use Forest with its full features
 * Add new wp_body_open hook
 * Fix translation errors & change text-domain to theme slug
+* Remove CDN usage for scripts & enqueue them locally
 * Fix escaping and sanitization issues
 * Update Google Fonts Library
 
