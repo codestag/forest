@@ -144,7 +144,7 @@ gulp.task( 'styles', ( done ) => {
 				compass({
 					config_file: './config.rb',
 					css: 'assets/css',
-					sass: 'assets/sass'
+					sass: 'assets/scss'
 				})
 			)
 			.on( 'error', sass.logError )
