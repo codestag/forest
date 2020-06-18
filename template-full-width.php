@@ -23,8 +23,8 @@
 
                 <div class="entry-content">
                     <?php
-                        the_content( __('Continue Reading <span class="meta-nav">&rarr;</span>', 'stag') );
-                        wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'stag').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
+                        the_content( __('Continue Reading <span class="meta-nav">&rarr;</span>', 'forest') );
+                        wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'forest').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
                     ?>
                 </div><!-- .entry-content -->
 

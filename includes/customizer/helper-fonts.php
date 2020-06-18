@@ -308,24 +308,24 @@ if ( ! function_exists( 'forest_get_all_fonts' ) ) :
 	 * @return array    All available fonts.
 	 */
 	function forest_get_all_fonts() {
-		$heading1       = array( 1 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Standard Fonts', 'stag' ) ) ) );
+		$heading1       = array( 1 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Standard Fonts', 'forest' ) ) ) );
 		$standard_fonts = forest_get_standard_fonts();
 
 		$google_fonts = forest_get_google_fonts();
 
-		$serif_heading = array( 2 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Serif Fonts (Google)', 'stag' ) ) ) );
+		$serif_heading = array( 2 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Serif Fonts (Google)', 'forest' ) ) ) );
 		$serif_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'serif' ) );
 
-		$sans_serif_heading = array( 3 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Sans Serif Fonts (Google)', 'stag' ) ) ) );
+		$sans_serif_heading = array( 3 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Sans Serif Fonts (Google)', 'forest' ) ) ) );
 		$sans_serif_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'sans-serif' ) );
 
-		$display_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Display Fonts (Google)', 'stag' ) ) ) );
+		$display_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Display Fonts (Google)', 'forest' ) ) ) );
 		$display_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'display' ) );
 
-		$handwriting_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Handwriting Fonts (Google)', 'stag' ) ) ) );
+		$handwriting_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Handwriting Fonts (Google)', 'forest' ) ) ) );
 		$handwriting_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'handwriting' ) );
 
-		$monospace_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Monospace Fonts (Google)', 'stag' ) ) ) );
+		$monospace_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Monospace Fonts (Google)', 'forest' ) ) ) );
 		$monospace_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'monospace' ) );
 
 		return apply_filters(
@@ -352,15 +352,15 @@ if ( ! function_exists( 'forest_get_standard_fonts' ) ) :
 	function forest_get_standard_fonts() {
 		return array(
 			'serif'      => array(
-				'label' => esc_html_x( 'Serif', 'font style', 'stag' ),
+				'label' => esc_html_x( 'Serif', 'font style', 'forest' ),
 				'stack' => 'Georgia,Times,"Times New Roman",serif',
 			),
 			'sans-serif' => array(
-				'label' => esc_html_x( 'Sans Serif', 'font style', 'stag' ),
+				'label' => esc_html_x( 'Sans Serif', 'font style', 'forest' ),
 				'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
 			),
 			'monospace'  => array(
-				'label' => esc_html_x( 'Monospaced', 'font style', 'stag' ),
+				'label' => esc_html_x( 'Monospaced', 'font style', 'forest' ),
 				'stack' => 'Monaco,"Lucida Sans Typewriter	","Lucida Typewriter","Courier New",Courier,monospace',
 			),
 		);
