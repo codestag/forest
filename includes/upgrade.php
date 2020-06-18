@@ -156,7 +156,7 @@ function forest_upgrade_notice() {
 
 	$message = sprintf(
 		/* translators: %s: Link to customizer. */
-		__( 'Looking for theme settings? It has been moved under Appearance &rarr; <a href="%s">Customize</a>.', 'stag' ),
+		__( 'Looking for theme settings? It has been moved under Appearance &rarr; <a href="%s">Customize</a>.', 'forest' ),
 		admin_url( 'customize.php' )
 	);
 

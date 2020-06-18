@@ -27,10 +27,10 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<?php
-						the_content( __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'stag' ) );
+						the_content( __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'forest' ) );
 						wp_link_pages(
 							array(
-								'before'         => '<p><strong>' . __( 'Pages:', 'stag' ) . '</strong> ',
+								'before'         => '<p><strong>' . __( 'Pages:', 'forest' ) . '</strong> ',
 								'after'          => '</p>',
 								'next_or_number' => 'number',
 							)
@@ -49,7 +49,7 @@ get_header(); ?>
 			if ( class_exists( 'Forest_Assistant' ) ) {
 				echo do_shortcode( '[forest_contact_form]' );
 			} else {
-				esc_html_e( 'Please install Forest Assistant plugin for Contact Form template to work!', 'stag' );
+				esc_html_e( 'Please install Forest Assistant plugin for Contact Form template to work!', 'forest' );
 			}
 			?>
 

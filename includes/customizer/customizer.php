@@ -56,8 +56,8 @@ function forest_customize_controls_enqueue_scripts() {
 
 	$localize = array(
 		'fontOptions'               => forest_get_font_property_option_keys(),
-		'chosen_no_results_default' => esc_html__( 'No results match', 'stag' ),
-		'chosen_no_results_fonts'   => esc_html__( 'No matching fonts', 'stag' ),
+		'chosen_no_results_default' => esc_html__( 'No results match', 'forest' ),
+		'chosen_no_results_fonts'   => esc_html__( 'No matching fonts', 'forest' ),
 	);
 
 	// Localize the script.

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * StagFramework Theme Hooks
- * 
+ *
  * @package WordPress
  * @subpackage StagFramework
  * @author Ram Ratan Maurya
@@ -60,9 +60,9 @@ if( ! function_exists( 'stag_do_atomic' ) ) {
 /**
  * stag_do_atomic
  *
- * Adds contextual action hooks to the theme. This allows users to easily add context-based content 
+ * Adds contextual action hooks to the theme. This allows users to easily add context-based content
  * without having to know how to use WordPress conditional tags.  The theme handles the logic.
- * 
+ *
  * @link http://ptahdunbar.com/wordpress/smarter-hooks-context-sensitive-hooks
  * @since 2.0
  * @uses stag_get_query_context() to get the context of the current page.
@@ -83,10 +83,10 @@ function stag_do_atomic( $tag = '', $args = '' ) {
 if( ! function_exists( 'stag_apply_atomic' ) ) {
 /**
  * stag_apply_atomic()
- * 
- * Adds contextual filter hooks to the theme. This allows users to easily filter context-based content 
+ *
+ * Adds contextual filter hooks to the theme. This allows users to easily filter context-based content
  * without having to know how to use WordPress conditional tags. The theme handles the logic.
- * 
+ *
  * @since 2.0
  * @uses stag_get_query_context() to get the context of the current page.
  * @param string $tag, usually the location of hook but defines what the base hook is.
@@ -96,7 +96,7 @@ if( ! function_exists( 'stag_apply_atomic' ) ) {
 function stag_apply_atomic( $tag = '', $value = '' ) {
 	if( !$tag ) return false;
 
-	$prefix = 'stag'; // theme prefix
+	$prefix = 'forest'; // theme prefix
 
 	// Apply filters on basic hook
 	$value = apply_filters( "{$prefix}_{$tag}", $value );
@@ -112,14 +112,14 @@ function stag_apply_atomic( $tag = '', $value = '' ) {
 if( ! function_exists( 'stag_get_query_context' ) ) {
 /**
  * stag_get_query_context()
- * 
+ *
  * Retrieve the context of the queried template
  * @since 2.0
  * @return array $query_context
  */
 function stag_get_query_context() {
 	global $wp_query, $query_context;
-	
+
 	/* If $query_context->context has been set, don't run through the conditionals again. Just return the variable. */
 	if ( is_object( $query_context ) && isset( $query_context->context ) && is_array( $query_context->context ) ) {
 		return $query_context->context;
@@ -142,20 +142,20 @@ function stag_get_query_context() {
 	} elseif ( is_singular() ) {
 		$query_context->context[] = 'singular';
 		$query_context->context[] = "singular-{$wp_query->post->post_type}";
-	
+
 		/* Page Templates. */
 		if ( is_page_template() ) {
 			$to_skip = array( 'page', 'post' );
-		
+
 			$page_template = basename( get_page_template() );
 			$page_template = str_replace( '.php', '', $page_template );
 			$page_template = str_replace( '.', '-', $page_template );
-		
+
 			if ( $page_template && ! in_array( $page_template, $to_skip ) ) {
 				$query_context->context[] = $page_template;
 			}
 		}
-		
+
 		$query_context->context[] = "singular-{$wp_query->post->post_type}-{$wp_query->post->ID}";
 	}
 
@@ -207,7 +207,7 @@ function stag_get_query_context() {
 	} elseif ( is_404() ) {
 		$query_context->context[] = 'error-404';
 	}
-	
+
 	return $query_context->context;
 } // End stag_get_query_context()
 }

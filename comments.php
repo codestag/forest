@@ -32,14 +32,14 @@ if ( post_password_required() )
 
     ?>
     <nav class="navigation comment-navigation" role="navigation">
-        <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'stag' ); ?></h1>
-        <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'stag' ) ); ?></div>
-        <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'stag' ) ); ?></div>
+        <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'forest' ); ?></h1>
+        <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'forest' ) ); ?></div>
+        <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'forest' ) ); ?></div>
     </nav><!-- .comment-navigation -->
     <?php endif; // Check for comment navigation ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
-    <p class="no-comments"><?php _e( 'Comments are closed.' , 'stag' ); ?></p>
+    <p class="no-comments"><?php _e( 'Comments are closed.' , 'forest' ); ?></p>
     <?php endif; ?>
 
   <?php endif; // have_comments() ?>
@@ -48,8 +48,8 @@ if ( post_password_required() )
             'comment_notes_after'  => false,
             'comment_notes_before' => false,
             'logged_in_as'         => false,
-            'title_reply'          => __( 'Submit a Comment', 'stag' ),
-            'label_submit'         => __( 'Submit Comment', 'stag' ),
+            'title_reply'          => __( 'Submit a Comment', 'forest' ),
+            'label_submit'         => __( 'Submit Comment', 'forest' ),
         ) );
     ?>
 

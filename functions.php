@@ -17,7 +17,7 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 	function stag_theme_setup() {
 
 		// Load translation domain.
-		load_theme_textdomain( 'stag', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'forest', get_template_directory() . '/languages' );
 
 		$locale      = get_locale();
 		$locale_file = get_template_directory() . "/languages/$locale.php";
@@ -26,7 +26,7 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		}
 
 		// Register Menus.
-		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'stag' ) );
+		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'forest' ) );
 
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 770, 99999, true );
@@ -104,61 +104,61 @@ if ( ! function_exists( 'stag_sidebar_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Global Sidebar', 'stag' ),
+				'name'          => __( 'Global Sidebar', 'forest' ),
 				'id'            => 'sidebar-main',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
-				'description'   => __( 'Blog Widgets Area.', 'stag' ),
+				'description'   => __( 'Blog Widgets Area.', 'forest' ),
 			)
 		);
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Homepage Sections', 'stag' ),
+				'name'          => __( 'Homepage Sections', 'forest' ),
 				'id'            => 'sidebar-homepage',
 				'before_widget' => '<section id="%1$s" class="%2$s"><div class="inside">',
 				'after_widget'  => '</div></section>',
 				'before_title'  => '<h2 class="section-title">',
 				'after_title'   => '</h2>',
-				'description'   => __( 'Here you can configure the layout of the Homepage.', 'stag' ),
+				'description'   => __( 'Here you can configure the layout of the Homepage.', 'forest' ),
 			)
 		);
 
 		register_sidebar(
 			array(
-				'name'          => __( 'About Sections', 'stag' ),
+				'name'          => __( 'About Sections', 'forest' ),
 				'id'            => 'sidebar-about',
 				'before_widget' => '<section id="%1$s" class="%2$s"><div class="inside">',
 				'after_widget'  => '</div></section>',
 				'before_title'  => '<h2 class="section-title">',
 				'after_title'   => '</h2>',
-				'description'   => __( 'About template sections.', 'stag' ),
+				'description'   => __( 'About template sections.', 'forest' ),
 			)
 		);
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Service Boxes Section', 'stag' ),
+				'name'          => __( 'Service Boxes Section', 'forest' ),
 				'id'            => 'sidebar-services',
 				'before_widget' => '<div id="%1$s" class="grid-3 %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h4 class="service-title">',
 				'after_title'   => '</h4>',
-				'description'   => __( 'Use only "Service Box" widgets here and they will populate the "Services" widget.', 'stag' ),
+				'description'   => __( 'Use only "Service Box" widgets here and they will populate the "Services" widget.', 'forest' ),
 			)
 		);
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Widgets', 'stag' ),
+				'name'          => __( 'Footer Widgets', 'forest' ),
 				'id'            => 'sidebar-footer',
 				'before_widget' => '<div class="grid-3 widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
-				'description'   => __( 'Widget area for footer', 'stag' ),
+				'description'   => __( 'Widget area for footer', 'forest' ),
 			)
 		);
 
@@ -334,7 +334,7 @@ function stag_comments( $comment, $args, $depth ) {
 		<div class="comment-area">
 			<div class="row">
 			  <span class="comment-author"><?php echo get_comment_author_link(); ?></span>
-			  <span class="comment-date"><?php printf( __( '%s ago', 'stag' ), human_time_diff( get_comment_date( 'U' ), current_time( 'timestamp' ) ) ); ?></span>
+			  <span class="comment-date"><?php printf( __( '%s ago', 'forest' ), human_time_diff( get_comment_date( 'U' ), current_time( 'timestamp' ) ) ); ?></span>
 				<?php
 				comment_reply_link(
 					array_merge(
@@ -347,7 +347,7 @@ function stag_comments( $comment, $args, $depth ) {
 				?>
 			</div>
 			<?php if ( $comment->comment_approved == '0' ) : ?>
-			   <em class="moderation"><?php _e( 'Your comment is awaiting moderation.', 'stag' ); ?></em>
+			   <em class="moderation"><?php _e( 'Your comment is awaiting moderation.', 'forest' ); ?></em>
 			<?php endif; ?>
 			<div class="comment-text">
 				<?php comment_text(); ?>
@@ -481,11 +481,11 @@ function stag_paging_nav() {
 	<div class="nav-links">
 
 		<?php if ( get_previous_posts_link() ) : ?>
-	  <div class="nav-previous"><?php previous_posts_link( __( '<i class="icon icon-previous"></i>', 'stag' ) ); ?></div>
+	  <div class="nav-previous"><?php previous_posts_link( __( '<i class="icon icon-previous"></i>', 'forest' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-	  <div class="nav-next"><?php next_posts_link( __( '<i class="icon icon-next"></i>', 'stag' ) ); ?></div>
+	  <div class="nav-next"><?php next_posts_link( __( '<i class="icon icon-next"></i>', 'forest' ) ); ?></div>
 		<?php endif; ?>
 
 	</div><!-- .nav-links -->
@@ -506,20 +506,29 @@ function stag_paging_nav() {
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function stag_required_plugins() {
+function forest_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'     => 'StagTools',
+			'name'     => __( 'StagTools', 'forest' ),
 			'slug'     => 'stagtools',
 			'required' => true,
+		),
+		array(
+			'name'             => __( 'Forest Assistant', 'forest' ),
+			'slug'             => 'forest-assistant',
+			'source'           => get_parent_theme_file_path() . '/assistant/forest-assistant.zip',
+			'required'         => true,
+			'force_activation' => true,
+			'version'          => '1.0',
+			'external_url'     => 'https://github.com/codestag/forest-assistant/',
 		),
 
 	);
 
 	tgmpa( $plugins );
 }
-add_action( 'tgmpa_register', 'stag_required_plugins' );
+add_action( 'tgmpa_register', 'forest_required_plugins' );
 
 /**
  * Check if there is any third party plugin active
