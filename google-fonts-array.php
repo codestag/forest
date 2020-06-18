@@ -58,7 +58,7 @@ if ( ! function_exists( 'forest_get_google_fonts' ) ) :
  *
  * Total {$count} Fonts.
  *
- * @since  1.0.0.
+ * @since  2.3.0.
  *
  * @return array    All Google Fonts.
  */

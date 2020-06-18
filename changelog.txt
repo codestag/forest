@@ -6,7 +6,7 @@
 * Fix translation errors & change text-domain to theme slug
 * Remove CDN usage for scripts & enqueue them locally
 * Fix escaping and sanitization issues
-* Update Google Fonts Library
+* Update Google Fonts Library - 110+ new fonts
 
 = 2.2.4: Dec 27, 2018 =
 * Compatibility with WordPress 5.0+
