@@ -988,9 +988,11 @@ main .inside {
 			color: inherit;
 		}
 	}
-	blockquote {
+	blockquote.wp-block-quote {
 		background: $sectionTitle;
 		color: #fff;
+	}
+	blockquote {
 		margin: 30px 0;
 		padding: 20px 20px 20px 100px;
 		position: relative;

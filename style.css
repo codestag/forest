@@ -1468,10 +1468,13 @@ textarea {
 .entry-content .entry-title a {
   color: inherit;
 }
-.hentry blockquote,
-.entry-content blockquote {
+.hentry blockquote.wp-block-quote,
+.entry-content blockquote.wp-block-quote {
   background: #363f48;
   color: #fff;
+}
+.hentry blockquote,
+.entry-content blockquote {
   margin: 30px 0;
   padding: 20px 20px 20px 100px;
   position: relative;
@@ -2314,4 +2317,13 @@ textarea {
 }
 .wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
   top: 40px;
+}
+
+.entry-content > * {
+  margin-bottom: 28px;
+}
+
+.entry-content ul, .entry-content ol {
+  margin: 1em 0;
+  padding-left: 15px;
 }

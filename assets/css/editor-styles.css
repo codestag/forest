@@ -158,13 +158,23 @@ you can use the generic selector below, but it's slower:
   content: "\e01d";
 }
 
-.edit-post-layout__content {
+.block-editor-block-list__layout {
   background-color: var(--style-background-color, #ffffff);
 }
 
-.edit-post-visual-editor .editor-block-list__block {
-  margin: 0 auto;
+/* Main column width */
+.wp-block {
   max-width: 770px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 1180px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
 }
 
 .editor-post-title,
@@ -176,123 +186,154 @@ you can use the generic selector below, but it's slower:
   background-color: var(--style-background-color, #ffffff);
 }
 
-.edit-post-visual-editor,
-.edit-post-visual-editor p {
+body,
+p {
   font-size: 17px;
   font-family: var(--font-body, "Noto Serif");
 }
 
-.edit-post-visual-editor h1,
-.edit-post-visual-editor h2,
-.edit-post-visual-editor h3,
-.edit-post-visual-editor h4,
-.edit-post-visual-editor h5,
-.edit-post-visual-editor h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   font-family: var(--font-header, "Noto Serif");
   color: #363f48;
 }
 
-.edit-post-visual-editor h1 {
+h1 {
   font-size: 45px;
   letter-spacing: -2.6px;
   line-height: 1.1667em;
 }
 
-.edit-post-visual-editor h2 {
+h2 {
   font-size: 25px;
   line-height: 1.4em;
   margin: 0 0 1em 0;
 }
 
-.edit-post-visual-editor h3 {
+h3 {
   font-size: 23px;
   line-height: 1.429em;
   margin: 0 0 0.5em 0;
 }
 
-.edit-post-visual-editor h4 {
+h4 {
   font-size: 22px;
   line-height: 1.2857em;
 }
 
-.edit-post-visual-editor h5 {
+h5 {
   font-size: 18px;
   line-height: 1.5em;
 }
 
-.edit-post-visual-editor h6 {
+h6 {
   font-size: 15px;
   line-height: 1.6em;
 }
 
-.edit-post-visual-editor a {
+a {
 	text-decoration: none;
 	color: var(--accent-color, #1bbc9b);
   }
 
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
 	text-decoration: none;
 	color: inherit;
   }
-  .edit-post-visual-editor .editor-block-list__block h1 a:visited,
-  .edit-post-visual-editor .editor-block-list__block h2 a:visited,
-  .edit-post-visual-editor .editor-block-list__block h3 a:visited,
-  .edit-post-visual-editor .editor-block-list__block h4 a:visited,
-  .edit-post-visual-editor .editor-block-list__block h5 a:visited,
-  .edit-post-visual-editor .editor-block-list__block h6 a:visited {
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
 	color: inherit;
   }
 
-.edit-post-visual-editor .wp-block-quote:not(.is-large) {
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+
+pre {
+  margin: 1em 0;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+pre.wp-block-verse {
+  padding: 0;
+}
+
+ul, ol, .wp-block-latest-posts.wp-block-latest-posts__list:not(.is-grid) {
+  margin: 1em 0;
+  padding-left: 15px;
+}
+
+.wp-block-quote:not(.is-large) {
   padding-left: 100px;
 }
 
-.edit-post-visual-editor blockquote {
-  border: 0 !important;
-  font-size: 20px;
+.wp-block-quote {
   background: #363f48;
   color: #fff;
   margin: 30px 0;
   padding: 20px 20px 20px 100px;
+}
+
+.wp-block-quote p {
+  color: #fff;
+}
+
+blockquote {
+  border: 0;
+  font-size: 20px;
   position: relative;
   min-height: 90px;
 }
-.edit-post-visual-editor blockquote p {
+blockquote p {
   margin: 0;
   font-size: 20px;
-  color: #fff;
   margin-bottom: 1em;
 }
 
-.edit-post-visual-editor blockquote cite {
-  color: #fff;
-}
-
-.wp-block-pullquote {
-  border: none;
-  text-align: left;
-  background: #363f48;
-  color: #fff;
-  margin: 30px 0;
-  padding: 20px 20px 20px 100px;
-  position: relative;
-}
-
-.wp-block-pullquote cite {
+blockquote cite, .wp-block-quote__citation {
   color: inherit;
 }
 
-.edit-post-visual-editor blockquote::before,
-.wp-block-pullquote:before {
-  font-family: "stag";
-  content: "\e00a";
-  speak: none;
+.wp-block-pullquote {
+  margin: 30px 0;
+  padding: 51px 0;
+  position: relative;
+}
+
+.wp-block-pullquote p {
+  font-size: 28px;
+}
+
+.wp-block-pullquote blockquote {
+  padding: 20px 20px 20px 100px;
+  margin: 30px 0;
+}
+
+.wp-block-pullquote cite, .wp-block-pullquote__citation {
+  color: inherit;
+  font-size: 13px;
+}
+
+.wp-block-quote::before,
+.wp-block-pullquote blockquote:before {
+  font-family: 'stag';
+  content: '\e00a';
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
@@ -312,9 +353,35 @@ you can use the generic selector below, but it's slower:
   top: 40px;
 }
 
+.wp-block-quote.is-style-large cite, .wp-block-quote.is-style-large footer, .wp-block-quote.is-large cite, .wp-block-quote.is-large footer, .wp-block-quote.is-large .wp-block-quote__citation {
+  font-size: 18px;
+}
+
 .wp-block-pullquote.alignleft {
-	padding-left: 0;
+  padding-left: 0;
+  margin-right: 30px;
 }
 .wp-block-pullquote.alignright {
-	padding-right: 0;
+  padding-right: 0;
+  margin-left: 30px;
 }
+
+.wp-block-pullquote.alignleft p, .wp-block-pullquote.alignright p {
+  font-size: 20px;
+}
+
+.wp-block[data-align='left'],
+.wp-block[data-align='right'],
+.alignright,
+.alignleft {
+  z-index: 12;
+  position: relative;
+}
+
+.wp-block-separator {
+	clear: both;
+}
+
+.wp-block[data-type="core/button"][data-align="left"], .wp-block[data-type="core/button"][data-align="right"] {
+	display: block;
+  }

@@ -58,6 +58,8 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-styles.css' );
 
 		/**
 		 * Add StagFramework specific theme support
@@ -199,12 +201,10 @@ if ( ! function_exists( 'stag_wp_title' ) ) {
 function forest_block_editor_styles() {
 	$style_dependencies = array();
 	$fonts              = forest_get_google_font_uri();
-	if ( '' !== $fonts ) {
-		// Enqueue the fonts.
-		wp_enqueue_style( 'forest-google-fonts', $fonts, array(), STAG_THEME_VERSION );
+	// Enqueue the fonts.
+	wp_enqueue_style( 'forest-google-fonts', $fonts, array(), STAG_THEME_VERSION );
 
-		$style_dependencies[] = 'forest-google-fonts';
-	}
+	$style_dependencies[] = 'forest-google-fonts';
 
 	// Editor styles.
 	wp_enqueue_style( 'forest-block-editor-style', get_template_directory_uri() . '/assets/css/block-editor-style.css', $style_dependencies, STAG_THEME_VERSION );
@@ -215,8 +215,8 @@ function forest_block_editor_styles() {
 	$background_color = forest_get_thememod_value( 'style_background_color' );
 
 	wp_add_inline_style(
-		'forest-block-editor-style', "
-		.editor-styles-wrapper {
+		'forest-google-fonts',
+		".editor-styles-wrapper {
 			--accent-color: {$accent_color};
 			--style-background-color: {$background_color};
 			--font-body: '{$font_body}';
