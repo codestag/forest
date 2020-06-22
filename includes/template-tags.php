@@ -136,3 +136,16 @@ function stag_user_styles_push( $content ) {
 	return $content;
 }
 add_action( 'stag_custom_styles', 'stag_user_styles_push', 10 );
+
+
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Backwards compatibility for wp_body_open.
+	 *
+	 * @return void.
+	 */
+	function wp_body_open() {
+			do_action( 'wp_body_open' );
+	}
+}

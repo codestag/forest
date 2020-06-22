@@ -1,5 +1,13 @@
 == Forest Changelog ==
 
+= 2.3.0: June 18, 2020 =
+* Add new Forest Assistant plugin, includes widgets, metaboxes & shortcodes from theme, and is now required to use Forest with its full features
+* Add new wp_body_open hook
+* Fix translation errors & change text-domain to theme slug
+* Remove CDN usage for scripts & enqueue them locally
+* Fix escaping and sanitization issues
+* Update Google Fonts Library - 110+ new fonts
+
 = 2.2.4: Dec 27, 2018 =
 * Compatibility with WordPress 5.0+
 

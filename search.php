@@ -2,7 +2,7 @@
 
     <div class="blog-cover-wrap">
         <div class="inside blog-cover">
-            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'stag' ), get_search_query() ); ?></h1>
+            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'forest' ), get_search_query() ); ?></h1>
         </div>
     </div>
 

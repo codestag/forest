@@ -4,11 +4,11 @@ Theme URI: https://codestag.com/themes/forest/
 Description: A portfolio WordPress theme with bold, flat design style and solid code framework.
 Author: Codestag
 Author URI: https://codestag.com
-Version: 2.2.4
+Version: 2.3.0
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two columns, flexible-width, custom-background, custom-menu, editor-style, featured-images, theme-options, translation ready, threaded-comments
-Text Domain: stag
+Text Domain: forest
 */
 
 // Non-printable
@@ -17,6 +17,8 @@ Text Domain: stag
 
 /* $Reset */
 @import '_reset';
+
+@import '_patterns';
 
 /* $Grids */
 @import '_grids';
@@ -986,9 +988,11 @@ main .inside {
 			color: inherit;
 		}
 	}
-	blockquote {
+	blockquote.wp-block-quote {
 		background: $sectionTitle;
 		color: #fff;
+	}
+	blockquote {
 		margin: 30px 0;
 		padding: 20px 20px 20px 100px;
 		position: relative;
@@ -1567,54 +1571,4 @@ main .inside {
 	color: #fff;
 }
 
-@media (min-width: 750px) {
-	body.no-sidebar {
-		.alignfull {
-			margin-left: calc(50% - 50vw);
-			margin-right: calc(50% - 50vw);
-			width: auto;
-			max-width: 1000%;
-
-			img {
-				width: 100%;
-			}
-		}
-
-		.alignwide {
-			margin-left: calc(25% - 25vw);
-			margin-right: calc(25% - 25vw);
-			width: auto;
-			max-width: 1000%;
-		}
-	}
-}
-
-.wp-block-quote {
-	border: none;
-	text-align: left;
-	cite {
-		color: inherit;
-		font-style: normal;
-		font-size: 13px;
-	}
-}
-
-.stag-latest-tweets li {
-	padding-bottom: 1em;
-
-	.time {
-		display: block;
-		a {
-			color: #ffffff;
-			opacity: 0.6;
-		}
-	}
-}
-
-.wp-block-quote.is-large, .wp-block-quote.is-style-large {
-	padding: 30px 30px 30px 100px;
-
-	&:before {
-		top: 40px;
-	}
-}
+@import '_blocks';

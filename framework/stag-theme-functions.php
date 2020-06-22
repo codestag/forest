@@ -59,7 +59,7 @@ function stag_body_class( $classes ) {
 	elseif($is_safari) $classes[] = 'safari';
 	elseif($is_chrome) $classes[] = 'chrome';
 	elseif($is_IE) {
-		$browser = $_SERVER['HTTP_USER_AGENT'];
+		$browser = isset( $_SERVER['HTTP_USER_AGENT'] ) ? wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) : '';
 		$browser = substr( "$browser", 25, 8);
 		if ($browser == "MSIE 7.0"  ) {
 			$classes[] = 'ie7';
@@ -78,7 +78,7 @@ function stag_body_class( $classes ) {
 		}
 	}
 	else $classes[] = 'unknown';
-	
+
 	if( $is_iphone ) $classes[] = 'iphone';
 
 	return $classes;

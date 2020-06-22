@@ -12,7 +12,7 @@
 
 	if( array_filter( $project_details ) || $skills) {
 		?>
-		<h4><?php _e('Project Details', 'stag'); ?></h4>
+		<h4><?php _e('Project Details', 'forest'); ?></h4>
 		<?php
 
 		$skill = array();
@@ -25,19 +25,19 @@
 		}
 
 		if($skill != ''){
-			echo "<li><span>". __('Category', 'stag') .": </span>{$skill}</li>";
+			echo "<li><span>". __('Category', 'forest') .": </span>{$skill}</li>";
 		}
 
 		if($project_details['date'] != ''){
-			echo "<li><span>". __('Project Date', 'stag') .": </span>{$project_date}</li>";
+			echo "<li><span>". __('Project Date', 'forest') .": </span>{$project_date}</li>";
 		}
 
 		if($project_details['client'] != ''){
-			echo "<li><span>". __('Client', 'stag') .": </span>{$project_details['client']}</li>";
+			echo "<li><span>". __('Client', 'forest') .": </span>{$project_details['client']}</li>";
 		}
 
 		if($project_details['url'] != ''){
-			echo "<li><a href='{$project_details['url']}' target='_blank' class='button'>". __('Go to Project', 'stag') ."</a></li>";
+			echo "<li><a href='{$project_details['url']}' target='_blank' class='button'>". __('Go to Project', 'forest') ."</a></li>";
 		}
 	}
 

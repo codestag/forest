@@ -154,7 +154,7 @@ class EDD_Theme_Updater_Admin {
 		}
 		?>
 		<div class="wrap">
-			<h2><?php echo $strings['theme-license']; ?></h2>
+			<h2><?php echo esc_html( $strings['theme-license'] ); ?></h2>
 			<form method="post" action="options.php">
 
 				<?php settings_fields( $this->theme_slug . '-license' ); ?>
@@ -164,12 +164,12 @@ class EDD_Theme_Updater_Admin {
 
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php echo $strings['license-key']; ?>
+								<?php echo esc_html( $strings['license-key'] ); ?>
 							</th>
 							<td>
-								<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+								<input id="<?php echo esc_attr( $this->theme_slug ); ?>_license_key" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
 								<p class="description">
-									<?php echo $message; ?>
+									<?php echo wp_kses( $message, forest_allowed_html() ); ?>
 								</p>
 							</td>
 						</tr>
@@ -177,16 +177,16 @@ class EDD_Theme_Updater_Admin {
 						<?php if ( $license ) { ?>
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php echo $strings['license-action']; ?>
+								<?php echo esc_html( $strings['license-action'] ); ?>
 							</th>
 							<td>
 								<?php
 								wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
 								if ( 'valid' == $status ) {
 								?>
-									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( $strings['deactivate-license'] ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_deactivate" value="<?php echo esc_attr( $strings['deactivate-license'] ); ?>"/>
 								<?php } else { ?>
-									<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( $strings['activate-license'] ); ?>"/>
+									<input type="submit" class="button-secondary" name="<?php echo esc_attr( $this->theme_slug ); ?>_license_activate" value="<?php echo esc_attr( $strings['activate-license'] ); ?>"/>
 								<?php
 }
 								?>
@@ -257,7 +257,7 @@ class EDD_Theme_Updater_Admin {
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
-			wp_die( $response->get_error_message(), __( 'Error' ) . $response->get_error_code() );
+			wp_die( $response->get_error_message(), __( 'Error', 'forest' ) . $response->get_error_code() );
 		}
 
 		return $response;
@@ -288,7 +288,7 @@ class EDD_Theme_Updater_Admin {
 			if ( is_wp_error( $response ) ) {
 				$message = $response->get_error_message();
 			} else {
-				$message = __( 'An error occurred, please try again.' );
+				$message = __( 'An error occurred, please try again.', 'forest' );
 			}
 		} else {
 
@@ -300,34 +300,34 @@ class EDD_Theme_Updater_Admin {
 
 					case 'expired':
 						$message = sprintf(
-							__( 'Your license key expired on %s.' ),
+							__( 'Your license key expired on %s.', 'forest' ),
 							date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires, current_time( 'timestamp' ) ) )
 						);
 						break;
 
 					case 'revoked':
-						$message = __( 'Your license key has been disabled.' );
+						$message = __( 'Your license key has been disabled.', 'forest' );
 						break;
 
 					case 'missing':
-						$message = __( 'Invalid license.' );
+						$message = __( 'Invalid license.', 'forest' );
 						break;
 
 					case 'invalid':
 					case 'site_inactive':
-						$message = __( 'Your license is not active for this URL.' );
+						$message = __( 'Your license is not active for this URL.', 'forest' );
 						break;
 
 					case 'item_name_mismatch':
-						$message = sprintf( __( 'This appears to be an invalid license key for %s.' ), $args['name'] );
+						$message = sprintf( __( 'This appears to be an invalid license key for %s.', 'forest' ), $args['name'] );
 						break;
 
 					case 'no_activations_left':
-						$message = __( 'Your license key has reached its activation limit.' );
+						$message = __( 'Your license key has reached its activation limit.', 'forest' );
 						break;
 
 					default:
-						$message = __( 'An error occurred, please try again.' );
+						$message = __( 'An error occurred, please try again.', 'forest' );
 						break;
 				}
 
@@ -383,7 +383,7 @@ class EDD_Theme_Updater_Admin {
 			if ( is_wp_error( $response ) ) {
 				$message = $response->get_error_message();
 			} else {
-				$message = __( 'An error occurred, please try again.' );
+				$message = __( 'An error occurred, please try again.', 'forest' );
 			}
 		} else {
 
@@ -602,7 +602,7 @@ function edd_sample_theme_admin_notices() {
 				$message = urldecode( $_GET['message'] );
 				?>
 				<div class="error">
-					<p><?php echo $message; ?></p>
+					<p><?php echo wp_kses( $message, forest_allowed_html() ); ?></p>
 				</div>
 				<?php
 				break;

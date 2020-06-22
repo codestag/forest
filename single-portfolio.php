@@ -8,13 +8,13 @@
 ?>
 
 	<?php stag_post_before(); ?>
-		
+
 	<div class="portfolio-hero the-hero-<?php the_ID(); ?>">
-		
+
 		<div class="portfolio-cover the-cover-<?php the_ID(); ?>"></div>
 
 		<div class="inside">
-			
+
 			<div class="grids">
 				<h1 class="entry-title grid-9">
 					<?php the_title(); ?>
@@ -74,10 +74,10 @@
 			<div class="project-content grid-9">
 				<div class="project-content-inner">
 					<?php
-					the_content( __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'stag' ) );
+					the_content( __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'forest' ) );
 					wp_link_pages(
 						array(
-							'before'         => '<p><strong>' . __( 'Pages:', 'stag' ) . '</strong> ',
+							'before'         => '<p><strong>' . __( 'Pages:', 'forest' ) . '</strong> ',
 							'after'          => '</p>',
 							'next_or_number' => 'number',
 						)
@@ -85,7 +85,7 @@
 				?>
 				</div>
 			</div>
-			
+
 			<?php get_template_part( 'helper', 'portfolio-sidebar' ); ?>
 
 		</div>
