@@ -20,9 +20,12 @@
 	}
 }
 
+.wp-block-quote:not(.has-text-align-right) {
+	text-align: left;
+}
+
 .wp-block-quote {
 	border: none;
-	text-align: left;
 	cite {
 		color: inherit;
 		font-style: normal;
@@ -57,4 +60,59 @@
 .entry-content ul, .entry-content ol {
 	margin: 1em 0;
 	padding-left: 15px;
+}
+
+/* Spacing fixes for block editor */
+.page .entry-content h1,
+.page .entry-content h2,
+.page .entry-content h3,
+.page .entry-content h4,
+.page .entry-content h5,
+.page .entry-content h6,
+.page .entry-content p,
+.single .entry-content h1,
+.single .entry-content h2,
+.single .entry-content h3,
+.single .entry-content h4,
+.single .entry-content h5,
+.single .entry-content h6,
+.single .entry-content p,
+.entry-content > [class^="wp-block-"],
+.entry-content > [class*=" wp-block-"] {
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+.blocks-gallery-caption {
+	width: 100%;
+}
+
+/* Gallery Block */
+.blocks-gallery-item figure > a {
+	border-bottom: 0;
+}
+.blocks-gallery-item .blocks-gallery-item__caption {
+	a {
+		color: inherit;
+	}
+}
+
+/* Block: Cover */
+.wp-block-cover-image p:not(.has-text-color),
+.wp-block-cover-image h1:not(.has-text-color),
+.wp-block-cover-image h2:not(.has-text-color),
+.wp-block-cover-image h3:not(.has-text-color),
+.wp-block-cover-image h4:not(.has-text-color),
+.wp-block-cover-image h5:not(.has-text-color),
+.wp-block-cover-image h6:not(.has-text-color),
+.wp-block-cover-image .wp-block-subhead:not(.has-text-color),
+.wp-block-cover p:not(.has-text-color),
+.wp-block-cover h1:not(.has-text-color),
+.wp-block-cover h2:not(.has-text-color),
+.wp-block-cover h3:not(.has-text-color),
+.wp-block-cover h4:not(.has-text-color),
+.wp-block-cover h5:not(.has-text-color),
+.wp-block-cover h6:not(.has-text-color),
+.wp-block-cover .wp-block-subhead:not(.has-text-color) {
+	color: #fff;
 }

@@ -55,7 +55,6 @@ if ( ! function_exists( 'stag_theme_setup' ) ) {
 		 *
 		 * @since 2.2.0.
 		 */
-		add_theme_support( 'align-wide' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'editor-styles' );
