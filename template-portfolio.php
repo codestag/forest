@@ -1,10 +1,11 @@
 <?php
 /**
  * Template Name: Portfolio
+ *
+ * @package Forest
  */
-?>
 
-<?php get_header(); ?>
+ get_header(); ?>
 
 	<div id="primary" class="portfolio-content section-portfolio">
 		<div class="portfolio-hero">
@@ -13,7 +14,7 @@
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 
 				<ul class="portfolio-filter">
-					<li class="button filter" data-filter="all"><?php _e( 'All', 'forest' ); ?></li>
+					<li class="button filter" data-filter="all"><?php esc_html_e( 'All', 'forest' ); ?></li>
 					<?php
 
 					$terms = get_terms( 'skill' );
@@ -60,7 +61,7 @@
 
 							$class = 'grid-4 mix ' . $skill;
 
-						?>
+							?>
 
 						<li id="post-<?php the_ID(); ?>" <?php post_class( $class ); ?>>
 
@@ -79,7 +80,7 @@
 									'class'    => 'lazy',
 								);
 
-										?>
+								?>
 										<?php echo get_the_post_thumbnail( get_the_ID(), 'portfolio-thumb', $attr ); ?>
 								  </a>
 
@@ -97,7 +98,7 @@
 								?>
 						  </li>
 
-						<?php
+							<?php
 
 					endwhile;
 
@@ -117,20 +118,20 @@
 	$text             = forest_get_thememod_value( 'forest_portfolio_cta_text' );
 	$button_text      = forest_get_thememod_value( 'forest_portfolio_cta_button_text' );
 	$button_text_link = forest_get_thememod_value( 'forest_portfolio_cta_button_link' );
-	$button_window    = ( forest_get_thememod_value( true === 'forest_portfolio_cta_button_window' ) ) ? " target=_blank" : false;
+	$button_window    = ( forest_get_thememod_value( true === 'forest_portfolio_cta_button_window' ) ) ? ' target=_blank' : false;
 
-	if ( $text != '' ) :
+	if ( '' !== $text ) :
 		?>
 
 		<div class="call-to-action
 		<?php
-		if ( $button_text != '' ) {
+		if ( '' !== $button_text ) {
 			echo 'with-button';}
-?>
+		?>
 ">
 			<div class="inside">
 				<p><?php echo esc_html( $text ); ?></p>
-				<?php if ( $button_text != '' ) : ?>
+				<?php if ( '' !== $button_text ) : ?>
 				<a href="<?php echo esc_url( $button_text_link ); ?>" class="button" <?php echo esc_attr( $button_window ); ?>><?php echo esc_html( $button_text ); ?></a>
 				<?php endif; ?>
 			</div>

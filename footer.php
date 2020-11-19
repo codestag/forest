@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template for displaying footers.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
+?>
 	</main>
 
 	<?php stag_footer_before(); ?>

@@ -1,37 +1,55 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying pages.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
 
-    <div class="blog-cover-wrap the-hero-<?php the_ID(); ?>">
-        <div class="the-cover the-cover-<?php the_ID(); ?>"></div>
-        <div class="inside blog-cover">
-            <h1 class="page-title"><?php the_title(); ?></h1>
-        </div>
-    </div>
+get_header(); ?>
 
-    <div class="inside content-wrapper">
-        <div id="primary" class="site-content hfeed">
-            <?php stag_page_before(); ?>
+	<div class="blog-cover-wrap the-hero-<?php the_ID(); ?>">
+		<div class="the-cover the-cover-<?php the_ID(); ?>"></div>
+		<div class="inside blog-cover">
+			<h1 class="page-title"><?php the_title(); ?></h1>
+		</div>
+	</div>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+	<div class="inside content-wrapper">
+		<div id="primary" class="site-content hfeed">
+			<?php stag_page_before(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <?php stag_page_start(); ?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
-                <div class="entry-content">
-                    <?php
-                        the_content( __('Continue Reading <span class="meta-nav">&rarr;</span>', 'forest') );
-                        wp_link_pages(array('before' => '<p><strong>'.__('Pages:', 'forest').'</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
-                    ?>
-                </div><!-- .entry-content -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php stag_page_start(); ?>
 
-                <?php stag_page_end(); ?>
-            </article><!-- #post -->
+				<div class="entry-content">
+					<?php
+						the_content( __( 'Continue Reading <span class="meta-nav">&rarr;</span>', 'forest' ) );
+						wp_link_pages(
+							array(
+								'before'         => '<p><strong>' . __( 'Pages:', 'forest' ) . '</strong> ',
+								'after'          => '</p>',
+								'next_or_number' => 'number',
+							)
+						);
+					?>
+				</div><!-- .entry-content -->
 
-            <?php endwhile; ?>
+				<?php stag_page_end(); ?>
+			</article><!-- #post -->
 
-            <?php stag_page_after(); ?>
-        </div><!-- #primary -->
+			<?php endwhile; ?>
 
-        <?php get_sidebar(); ?>
-    </div>
+			<?php stag_page_after(); ?>
+		</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+	</div>
 
 <?php get_footer(); ?>

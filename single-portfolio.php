@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying single portfolios.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
+
+get_header(); ?>
 
 <div id="primary" class="portfolio-content hfeed">
 
@@ -23,7 +32,7 @@
 				<div class="grid-3">
 					<nav class="portfolio-navigation">
 						<?php if ( '' !== forest_get_thememod_value( 'forest_portfolio_page' ) && '-1' !== forest_get_thememod_value( 'forest_portfolio_page' ) ) : ?>
-						<li><a href="<?php echo get_page_link( forest_get_thememod_value( 'forest_portfolio_page' ) ); ?>"><i class="icon-grid"></i></a></li>
+						<li><a href="<?php echo esc_url( get_page_link( forest_get_thememod_value( 'forest_portfolio_page' ) ) ); ?>"><i class="icon-grid"></i></a></li>
 						<?php endif; ?>
 
 						<?php
@@ -31,12 +40,12 @@
 						$next = get_adjacent_post( false, '', true );
 						?>
 
-						<?php if ( is_object( $prev ) && $prev->ID != get_the_ID() ) : ?>
-						<li><a href="<?php echo get_permalink( $prev->ID ); ?>"><i class="icon-previous"></i></a></li>
+						<?php if ( is_object( $prev ) && $prev->ID !== get_the_ID() ) : ?>
+						<li><a href="<?php echo esc_url( get_permalink( $prev->ID ) ); ?>"><i class="icon-previous"></i></a></li>
 						<?php endif; ?>
 
-						<?php if ( is_object( $next ) && $next->ID != get_the_ID() ) : ?>
-						<li><a href="<?php echo get_permalink( $next->ID ); ?>"><i class="icon-next"></i></a></li>
+						<?php if ( is_object( $next ) && $next->ID !== get_the_ID() ) : ?>
+						<li><a href="<?php echo esc_url( get_permalink( $next->ID ) ); ?>"><i class="icon-next"></i></a></li>
 						<?php endif; ?>
 					</nav>
 				</div>

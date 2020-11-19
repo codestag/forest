@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Default template for displaying theme pages.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
+
+get_header(); ?>
 	
 	<?php get_template_part( 'helper', 'blog-header' ); ?>
 		
@@ -10,14 +19,14 @@
 			if ( have_posts() ) :
 				while ( have_posts() ) :
 					the_post();
-?>
+					?>
 
-			<?php stag_post_start(); ?>
-				<?php get_template_part( 'content' ); ?>
-			<?php stag_post_end(); ?>
+					<?php stag_post_start(); ?>
+					<?php get_template_part( 'content' ); ?>
+					<?php stag_post_end(); ?>
 
 			<?php endwhile; ?>
-			<?php stag_post_after(); ?>
+				<?php stag_post_after(); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>

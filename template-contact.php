@@ -1,6 +1,8 @@
 <?php
 /**
  * Template Name: Contact Form
+ *
+ * @package Forest
  */
 
 get_header(); ?>

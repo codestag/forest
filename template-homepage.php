@@ -1,13 +1,14 @@
 <?php
 /**
  * Template Name: Homepage
+ *
+ * @package Forest
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
-    <div class="widgetized-sections">
-    	<?php dynamic_sidebar('sidebar-homepage'); ?>
-    </div>
+	<div class="widgetized-sections">
+		<?php dynamic_sidebar( 'sidebar-homepage' ); ?>
+	</div>
 
 <?php get_footer(); ?>

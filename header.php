@@ -1,3 +1,14 @@
+<?php
+/**
+ * The template for displaying headers.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
+
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,15 +34,15 @@
 		<div class="inside">
 			<?php stag_header_start(); ?>
 
-			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 				<?php
 				if ( true === forest_get_thememod_value( 'forest_text_logo' ) ) {
 				?>
 					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<?php } elseif ( forest_get_thememod_value( 'forest_custom_logo' ) != '' ) { ?>
-					<img src="<?php echo forest_get_thememod_value( 'forest_custom_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+				<?php } elseif ( forest_get_thememod_value( 'forest_custom_logo' ) !== '' ) { ?>
+					<img src="<?php echo esc_url( forest_get_thememod_value( 'forest_custom_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php } else { ?>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				<?php
 }
 				?>

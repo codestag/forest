@@ -1,31 +1,43 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying search result page.
+ *
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Forest
+ */
 
-    <div class="blog-cover-wrap">
-        <div class="inside blog-cover">
-            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'forest' ), get_search_query() ); ?></h1>
-        </div>
-    </div>
+get_header(); ?>
 
-    <div class="inside content-wrapper">
-        <div id="primary" class="site-content hfeed">
-        <?php if( have_posts() ) : ?>
+	<div class="blog-cover-wrap">
+		<div class="inside blog-cover">
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'forest' ), get_search_query() ); ?></h1>
+		</div>
+	</div>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+	<div class="inside content-wrapper">
+		<div id="primary" class="site-content hfeed">
+		<?php if ( have_posts() ) : ?>
 
-            <?php get_template_part('content'); ?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
-            <?php endwhile; ?>
+				<?php get_template_part( 'content' ); ?>
 
-        <?php else: ?>
-            <?php get_template_part('content', 'none'); ?>
-        <?php endif; ?>
+			<?php endwhile; ?>
 
-        <?php stag_paging_nav(); ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
 
-        </div><!-- #primary -->
+		<?php stag_paging_nav(); ?>
 
-        <?php get_sidebar(); ?>
+		</div><!-- #primary -->
 
-    </div>
+		<?php get_sidebar(); ?>
+
+	</div>
 
 <?php get_footer(); ?>
