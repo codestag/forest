@@ -2266,10 +2266,10 @@ textarea {
   opacity: 0.8;
 }
 
-.widget_recent_entries .post-date,
-.widget_categories,
-.widget_recent_entries,
-.site-footer a {
+.site-footer .widget_recent_entries .post-date,
+.site-footer .widget_categories,
+.site-footer .widget_recent_entries,
+.site-footer .site-footer a {
   color: #fff;
 }
 

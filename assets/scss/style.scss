@@ -1563,11 +1563,12 @@ main .inside {
 	}
 }
 
-.widget_recent_entries .post-date,
-.widget_categories,
-.widget_recent_entries,
-.site-footer a {
-	color: #fff;
+.site-footer {
+	.widget_recent_entries .post-date,
+	.widget_categories,
+	.widget_recent_entries,
+	.site-footer a {
+		color: #fff;
+	}
 }
-
 @import '_blocks';
