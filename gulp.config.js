@@ -1,16 +1,16 @@
 /**
- * WPGulp Configuration File
+ * Gulp Configuration File
  *
  * 1. Edit the variables as per your project requirements.
  * 2. In paths you can add <<glob or array of globs>>.
  *
- * @package WPGulp
+ * @package Gulp
  */
 
 module.exports = {
 
 	// Project options.
-	projectURL: 'wpstag.local/forest', // Local project URL of your already running WordPress site. Could be soforesting like wpgulp.local or localhost:3000 depending upon your local WordPress setup.
+	projectURL: 'wpstag.local/forest', // Local project URL of your already running WordPress site. Could be soforesting like gulp.local or localhost:3000 depending upon your local WordPress setup.
 	productURL: './', // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 	browserAutoOpen: false,
 	injectChanges: true,

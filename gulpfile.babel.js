@@ -18,10 +18,10 @@
  */
 
 /**
- * Load WPGulp Configuration.
+ * Load Gulp Configuration.
  *
  */
-const config = require('./wpgulp.config.js');
+const config = require('./gulp.config.js');
 
 /**
  * Load Plugins.
