@@ -518,10 +518,10 @@ function forest_required_plugins() {
 		array(
 			'name'             => __( 'Forest Assistant', 'forest' ),
 			'slug'             => 'forest-assistant',
-			'source'           => get_parent_theme_file_path() . '/assistant/forest-assistant.zip',
+			'source'           => get_parent_theme_file_path() . '/assistant/forest-assistant-1.0.1.zip',
 			'required'         => true,
 			'force_activation' => true,
-			'version'          => '1.0',
+			'version'          => '1.0.1',
 			'external_url'     => 'https://github.com/codestag/forest-assistant/',
 		),
 
