@@ -356,7 +356,7 @@ function stag_comments( $comment, $args, $depth ) {
 <?php
 }
 
-function stag_list_pings( $comment, $args, $depth ) {
+function stag_list_pings( $comment ) {
 	$GLOBALS['comment'] = $comment;
 	?>
 <li id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?>
@@ -364,11 +364,13 @@ function stag_list_pings( $comment, $args, $depth ) {
 }
 
 
-/**
-* Custom Excerpt
-*/
 if ( ! function_exists( 'custom_excerpt_length' ) ) {
-	function custom_excerpt_length( $length ) {
+    /**
+     * Custom Excerpt
+	 *
+     * @return int modified excerpt length.
+     */
+	function custom_excerpt_length() {
 		return forest_get_thememod_value( 'forest_post_excerpt_length' );
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
@@ -376,7 +378,12 @@ if ( ! function_exists( 'custom_excerpt_length' ) ) {
 
 
 if ( ! function_exists( 'new_excerpt_more' ) ) {
-	function new_excerpt_more( $more ) {
+    /**
+     * Excerpt More
+     *
+     * @return string modified exerpt more markup.
+     */
+	function new_excerpt_more() {
 		global $post;
 		return ' <a class="read-more" href="' . get_permalink( $post->ID ) . '">' . forest_get_thememod_value( 'forest_post_excerpt_text' ) . '</a>';
 	}
