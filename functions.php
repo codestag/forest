@@ -397,53 +397,6 @@ add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
 
 
-/**
- * Relative Date for comments
- */
-// add_filter( 'get_comment_date', 'get_the_relative_time' );
-function get_the_relative_time( $time = null ) {
-	if ( is_null( $time ) ) {
-		$time = get_the_time( 'U' );
-	}
-
-	$time_diff = date( 'U' ) - $time; // difference in second
-
-	$second = 1;
-	$minute = 60;
-	$hour   = 60 * 60;
-	$day    = 60 * 60 * 24;
-	$week   = 60 * 60 * 24 * 7;
-	$month  = 60 * 60 * 24 * 7 * 30;
-	$year   = 60 * 60 * 24 * 7 * 30 * 365;
-
-	if ( $time_diff <= 120 ) {
-		$output = 'now';
-	} elseif ( $time_diff > $second && $time_diff < $minute ) {
-		$output = round( $time_diff / $second ) . ' second';
-	} elseif ( $time_diff >= $minute && $time_diff < $hour ) {
-		$output = round( $time_diff / $minute ) . ' minute';
-	} elseif ( $time_diff >= $hour && $time_diff < $day ) {
-		$output = round( $time_diff / $hour ) . ' hour';
-	} elseif ( $time_diff >= $day && $time_diff < $week ) {
-		$output = round( $time_diff / $day ) . ' day';
-	} elseif ( $time_diff >= $week && $time_diff < $month ) {
-		$output = round( $time_diff / $week ) . ' week';
-	} elseif ( $time_diff >= $month && $time_diff < $year ) {
-		$output = round( $time_diff / $month ) . ' month';
-	} elseif ( $time_diff >= $year && $time_diff < $year * 10 ) {
-		$output = round( $time_diff / $year ) . ' year';
-	} else {
-		$output = ' more than a decade ago'; }
-
-	if ( $output <> 'now' ) {
-		$output  = ( substr( $output, 0, 2 ) <> '1 ' ) ? $output . 's' : $output;
-		$output .= ' ago';
-	}
-
-	return $output;
-}
-
-
 function pagination() {
 	global $wp_query;
 	$total_pages = $wp_query->max_num_pages;
