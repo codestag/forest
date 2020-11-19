@@ -16,55 +16,55 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:5
+#: 404.php:14
 msgid "Error 404 - Not Found"
 msgstr ""
 
-#: 404.php:13
+#: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive.php:25
+#: archive.php:35
 msgid "Blog Archives"
 msgstr ""
 
-#: archive.php:23
+#: archive.php:33
 msgid "All posts by"
 msgstr ""
 
-#: archive.php:21, archive.php:19, archive.php:17
+#: archive.php:31, archive.php:29, archive.php:27
 msgid "Archive for"
 msgstr ""
 
-#: archive.php:15
+#: archive.php:25
 msgid "All posts tagged %s"
 msgstr ""
 
-#: archive.php:13
+#: archive.php:23
 msgid "All posts in %s"
 msgstr ""
 
-#: comments.php:35
+#: comments.php:45
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36
+#: comments.php:46
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37
+#: comments.php:47
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:42
+#: comments.php:52
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:51
+#: comments.php:63
 msgid "Submit a Comment"
 msgstr ""
 
-#: comments.php:52
+#: comments.php:64
 msgid "Submit Comment"
 msgstr ""
 
@@ -84,19 +84,23 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content.php:22
+#: content.php:29
+msgid "&nbsp;in category&nbsp;"
+msgstr ""
+
+#: content.php:29
 msgid ", "
 msgstr ""
 
-#: content.php:35
+#: content.php:42
 msgid "Permalink to %s"
 msgstr ""
 
-#: content.php:42
+#: content.php:49
 msgid "Read More&hellip;"
 msgstr ""
 
-#: content.php:43, page.php:22, single-portfolio.php:80, template-archives.php:24, template-contact.php:33, template-full-width.php:27
+#: content.php:52, page.php:36, single-portfolio.php:89, template-archives.php:32, template-contact.php:35, template-full-width.php:34
 msgid "Pages:"
 msgstr ""
 
@@ -144,35 +148,35 @@ msgstr ""
 msgid "Widget area for footer"
 msgstr ""
 
-#: functions.php:338
+#: functions.php:333
 msgid "%s ago"
 msgstr ""
 
-#: functions.php:351
+#: functions.php:347
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:485
+#: functions.php:456
 msgid "<i class=\"icon icon-previous\"></i>"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:460
 msgid "<i class=\"icon icon-next\"></i>"
 msgstr ""
 
-#: functions.php:514
+#: functions.php:485
 msgid "StagTools"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:490
 msgid "Forest Assistant"
 msgstr ""
 
-#: functions.php:590
+#: functions.php:561
 msgid "As per ThemeForest guidelines, some functionalities are now excluded from theme and moved to an assistant plugin."
 msgstr ""
 
-#: functions.php:590
+#: functions.php:561
 msgid "To use Forest with full features, please activate Forest Assistant from "
 msgstr ""
 
@@ -194,6 +198,79 @@ msgstr ""
 
 #: helper-portfolio-sidebar.php:40
 msgid "Go to Project"
+msgstr ""
+
+#: page.php:33, single-portfolio.php:86, template-contact.php:32, template-full-width.php:31
+msgid "Continue Reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: search.php:14
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:12
+msgid "Enter your query here..."
+msgstr ""
+
+#: template-about.php:3
+msgid "About"
+msgstr ""
+
+#: template-archives.php:3
+msgid "Archives"
+msgstr ""
+
+#: template-archives.php:28
+msgid "Read more..."
+msgstr ""
+
+#: template-archives.php:41
+msgid "Last 30 Posts"
+msgstr ""
+
+#: template-archives.php:52
+msgid "Archives by Month"
+msgstr ""
+
+#: template-archives.php:58
+msgid "Archives by Subject"
+msgstr ""
+
+#: template-contact.php:3
+msgid "Contact Form"
+msgstr ""
+
+#: template-contact.php:54
+msgid "Please install Forest Assistant plugin for Contact Form template to work!"
+msgstr ""
+
+#: template-full-width.php:3
+msgid "Full Width"
+msgstr ""
+
+#: template-homepage.php:3
+msgid "Homepage"
+msgstr ""
+
+#: template-portfolio.php:3
+msgid "Portfolio"
+msgstr ""
+
+#: template-portfolio.php:17
+msgid "All"
+msgstr ""
+
+#: template-portfolio.php:70, template-portfolio.php:89
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: template-widgetized.php:3
+msgid "Widgetized"
+msgstr ""
+
+#. translators: %s: Link to customizer.
+#: includes/upgrade.php:159
+msgid "Looking for theme settings? It has been moved under Appearance &rarr; <a href=\"%s\">Customize</a>."
 msgstr ""
 
 #: includes/customizer/customizer.php:59
@@ -615,7 +692,7 @@ msgstr ""
 
 #: includes/updater/theme-updater.php:30
 msgid ""
-"Enter your theme license key received upon purchase from <a target=\"_blank\" href=\"https://codestag.com/account/\">Codestag</a>.<br><br>\n"
+"Enter your theme license key received upon purchase from <a target=\"_blank\" href=\"https://codestag.com/account/\">Codestag</a>.<br><br>\n"
 "											If you're coming from ThemeForest, please download <a href=\"https://envato.com/market-plugin/\" target=\"_blank\">Envato Market</a> plugin instead to receive automatic updates."
 msgstr ""
 
@@ -693,77 +770,4 @@ msgstr ""
 
 #: includes/updater/theme-updater.php:53
 msgid "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
-msgstr ""
-
-#. translators: %s: Link to customizer.
-#: includes/upgrade.php:159
-msgid "Looking for theme settings? It has been moved under Appearance &rarr; <a href=\"%s\">Customize</a>."
-msgstr ""
-
-#: page.php:21, single-portfolio.php:77, template-contact.php:30, template-full-width.php:26
-msgid "Continue Reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: search.php:5
-msgid "Search Results for: %s"
-msgstr ""
-
-#: searchform.php:2
-msgid "Enter your query here..."
-msgstr ""
-
-#: template-about.php:3
-msgid "About"
-msgstr ""
-
-#: template-archives.php:3
-msgid "Archives"
-msgstr ""
-
-#: template-archives.php:23
-msgid "Read more..."
-msgstr ""
-
-#: template-archives.php:28
-msgid "Last 30 Posts"
-msgstr ""
-
-#: template-archives.php:37
-msgid "Archives by Month"
-msgstr ""
-
-#: template-archives.php:43
-msgid "Archives by Subject"
-msgstr ""
-
-#: template-contact.php:3
-msgid "Contact Form"
-msgstr ""
-
-#: template-contact.php:52
-msgid "Please install Forest Assistant plugin for Contact Form template to work!"
-msgstr ""
-
-#: template-full-width.php:3
-msgid "Full Width"
-msgstr ""
-
-#: template-homepage.php:3
-msgid "Homepage"
-msgstr ""
-
-#: template-portfolio.php:3
-msgid "Portfolio"
-msgstr ""
-
-#: template-portfolio.php:16
-msgid "All"
-msgstr ""
-
-#: template-portfolio.php:69, template-portfolio.php:88
-msgid "Permanent Link to %s"
-msgstr ""
-
-#: template-widgetized.php:3
-msgid "Widgetized"
 msgstr ""

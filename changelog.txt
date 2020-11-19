@@ -1,5 +1,13 @@
 == Forest Changelog ==
 
+= 2.3.1: November 19, 2020 =
+* Support for WP 5.6.x
+* Fix warnings & remove deprecated/unused functions
+* Fix escaping & missing translation strings
+* Update assistant plugin
+* Update Google Fonts library
+* Other minor changes
+
 = 2.3.0: June 22, 2020 =
 * Add new Forest Assistant plugin, includes widgets, metaboxes & shortcodes from theme, and is now required to use Forest with its full features
 * Add new wp_body_open hook
