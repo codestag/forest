@@ -311,12 +311,6 @@ add_action( 'wp_enqueue_scripts', 'stag_scripts_styles' );
  */
 function stag_comments( $comment, $args, $depth ) {
 
-	$isByAuthor = false;
-
-	if ( $comment->comment_author_email == get_the_author_meta( 'email' ) ) {
-		$isByAuthor = true;
-	}
-
 	$GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 	 <div id="comment-<?php comment_ID(); ?>" class="the-comment">

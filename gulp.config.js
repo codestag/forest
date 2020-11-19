@@ -81,7 +81,7 @@ module.exports = {
 	export: {
 		src: [
 			'**/*',
-			'!wpgulp.config.js',
+			'!gulp.config.js',
 			'!dev/**/*',
 			'!node_modules',
 			'!node_modules/**/*',
