@@ -246,7 +246,6 @@ function stag_scripts_styles() {
 		wp_register_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.js', array(), '3.7.3', false );
 		wp_register_script( 'css3-mediaqueries', get_template_directory_uri() . '/assets/js/css3-mediaqueries.min.js', array(), '1.0.0', false );
 
-
 		/* Enqueue Scripts ---------------------------------------------------*/
 
 		if ( is_front_page() || is_singular( 'portfolio' ) || is_page_template( 'template-widgetized.php' ) ) {
@@ -290,7 +289,9 @@ function stag_scripts_styles() {
 		}
 
 		wp_localize_script(
-			'stag-custom', 'stag', array(
+			'stag-custom',
+			'stag',
+			array(
 				'ajaxurl'  => admin_url( 'admin-ajax.php' ),
 				'accent'   => forest_get_thememod_value( 'style_accent_color' ),
 				'menuIcon' => ( function_exists( 'stag_icon' ) ) ? stag_icon( array( 'icon' => 'bars' ) ) : '',
@@ -333,7 +334,8 @@ function stag_comments( $comment, $args, $depth ) {
 				<?php
 				comment_reply_link(
 					array_merge(
-						$args, array(
+						$args,
+						array(
 							'depth'     => $depth,
 							'max_depth' => $args['max_depth'],
 						)
@@ -353,23 +355,29 @@ function stag_comments( $comment, $args, $depth ) {
 	 </div>
    </li>
 
-<?php
+	<?php
 }
 
+/**
+ * Comment list pings
+ *
+ * @param array $comment Array of WP_Comment objects.
+ * @return void
+ */
 function stag_list_pings( $comment ) {
 	$GLOBALS['comment'] = $comment;
 	?>
 <li id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?>
-<?php
+	<?php
 }
 
 
 if ( ! function_exists( 'custom_excerpt_length' ) ) {
-    /**
-     * Custom Excerpt
+	/**
+	 * Custom Excerpt
 	 *
-     * @return int modified excerpt length.
-     */
+	 * @return int modified excerpt length.
+	 */
 	function custom_excerpt_length() {
 		return forest_get_thememod_value( 'forest_post_excerpt_length' );
 	}
@@ -378,11 +386,11 @@ if ( ! function_exists( 'custom_excerpt_length' ) ) {
 
 
 if ( ! function_exists( 'new_excerpt_more' ) ) {
-    /**
-     * Excerpt More
-     *
-     * @return string modified exerpt more markup.
-     */
+	/**
+	 * Excerpt More
+	 *
+	 * @return string modified exerpt more markup.
+	 */
 	function new_excerpt_more() {
 		global $post;
 		return ' <a class="read-more" href="' . get_permalink( $post->ID ) . '">' . forest_get_thememod_value( 'forest_post_excerpt_text' ) . '</a>';
@@ -397,6 +405,11 @@ add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
 
 
+/**
+ * Pagination function.
+ *
+ * @return void
+ */
 function pagination() {
 	global $wp_query;
 	$total_pages = $wp_query->max_num_pages;
@@ -419,7 +432,11 @@ function pagination() {
 	}
 }
 
-
+/**
+ * Process Page navigation.
+ *
+ * @return void
+ */
 function stag_paging_nav() {
 	global $wp_query;
 
@@ -432,7 +449,7 @@ function stag_paging_nav() {
 	<?php
 	if ( ! is_search() ) {
 		pagination();}
-?>
+	?>
 	<div class="nav-links">
 
 		<?php if ( get_previous_posts_link() ) : ?>
@@ -541,12 +558,11 @@ if ( ! function_exists( 'forest_assistant_notice' ) ) {
 	function forest_assistant_notice() {
 		if ( ! class_exists( 'Forest_Assistant' ) && current_user_can( 'activate_plugins' ) ) {
 			$page_link = self_admin_url( 'themes.php?page=tgmpa-install-plugins' );
-			$message       = '<p>' . sprintf( '%1$s<br><strong>%2$s<a href="%3$s">this page</a>.', __('As per ThemeForest guidelines, some functionalities are now excluded from theme and moved to an assistant plugin.', 'forest' ), __( 'To use Forest with full features, please activate Forest Assistant from ', 'forest' ), esc_url( $page_link ) ) . '</strong></p>';
+			$message   = '<p>' . sprintf( '%1$s<br><strong>%2$s<a href="%3$s">this page</a>.', __( 'As per ThemeForest guidelines, some functionalities are now excluded from theme and moved to an assistant plugin.', 'forest' ), __( 'To use Forest with full features, please activate Forest Assistant from ', 'forest' ), esc_url( $page_link ) ) . '</strong></p>';
 
 			echo '<div class="error">' . $message . '</div>'; // phpcs:ignore
 		}
 	}
-
 }
 add_action( 'admin_notices', 'forest_assistant_notice' );
 
