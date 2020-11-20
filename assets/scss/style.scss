@@ -493,6 +493,26 @@ main .inside {
 	}
 }
 
+.widget_calendar {
+	table {
+		width: 100%;
+		td, th {
+			padding: 0.5em;
+			border: 1px solid;
+			word-break: normal;
+		}
+	}
+	.wp-calendar-nav {
+		margin-top: 10px;
+	}
+}
+
+.widget {
+	select {
+		width: 100%;
+	}
+}
+
 /* $Widgetized Sections */
 .widgetized-sections {
 	section {
@@ -1012,6 +1032,14 @@ main .inside {
 		}
 		p {
 			margin: 0 0 1em 0;
+		}
+	}
+	table {
+		width: 100%;
+		td, th {
+			padding: 0.5em;
+			border: 1px solid;
+			word-break: normal;
 		}
 	}
 }

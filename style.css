@@ -949,6 +949,22 @@ textarea {
   border-color: #273544;
 }
 
+.widget_calendar table {
+  width: 100%;
+}
+.widget_calendar table td, .widget_calendar table th {
+  padding: 0.5em;
+  border: 1px solid;
+  word-break: normal;
+}
+.widget_calendar .wp-calendar-nav {
+  margin-top: 10px;
+}
+
+.widget select {
+  width: 100%;
+}
+
 /* $Widgetized Sections */
 .widgetized-sections .inside {
   padding: 70px 20px;
@@ -1497,6 +1513,17 @@ textarea {
 .hentry blockquote p,
 .entry-content blockquote p {
   margin: 0 0 1em 0;
+}
+.hentry table,
+.entry-content table {
+  width: 100%;
+}
+.hentry table td, .hentry table th,
+.entry-content table td,
+.entry-content table th {
+  padding: 0.5em;
+  border: 1px solid;
+  word-break: normal;
 }
 
 .portfolio-hero {
