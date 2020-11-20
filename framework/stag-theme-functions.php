@@ -22,7 +22,7 @@ function stag_remove_option( $name ) {
 
 function stag_get_option( $name ) {
 	$stag_values = get_option( 'stag_framework_values' );
-	if ( @array_key_exists( $name, $stag_values ) ) {
+	if ( array_key_exists( $name, $stag_values ) ) {
 		return stripslashes( $stag_values[ $name ] );
 	}
 	return false;
@@ -30,7 +30,7 @@ function stag_get_option( $name ) {
 
 function stag_is_theme_activated() {
 	global $pagenow;
-	if ( is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) {
+	if ( is_admin() && isset( $_GET['activated'] ) && 'themes.php' === $pagenow ) {
 		return true;
 	}
 	return false;
@@ -43,21 +43,20 @@ function stag_add_version_meta() {
 add_action( 'stag_meta_head', 'stag_add_version_meta' );
 
 /*
----------------------------------------------------------*/
-/*
+---------------------------------------------------------
  Filters that allow shortcodes in Text widgets
-/*---------------------------------------------------------*/
+---------------------------------------------------------
+*/
 add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
 
 /*
----------------------------------------------------------*/
-/*
- Remove generator for security
-/*---------------------------------------------------------*/
+---------------------------------------------------------
+Remove generator for security
+---------------------------------------------------------
+*/
 remove_action( 'wp_head', 'wp_generator' );
 
-add_filter( 'body_class', 'stag_body_class' );
 function stag_body_class( $classes ) {
 	global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
 
@@ -101,3 +100,5 @@ function stag_body_class( $classes ) {
 
 	return $classes;
 }
+
+add_filter( 'body_class', 'stag_body_class' );
