@@ -73,23 +73,7 @@ function stag_body_class( $classes ) {
 	} elseif ( $is_chrome ) {
 		$classes[] = 'chrome';
 	} elseif ( $is_IE ) {
-		$browser = isset( $_SERVER['HTTP_USER_AGENT'] ) ? wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) : ''; // phpcs:ignore
-		$browser = substr( '$browser', 25, 8 );
-		if ( 'MSIE 7.0' === $browser ) {
-			$classes[] = 'ie7';
 			$classes[] = 'ie';
-		} elseif ( 'MSIE 6.0' === $browser ) {
-			$classes[] = 'ie6';
-			$classes[] = 'ie';
-		} elseif ( 'MSIE 8.0' === $browser ) {
-			$classes[] = 'ie8';
-			$classes[] = 'ie';
-		} elseif ( 'MSIE 9.0' === $browser ) {
-			$classes[] = 'ie9';
-			$classes[] = 'ie';
-		} else {
-			$classes[] = 'ie';
-		}
 	} else {
 		$classes[] = 'unknown';
 	}
