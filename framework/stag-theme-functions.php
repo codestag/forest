@@ -73,7 +73,7 @@ function stag_body_class( $classes ) {
 	} elseif ( $is_chrome ) {
 		$classes[] = 'chrome';
 	} elseif ( $is_IE ) {
-			$classes[] = 'ie';
+	    $classes[] = 'ie';
 	} else {
 		$classes[] = 'unknown';
 	}
