@@ -104,5 +104,9 @@ module.exports = {
 			'!*.zip'
 		],
 		dest: './build/'
+	},
+	demo: {
+		hostname: 'demo.codestag.com',
+		username: 'demo',
 	}
 };

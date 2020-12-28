@@ -81,6 +81,10 @@ const _ = require('lodash');
 const exec = require('gulp-exec');
 const download = require('gulp-download');
 
+// Deploy task.
+const rsync = require( 'gulp-rsync' );
+const buildDestination = `./build/${ pkgConfig.name }/`;
+
 const newThemeVersion = semver.inc(pkgConfig.version, argv.releaseType);
 
 /**
@@ -726,3 +730,30 @@ gulp.task('release', done => {
 	}
 	done();
 });
+
+/**
+ * Task: Deploy to demo server
+ */
+gulp.task( 'deploy', gulp.series(
+	'build',
+	function() {
+		// Dirs and Files to sync
+		const rsyncPaths = [ buildDestination ];
+
+		// Default options for rsync
+		const rsyncConf = {
+			emptyDirectories: true,
+			compress: true,
+			archive: true,
+			progress: true,
+			root: './build/',
+			exclude: ['node_modules', '.svn', '.git'],
+			hostname: config.demo.hostname,
+			username: config.demo.username,
+			destination: `~/files/wp-content/themes/`,
+		};
+
+		// Use gulp-rsync to sync the files
+		return gulp.src( rsyncPaths ).pipe( rsync( rsyncConf ) );
+	}
+) );
