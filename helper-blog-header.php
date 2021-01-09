@@ -5,7 +5,7 @@
 		<div class="grids">
 			
 			<div class="grid-9">
-				<h1 class="page-title"><?php echo esc_attr( forest_get_thememod_value( 'forest_blog_title' ) ); ?></h1>
+				<h1 class="page-title"><?php echo esc_html( forest_get_thememod_value( 'forest_blog_title' ) ); ?></h1>
 			</div>
 
 			<?php if ( is_single() ) : ?>

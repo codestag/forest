@@ -574,7 +574,3 @@ require_once get_template_directory() . '/includes/template-tags.php';
 require_once get_template_directory() . '/includes/upgrade.php';
 require_once get_template_directory() . '/includes/extras.php';
 
-/**
- * Include theme updater file
- */
-require_once get_template_directory() . '/includes/updater/theme-updater.php';

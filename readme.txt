@@ -1,4 +1,28 @@
-== Forest Changelog ==
+=== Forest ===
+Contributors: codestag
+Requires at least: 5.6
+Tested up to: 5.6
+Requires PHP: 5.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+== Description ==
+
+A portfolio WordPress theme with bold, flat design style and solid code framework.
+
+== Installation ==
+
+1. Download theme zip.
+2. From your wp-admin Dashboard, go to Themes >> Add New and Upload theme.
+3. Once installed, activate the theme.
+4. Install & activate required plugins from the Install Plugins submenu at Themes page.
+
+== Copyright ==
+
+Forest is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+== Changelog ==
 
 = 2.3.2 - January 09, 2021 =
 * Revised for free release
