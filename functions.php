@@ -1,5 +1,40 @@
 <?php
 
+if ( ! function_exists( 'forest_fs' ) ) {
+	// Create a helper function for easy SDK access.
+	function forest_fs() {
+		global $forest_fs;
+
+		if ( ! isset( $forest_fs ) ) {
+			// Include Freemius SDK.
+			require_once dirname(__FILE__) . '/freemius/start.php';
+
+			$forest_fs = fs_dynamic_init( array(
+				'id'                  => '7656',
+				'slug'                => 'forest',
+				'type'                => 'theme',
+				'public_key'          => 'pk_e37c5ddfc1c8c6dbe5d0882035197',
+				'is_premium'          => false,
+				'has_addons'          => false,
+				'has_paid_plans'      => false,
+				'is_org_compliant'    => false,
+				'menu'                => array(
+					'first-path'     => 'themes.php',
+					'account'        => false,
+					'support'        => false,
+				),
+			) );
+		}
+
+		return $forest_fs;
+	}
+
+	// Init Freemius.
+	forest_fs();
+	// Signal that SDK was initiated.
+	do_action( 'forest_fs_loaded' );
+}
+
 /* Set Retina Cookie -------------------------------------------------------*/
 global $is_retina;
 ( isset( $_COOKIE['retina'] ) ) ? $is_retina = true : $is_retina = false;

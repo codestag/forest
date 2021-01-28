@@ -2,7 +2,7 @@
     "name": "codestag/forest",
     "description": "A WordPress theme by Codestag.",
 	"type": "wordpress-theme",
-	"version": "2.3.2",
+	"version": "2.3.3",
     "license": "GPL v2+",
     "authors": [
         {

@@ -104,79 +104,79 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: functions.php:29
+#: functions.php:64
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:145
 msgid "Global Sidebar"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:151
 msgid "Blog Widgets Area."
 msgstr ""
 
-#: functions.php:122
+#: functions.php:157
 msgid "Homepage Sections"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:163
 msgid "Here you can configure the layout of the Homepage."
 msgstr ""
 
-#: functions.php:134
+#: functions.php:169
 msgid "About Sections"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:175
 msgid "About template sections."
 msgstr ""
 
-#: functions.php:146
+#: functions.php:181
 msgid "Service Boxes Section"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:187
 msgid "Use only \"Service Box\" widgets here and they will populate the \"Services\" widget."
 msgstr ""
 
-#: functions.php:158
+#: functions.php:193
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:199
 msgid "Widget area for footer"
 msgstr ""
 
-#: functions.php:332
+#: functions.php:367
 msgid "%s ago"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:381
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:455
+#: functions.php:490
 msgid "<i class=\"icon icon-previous\"></i>"
 msgstr ""
 
-#: functions.php:459
+#: functions.php:494
 msgid "<i class=\"icon icon-next\"></i>"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:519
 msgid "StagTools"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:524
 msgid "Forest Assistant"
 msgstr ""
 
-#: functions.php:560
+#: functions.php:595
 msgid "As per ThemeForest guidelines, some functionalities are now excluded from theme and moved to an assistant plugin."
 msgstr ""
 
-#: functions.php:560
+#: functions.php:595
 msgid "To use Forest with full features, please activate Forest Assistant from "
 msgstr ""
 
