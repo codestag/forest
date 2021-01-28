@@ -24,6 +24,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 == Changelog ==
 
+= 2.3.3 - January 28, 2021 =
+* Add Freemius SDK
+* Other minor improvements
+
 = 2.3.2 - January 09, 2021 =
 * Revised for free release
 * Other minor improvements
